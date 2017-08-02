@@ -54,6 +54,21 @@ The next time you open your project in RStudio the first step you should take is
 - Add a Description (Optional)
 - Add Tags (Optional)
 
+### Public Hubs v Duke's Hub
+
+- Public Hubs:  GitHub, GitLab, Bitbucket
+
+    - public by default
+    - can pay for privacy
+    - large user communities
+
+- Duke's GitLab can make 
+
+    - Works with your NetID
+    - Same Functionality as above
+    - Price is right
+    - Can make any repo public, private by default 
+
 ## Resources
 
 - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)  
