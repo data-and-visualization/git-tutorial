@@ -49,12 +49,25 @@ output: html_document
 	1. Back at your GitLab repo `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copyURL to clipboard (click icon)
 	1. Launch RStudio, Menubar:  *File > New Project* > Version Control > Git > paste the URL from the step above into *Repository URL:*
 
-### Edit your Repo in RStudio
+### Edit, Commit, and Push your Repo in RStudio
 
 1. In the Files Pane, Open the README.md file
 1. In the Editor Pane, modify your README with [Markdown](https://en.wikipedia.org/wiki/Markdown#Example)
 
-    - 
+    - Make a Subheading with the word "Purpose":  `##Purpose`
+    - A blank line, then "This is my first git repository.  I'm going to push this file via RStudio"
+1. Save the changes to this file
+1. In the Git pane:
+
+    1. Check each of the staged files
+    1. Click *commit* and provide a message:  `this is my first edit of a README and supporting files`
+    1. Click the *commit* button to engage your commit  process with the message, then close
+    1. Click the *Push* arrow, then close, then close the commit dialogue box  
+1. View your changes back at gitLab:  https://gitlab.oit.duke.edu/<<your-NetID>>/test-one
+
+### Pull
+
+The next time you open your project in RStudio the first step you should take is to *Pull* from the gitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you make have to resolve some conflicts so get into the habit of pulling before you make edits.
 
 ## Resources
 
