@@ -10,7 +10,9 @@ output: html_document
 
 1. git
 
-    - lost in the forest - https://blog.twoknobbytires.com/category/iowa-mountain-biking-trails/ ; https://twoknobbytires.files.wordpress.com/2012/05/img_4829.jpg?w=840&h=630)
+    - lost in the forest -
+    
+        - ![](https://twoknobbytires.files.wordpress.com/2012/05/img_4829.jpg) [^https://blog.twoknobbytires.com/category/iowa-mountain-biking-trails/]
     - breadcrumbs
     - repository
 1. GitHub and GitLab and Bitbucket
