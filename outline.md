@@ -63,11 +63,17 @@ output: html_document
     1. Click *commit* and provide a message:  `this is my first edit of a README and supporting files`
     1. Click the *commit* button to engage your commit  process with the message, then close
     1. Click the *Push* arrow, then close, then close the commit dialogue box  
-1. View your changes back at gitLab:  https://gitlab.oit.duke.edu/<<your-NetID>>/test-one
+1. View your changes back at gitLab:  `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`
 
 ### Pull
 
 The next time you open your project in RStudio the first step you should take is to *Pull* from the gitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you make have to resolve some conflicts so get into the habit of pulling before you make edits.
+
+### Public or Private Repositories
+
+- `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one` > Settings > Scroll to *Project Visibility* > right-hand drop-down list:  Private | Public
+- Add a Description (Optional)
+- Add Tags (Optional)
 
 ## Resources
 
