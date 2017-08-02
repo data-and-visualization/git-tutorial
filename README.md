@@ -10,3 +10,5 @@ This Repository contains markdown documents useful for the hands-on portion of o
 
 - [Git, GitHub | GitLab, RStudio Outline](outline.md)
 - [Hands-on Exercises](handson.md)
+
+delme comment
