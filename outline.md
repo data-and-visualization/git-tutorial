@@ -6,7 +6,7 @@ output: html_document
 ---
 # git and a git host
 
-## Overview; What is
+## Overview
 
 1. git
 
@@ -77,5 +77,4 @@ The next time you open your project in RStudio the first step you should take is
 
 ## Resources
 
-- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
-- 
+- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)  
