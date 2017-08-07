@@ -16,9 +16,12 @@ Download and install the following:
     1. ![](images/git_os.png "Click on the link to your OS") 
     1. ![](images/git-bash.png 'Run the install and *accept all the defaults* **EXCEPT** choose "Use Git from Bash only" (This may be a message unique to Windows workstations')
     
+- Install R `http://archive.linux.duke.edu/cran/`
+    
 - [RStudio](https://www.rstudio.com/products/RStudio/#Desktop) `https://www.rstudio.com/products/RStudio/#Desktop`
 
     - ![](images/rstudio_download.png "Click *Download Rstudio Desktiop*")
+    - `https://www.rstudio.com/products/rstudio/download/#download`
 
 
 
