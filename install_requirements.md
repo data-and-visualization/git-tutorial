@@ -11,12 +11,14 @@ To complete the hans-on portion of the workshop you'll need software pre-install
 
 Download and install the following:
 
-- [git](https://git-scm.com/downloads)  
+- [git](https://git-scm.com/downloads)  `https://git-scm.com/downloads`
 
-    - ![Click on the link to your OS](images/git_os.png) 
-- [RStudio](https://www.rstudio.com/products/RStudio/#Desktop)
+    1. ![](images/git_os.png "Click on the link to your OS") 
+    1. ![](images/git-bash.png 'Run the install and *accept all the defaults* **EXCEPT** choose "Use Git from Bash only" (This may be a message unique to Windows workstations')
+    
+- [RStudio](https://www.rstudio.com/products/RStudio/#Desktop) `https://www.rstudio.com/products/RStudio/#Desktop`
 
-    - ![Click *Download Rstudio Desktiop*](images/rstudio_download.png)
+    - ![](images/rstudio_download.png "Click *Download Rstudio Desktiop*")
 
 
 
