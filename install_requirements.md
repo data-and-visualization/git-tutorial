@@ -9,7 +9,7 @@ To complete the hands-on portion of the workshop you'll need software pre-instal
 
 ## Required Software
 
-Download and install the following:
+Download and install.  I recommend accepting the install defaults for the following:
 
 - git download page: https://git-scm.com/downloads
 
@@ -26,13 +26,17 @@ Download and install the following:
     - ![](images/rstudio_download.png "Click *Download Rstudio Desktiop*")
 
 
-## Required GitLab Access
+## Verify your Access to **Duke's** GitLab
 
-During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) implementation.  To complete the hands-on portion of the workshop, you **must log-in, in advance** of the workshop to ensure you have NetID access.  If you do not have access [contact OIT](https://oit.duke.edu/help) and resolve the issue in advance of the workshop.
+During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) implementation.  To complete the hands-on portion of the workshop, you **must log-in, in advance** of the workshop and ensure you have NetID access to https://gitlab.oit.duke.edu.  If you do not have access to **Duke's** gitlab, [contact OIT](https://oit.duke.edu/help) and resolve the issue in advance of the workshop.
 
-## Genearte SSH keys Generated in Advance of the workshop
+- Be certain to login via "Duke Shibboleth Login" using your NetID
 
-I recommend generating your SSH keys in advance of the workshop.  To do so, you should have already installed git to your laptop.  Then follow these instructions for generating the keys.  We will cover this in class but [I recommend following the steps on *Generating a new SSH key pair*](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair) in advance of the workshop.
+    - ![](images/gitlab_shib_login.png)  
+
+## Genearte SSH keys in Advance of the Workshop
+
+I recommend generating your SSH keys in advance of the workshop.  To do so, you should have already installed git to your laptop.  Then follow these instructions for generating the keys.  We will cover key configuration in the workshop and [I recommend following the steps on **Generating a new SSH key pair**](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair) **in advance** of the workshop.
 
 
 
