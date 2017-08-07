@@ -38,5 +38,18 @@ During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) imp
 
 I recommend generating your SSH keys in advance of the workshop.  To do so, you should have already installed git to your laptop.  Then follow these instructions for generating the keys.  We will cover key configuration in the workshop and [I recommend following the steps on **Generating a new SSH key pair**](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair) **in advance** of the workshop.
 
+1. To begin, open a shell **from RStudio**
+
+    1. `Tools > Shell...`
+    1. At the Shell enter, `ssh-keygen -t rsa -C "your.email@example.com" -b 4096`  Be sure to replace `your.email@example.com` with *yourNetID@duke.edu*.  e.g.:  `td184@duke.edu`
+    1. you'll see the mesage, "Generating public/private rsa key pair."
+        
+        1. Wait till you see `Enter file in which to save the key (/c/Users/<<yourNetID>>/.ssh/id_rsa):`. 
+        1. Hit `Enter` and accept the default location
+        1. JRLJRLJLR -- does it make sense to `Enter passphrase (empty for no passphrase):`
+        
+    1. Close the Shell
+        
+
 
 
