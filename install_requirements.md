@@ -1,11 +1,11 @@
 ---
-title: "Install Prereqs for Workshop"
+title: "Install Prerequisite for Workshop"
 author: "John Little"
 date: "`r Sys.Date()`"
 output: html_document
 ---
 
-To complete the hans-on portion of the workshop you'll need software pre-installed.  Due to the nature of the workshop we will not have time to troubleshoot installations durhing the workshop.  Please be sure to perform the following steps **on the laptop you are bringing to the workshop**.
+To complete the hands-on portion of the workshop you'll need software pre-installed.  Due to the nature of the workshop we will not have time to troubleshoot installations during the workshop.  Please be sure to perform the following steps **on the laptop you will bring to the workshop**.
 
 ## Required Software
 
