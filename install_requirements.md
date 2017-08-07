@@ -11,18 +11,19 @@ To complete the hands-on portion of the workshop you'll need software pre-instal
 
 Download and install the following:
 
-- [git](https://git-scm.com/downloads)  `https://git-scm.com/downloads`
+- git download page: https://git-scm.com/downloads
 
     1. ![](images/git_os.png "Click on the link to your OS") 
-    1. ![](images/git-bash.png 'Run the install and *accept all the defaults* **EXCEPT** choose "Use Git from Bash only" (This may be a message unique to Windows workstations')
+    1. Run the install and accept all the defaults
     
-- Install R `http://archive.linux.duke.edu/cran/`
+- R download: http://archive.linux.duke.edu/cran/
+
+    - If you have not installed R before, choose *install R for the first time*
+    - If you already have R installed on your workstation, I recommend running the latest version but any reasonably current version should be fine.  The latest version is R-3.4.1
     
-- [RStudio](https://www.rstudio.com/products/RStudio/#Desktop) `https://www.rstudio.com/products/RStudio/#Desktop`
+- [RStudio](https://www.rstudio.com/products/rstudio/download/#download) `https://www.rstudio.com/products/rstudio/download/#download`
 
     - ![](images/rstudio_download.png "Click *Download Rstudio Desktiop*")
-    - `https://www.rstudio.com/products/rstudio/download/#download`
-
 
 
 ## Required GitLab Access
