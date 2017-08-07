@@ -9,21 +9,23 @@ To complete the hands-on portion of the workshop you'll need software pre-instal
 
 ## Required Software
 
-Download and install.  I recommend accepting the install defaults for the following:
+**Download and install**.  I recommend accepting the install defaults for the following:
 
-- git download page: https://git-scm.com/downloads
+- **git** https://git-scm.com/downloads
 
     1. ![](images/git_os.png "Click on the link to your OS") 
     1. Run the install and accept all the defaults
     
-- R download: http://archive.linux.duke.edu/cran/
+- **R** http://archive.linux.duke.edu/cran/
 
     - If you have not installed R before, choose *install R for the first time*
     - If you already have R installed on your workstation, I recommend running the latest version but any reasonably current version should be fine.  The latest version is R-3.4.1
     
-- [RStudio](https://www.rstudio.com/products/rstudio/download/#download) `https://www.rstudio.com/products/rstudio/download/#download`
+- [**RStudio**](https://www.rstudio.com/products/rstudio/download/#download) `https://www.rstudio.com/products/rstudio/download/#download`
 
     - ![](images/rstudio_download.png "Click *Download Rstudio Desktiop*")
+    
+- If you haven't yet, install each of those programs
 
 
 ## Verify your Access to **Duke's** GitLab
