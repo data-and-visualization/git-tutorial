@@ -46,6 +46,11 @@ I recommend generating your SSH keys in advance of the workshop.  To do so, you 
         
         1. Wait till you see `Enter file in which to save the key (/c/Users/<<yourNetID>>/.ssh/id_rsa):`. 
         1. Hit `Enter` and accept the default location
+        1. If you see a message `Overwrite (y/n)?`, type 'n' and hit enter.  Do you already use GIT?  Check with a local Administator if you don't know.
+            
+            - You can save a key with a different name.
+            - e.g. id_forworkshop.rsa
+            
         1. JRLJRLJLR -- does it make sense to `Enter passphrase (empty for no passphrase):`
         
     1. Close the Shell
