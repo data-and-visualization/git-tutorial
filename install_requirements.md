@@ -13,7 +13,7 @@ Download and install.  I recommend accepting the install defaults for the follow
 
 - git download page: https://git-scm.com/downloads
 
-    1. ![](images/git_os.png =215 "Click on the link to your OS") 
+    1. ![](images/git_os.png "Click on the link to your OS") 
     1. Run the install and accept all the defaults
     
 - R download: http://archive.linux.duke.edu/cran/
