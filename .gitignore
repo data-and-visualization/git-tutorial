@@ -20,7 +20,6 @@
 
 # Xaringan Slides
 *libs/
-*.html
 
 # produced vignettes
 vignettes/*.html
