@@ -44,12 +44,10 @@ To complete the hands-on portion of the workshop you'll need software pre-instal
     
 - **R**: http://archive.linux.duke.edu/cran/
 
-    - If you have not installed R before, choose *install R for the first time*
-    - If you already have R installed on your workstation, I recommend running the latest version but any reasonably current version should be fine.  The latest version is R-3.4.1
+    - If you have not installed R before choose *install R for the first time*
+    - If you already have R installed on your workstation I recommend running the latest version, but any reasonably current version should be fine.
     
-- **RStudio**: https://www.rstudio.com/products/rstudio/download/#download
-
-    - ![](../images/rstudio_download.png "Click *Download Rstudio Desktiop*")
+- **RStudio**: https://www.rstudio.com/products/rstudio/download/#download <br>  ![](../images/rstudio_download.png "Click *Download Rstudio Desktop*")
     
 - If you haven't yet, install each of those programs
 
@@ -58,9 +56,7 @@ To complete the hands-on portion of the workshop you'll need software pre-instal
 
 During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) implementation.  To complete the hands-on portion of the workshop, you **must log-in** -- **in advance** of the workshop -- and ensure you have NetID access to https://gitlab.oit.duke.edu.  If you do not have access to **Duke's** GitLab, [contact OIT](https://oit.duke.edu/help).
 
-- Be certain you login via "Duke Shibboleth Login" using your NetID
-
-    - ![](../images/gitlab_shib_login.png)  
+- Be certain you login via "Duke Shibboleth Login" using your NetID <br> ![](../images/gitlab_shib_login.png)  
 
 ### Genearte SSH keys in Advance of the Workshop
 
@@ -68,7 +64,7 @@ I recommend generating your SSH keys in advance of the workshop.  To do so, you 
 
 1. To begin, open a shell **from RStudio**
 
-    1. In RStudio > Menubar > `Tools > Shell...`
+    - In RStudio > Menubar > `Tools > Shell...` <br> ![](../images/shell.png)
     
 1. Follow the instructions https://gitlab.oit.duke.edu/help/ssh/README
 1. Close the Shell
