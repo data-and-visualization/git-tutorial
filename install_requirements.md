@@ -38,7 +38,7 @@ During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) imp
 
 ## Genearte SSH keys in Advance of the Workshop
 
-I recommend generating your SSH keys in advance of the workshop.  To do so, you should have already installed git to your laptop.  Then follow these instructions for generating the keys.  We will cover key configuration in the workshop and [I recommend following the steps on **Generating a new SSH key pair**](https://gitlab.oit.duke.edu/help/ssh/README) **in advance** of the workshop.
+I recommend generating your SSH keys in advance of the workshop.  To do so, you should have already installed Git to your laptop.  Then follow these instructions for generating the keys.  We will cover key configuration in the workshop and [I recommend following the steps on **Generating a new SSH key pair**](https://gitlab.oit.duke.edu/help/ssh/README) **in advance** of the workshop.
 
 1. To begin, open a shell **from RStudio**
 

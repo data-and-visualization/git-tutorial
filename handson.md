@@ -34,7 +34,7 @@ output: html_document
 1. In the Editor Pane, modify your README with [Markdown](https://en.wikipedia.org/wiki/Markdown#Example)
 
     - Make a Subheading with the word "Purpose":  `##Purpose`
-    - A blank line, then "This is my first git repository.  I'm going to push this file via RStudio"
+    - A blank line, then "This is my first Git repository.  I'm going to push this file via RStudio"
 1. Save the changes to this file
 1. In the Git pane:
 
