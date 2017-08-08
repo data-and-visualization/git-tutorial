@@ -1,0 +1,24 @@
+name: "Git & RStudio"
+output_dir: "docs"
+navbar:
+  title: "Reproducibility: Git & RStudio"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "outline"
+      href: outline.html
+    - text: "Hands-On"
+      href: handson.html
+  right:
+    - icon: fa-github
+#    - text: "GitHub"
+      href: http://github.com/libjohn          
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    css: ["flatly.min.css", "duke.css"]
