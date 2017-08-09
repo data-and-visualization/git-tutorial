@@ -1,13 +1,13 @@
 # How to Build this site:
 
-1. clone to RStudio
-2. library(rmarkdown)  # Probably not necessary as it should be built-in
-3. Environment | History | **Build** tab > Build Website button
+This site is built with R Markdown's website feature.  [Read more about websites](http://rmarkdown.rstudio.com/lesson-13.html).
 
-    - Or, `rmarkdown::render_site()`
+1. clone from Github to RStudio
+
+4. Manipulate files
+
+3. `rmarkdown::render_site()`
     
-4. Manipulate some files
-
 5. copy /docs web serving location
 
     - e.g. github repo served by Netlify

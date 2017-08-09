@@ -1,0 +1,38 @@
+---
+title: "Markdown QuickStart"
+output: html_document
+---
+
+## Very Basic Markdown Tags
+
+```{}
+# Heading
+
+## Sub-heading
+
+### Another deeper heading
+ 
+Paragraphs are separated by a blank line.
+
+Text attributes _italic_, *italic*, __bold__, **bold**, `monospace`.
+
+A [link](http://example.com).
+
+Bullet list:
+
+* apples  
+* oranges  
+* pears  
+
+Numbered list:
+
+1. apples
+2. oranges
+3. pears
+```
+
+## More On R markdown
+
+- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+- http://rmarkdown.rstudio.com/lesson-1.html

@@ -1,15 +1,12 @@
----
-title: "Git Workshop - Hands-on"
-author: "John Little"
-output: html_document
----
-## Hands-On:  a quickstart
+### Generate SSH Keys 
 
-### Generate SSH Keys (Do this once per workstation)
+This must be done on each workstation you use to *push*.  
 
-- https://gitlab.oit.duke.edu/help/ssh/README  
+- https://gitlab.oit.duke.edu/help/ssh/README
 
-### Make a Repository
+This step was covered in the [outline] > Prerequisites section.
+
+## Make a Repository
 1. Duke's GitLab -- https://gitlab.oit.duke.edu
 1. Duke Shibboleth Login
 1. New Project
@@ -28,7 +25,7 @@ output: html_document
 	1. Back at your GitLab repo `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copyURL to clipboard (click icon)
 	1. Launch RStudio, Menubar:  *File > New Project* > Version Control > Git > paste the URL from the step above into *Repository URL:*
 
-### Edit, Commit, and Push your Repo in RStudio
+## Edit, Commit, and Push your Repo in RStudio
 
 1. In the Files Pane, Open the README.md file
 1. In the Editor Pane, modify your README with [Markdown](https://en.wikipedia.org/wiki/Markdown#Example)
@@ -44,17 +41,17 @@ output: html_document
     1. Click the *Push* arrow, then close, then close the commit dialogue box  
 1. View your changes back at gitLab:  `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`
 
-### Pull
+## Pull
 
 The next time you open your project in RStudio the first step you should take is to *Pull* from the gitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you make have to resolve some conflicts so get into the habit of pulling before you make edits.
 
-### Public or Private Repositories
+## Public or Private Repositories
 
 - `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one` > Settings > Scroll to *Project Visibility* > right-hand drop-down list:  Private | Public
 - Add a Description (Optional)
-- Add Tags (Optional)
+- Add Tags (Optional)  
 
-### Public Hubs v Duke's Hub
+## Public Hubs v Duke's Hub
 
 - Public Hubs:  GitHub, GitLab, Bitbucket
 
@@ -68,7 +65,3 @@ The next time you open your project in RStudio the first step you should take is
     - Same Functionality as above
     - Price is right
     - Can make any repo public, private by default 
-
-## Resources
-
-- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)  

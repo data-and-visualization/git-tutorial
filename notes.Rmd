@@ -1,6 +1,17 @@
+# Notes
+
+1. git
+
+    - lost in the forest -
+    
+        - ![](https://twoknobbytires.files.wordpress.com/2012/05/img_4829.jpg) [^https://blog.twoknobbytires.com/category/iowa-mountain-biking-trails/]
+    - breadcrumbs
+    - repository
+    
+============================
+
 ---
 title: "Git Workshop - Hands-on"
-author: "John Little"
 output: html_document
 ---
 ## Hands-On:  a quickstart
