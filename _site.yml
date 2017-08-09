@@ -1,11 +1,11 @@
 name: "Git & RStudio"
-output_dir: "docs"
+output_dir: docs
 navbar:
   title: "Reproducibility: Git & RStudio"
   left:
-    - text: "Home"
-      href: index.html
-    - text: "outline"
+#    - text: "Home"
+#      href: index.html
+    - text: "Outline"
       href: outline.html
     - text: "Hands-On"
       href: handson.html
@@ -21,4 +21,5 @@ output:
     toc_depth: 2
     toc_float:
       collapsed: false
-    css: ["flatly.min.css", "duke.css"]
+    css: ["duke.css"]
+    #css: ["flatly.min.css", "duke.css"]

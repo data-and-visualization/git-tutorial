@@ -1,9 +1,7 @@
 ---
 title: "Git Workshop - Outline"
-author: "John Little"
 output: html_document
 ---
-# Git and a Git host
 
 ## Overview
 

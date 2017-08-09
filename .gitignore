@@ -19,7 +19,7 @@
 *.Rproj
 
 # Xaringan Slides
-*libs/
+# *libs/
 
 # produced vignettes
 vignettes/*.html
