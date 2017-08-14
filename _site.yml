@@ -5,7 +5,7 @@ navbar:
   left:
 #    - text: "Home"
 #      href: index.html
-    - text: "Outline"
+    - text: "Home"
       href: outline.html
     - text: "Hands-On"
       href: handson.html
@@ -16,7 +16,7 @@ navbar:
   right:
     - icon: fa-github
 #    - text: "GitHub"
-      href: http://github.com/libjohn          
+      href: http://github.com/libjohn/git-tutorial          
 output:
   html_document:
     theme: flatly

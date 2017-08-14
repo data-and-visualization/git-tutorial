@@ -3,4 +3,18 @@ title: "Git Workshop - Home"
 output: html_document
 ---
 
-Start: https://libjohn.github.io/git/outline.html
+## Workshop Resorce Page
+
+1. [Outline](outline.html)
+
+    - [Prerequisites](outline.html#prerequisites)  
+    
+1. [Hands-On](handson.html)
+
+    - We use Duke's GitLab  
+    
+1. [Markdown](markdown.html)  
+1. [Resources](resources.html)
+
+
+
