@@ -3,8 +3,8 @@ output_dir: docs
 navbar:
   title: "Reproducibility: Git & RStudio"
   left:
-#    - text: "Home"
-#      href: index.html
+    - text: "Home"
+      href: index.html
     - text: "Home"
       href: outline.html
     - text: "Hands-On"
