@@ -31,7 +31,7 @@ Numbered list:
 3. pears
 ```
 
-## More On R markdown
+## R markdown
 
 - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 

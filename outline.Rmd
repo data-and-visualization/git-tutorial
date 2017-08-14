@@ -1,9 +1,9 @@
 ---
-title: "Git Workshop - Outline"
+title: "Git Workshop - Overview"
 output: html_document
 ---
 
-## Overview
+## Workshop Outline
 
 1. Git
 1. GitHub and GitLab and Bitbucket
@@ -29,36 +29,39 @@ To complete the hands-on portion of the workshop you'll need software pre-instal
 
 I recommend accepting the install defaults for the following:
 
-- **Git**: https://git-scm.com/downloads
+- **Git**: <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
 
     1. Download and install Git <br> ![](images/git_os.png "Click on the link to your OS") 
     1. Run the install and accept all the defaults
     
-- **R**: http://archive.linux.duke.edu/cran/
+- **R**: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a>
 
     - If you have not installed R before choose *install R for the first time*
     - If you already have R installed on your workstation I recommend running the latest version, but any reasonably current version should be fine.
     
-- **RStudio**: https://www.rstudio.com/products/rstudio/download/#download <br>  ![](images/rstudio_download.png "Click *Download Rstudio Desktop*")
+- **RStudio**: <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#download</a> <br>  ![](images/rstudio_download.png "Click *Download Rstudio Desktop*")
     
-- If you haven't yet, install each of those programs
+
+If you haven't yet, install each of the above applications.  
 
 
 ### **Duke's** GitLab -- Verify *your NetID* Access
 
-During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) implementation.  To complete the hands-on portion of the workshop, you **must log-in** -- **in advance** of the workshop -- and ensure you have NetID access to https://gitlab.oit.duke.edu.  If you do not have access to **Duke's** GitLab, [contact OIT](https://oit.duke.edu/help).
+During the workshop we will use <a href="https://gitlab.oit.duke.edu" target="_blank">Duke's GitLab</a>.  To complete the hands-on portion of the workshop, you **must log-in** -- **in advance** of the workshop -- and ensure you have NetID access to <a href="https://gitlab.oit.duke.edu" target="_blank"> https://gitlab.oit.duke.edu</a>.  If you do not have access to **Duke's** GitLab, [contact OIT](https://oit.duke.edu/help).
 
-- Be certain you login via "Duke Shibboleth Login" using your NetID <br> ![](images/gitlab_shib_login.png)  
+- Be certain you log-in via "Duke Shibboleth Login" using your NetID <br> ![](images/gitlab_shib_login.png)  
 
-### Genearte SSH keys in Advance of the Workshop
+### Generate SSH keys in Advance of the Workshop
 
-I recommend generating your SSH keys in advance of the workshop.  To do so, you should have already installed Git to your laptop.  Then follow these instructions for generating the keys.  We will cover key configuration in the workshop although you will find the explanation easier to if you generate your keys in advance.
+I recommend generating your SSH keys in advance of the workshop, then add your public key to Duke's GitLab.  To do so, you should have already installed Git to your laptop.  
+
+Follow these instructions for generating and adding keys.  We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate your keys in advance.
 
 1. To begin, open a shell **from RStudio**
 
     - In RStudio > Menubar > `Tools > Shell...` <br> ![](images/shell.png)
     
-1. Follow the instructions https://gitlab.oit.duke.edu/help/ssh/README
+1. Follow the instructions <a href="https://gitlab.oit.duke.edu/help/ssh/README" target="_blank">https://gitlab.oit.duke.edu/help/ssh/README</a>
 
-    - You can stop at Step 5 of *[Generating a new SSH key pair](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair)*
+    - You can stop *after* step 5 of *[Generating a new SSH key pair](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair)*
 1. Close the Shell

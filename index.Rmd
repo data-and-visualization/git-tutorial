@@ -3,9 +3,9 @@ title: "Git Workshop - Home"
 output: html_document
 ---
 
-## Workshop Resorce Page
+## Workshop Resource Page
 
-1. [Outline](outline.html)
+1. [Overview](outline.html)
 
     - [Prerequisites](outline.html#prerequisites)  
     

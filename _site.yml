@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Home"
+    - text: "Overview"
       href: outline.html
     - text: "Hands-On"
       href: handson.html
