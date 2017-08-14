@@ -21,7 +21,7 @@ output: html_document
 
 ### Load & Install Software **Before the Workshop**
 
-To complete the hands-on portion of the workshop you'll need software pre-installed.  Due to the nature of the workshop we will not have time to troubleshoot installations during the workshop.  Please be sure to perform the following steps **on the laptop you will bring to the workshop**.  
+To complete the hands-on portion of the workshop you'll need software pre-installed.  Due to the nature of the workshop we will not have time to troubleshoot installations during the workshop.  Please be sure to perform the following steps **on the laptop you bring to the workshop**.  
 
 ### Required Software
 
@@ -44,7 +44,7 @@ I recommend accepting the install defaults for the following:
 - If you haven't yet, install each of those programs
 
 
-### Verify your Access to **Duke's** GitLab
+### **Duke's** GitLab -- Verify *your NetID* Access
 
 During the Workshop we will use [Duke's Gitlab](https://gitlab.oit.duke.edu) implementation.  To complete the hands-on portion of the workshop, you **must log-in** -- **in advance** of the workshop -- and ensure you have NetID access to https://gitlab.oit.duke.edu.  If you do not have access to **Duke's** GitLab, [contact OIT](https://oit.duke.edu/help).
 
@@ -59,4 +59,6 @@ I recommend generating your SSH keys in advance of the workshop.  To do so, you 
     - In RStudio > Menubar > `Tools > Shell...` <br> ![](images/shell.png)
     
 1. Follow the instructions https://gitlab.oit.duke.edu/help/ssh/README
+
+    - You can stop at Step 5 of *[Generating a new SSH key pair](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair)*
 1. Close the Shell

@@ -4,7 +4,7 @@ This must be done on each workstation you use to *push*.
 
 - https://gitlab.oit.duke.edu/help/ssh/README
 
-This step was covered in the [outline] > Prerequisites section.
+This step was covered in the [Outline Section](outline.html#genearte_ssh_keys_in_advance_of_the_workshop)
 
 ## Make a Repository
 1. Duke's GitLab -- https://gitlab.oit.duke.edu
@@ -28,7 +28,7 @@ This step was covered in the [outline] > Prerequisites section.
 ## Edit, Commit, and Push your Repo in RStudio
 
 1. In the Files Pane, Open the README.md file
-1. In the Editor Pane, modify your README with [Markdown](https://en.wikipedia.org/wiki/Markdown#Example)
+1. In the Editor Pane, modify your README with [Markdown](markdown.html)
 
     - Make a Subheading with the word "Purpose":  `##Purpose`
     - A blank line, then "This is my first Git repository.  I'm going to push this file via RStudio"
