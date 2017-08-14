@@ -1,3 +1,8 @@
+---
+title: "Git Workshop - Hands-On"
+output: html_document
+---
+
 ### Generate SSH Keys 
 
 This must be done on each workstation you use to *push*.  
