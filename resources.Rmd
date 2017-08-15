@@ -6,3 +6,14 @@ output: html_document
 ## Resources
 
 - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+- Data Carpentry [Reproducible Research Version Control](http://www.datacarpentry.org/rr-version-control/)
+- Duke’s Co-Lab [Introduction to Git](https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about)
+- Duke’s [GitLab](https://gitlab.oit.duke.edu/)
+
+    - [Managing SSH keys](https://gitlab.oit.duke.edu/help/ssh/README)
+    
+- [Happy Git and GitHub for the useR](http://happygitwithr.com/)
+- [Writing clear code: Tools for Reproducible Research](http://kbroman.org/Tools4RR/assets/lectures/07_clearcode.pdf)
+- [Initial Steps Toward Reproducible Research](http://kbroman.org/steps2rr/) 
+- [Got 15 minutes](https://try.github.io/levels/1/challenges/1) - Interactive tool to learn Git at the Command Line
+- [Learn Git | Course | Codeacademy ](https://www.codecademy.com/learn/learn-git) -- Free
