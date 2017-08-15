@@ -22,7 +22,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
     - ![](images/project_name.png) `-->` `test-one` 
     - ![](images/create_project.png) -- Create Project
-    - On the Next Page, notice the section below *Command line instructions*.  That information could come in handy.  For future repositories, you may want to make a note of those *Git* commands.  
+    - GitLab will present a new page.  Notice the section below the *Command line instructions* header.  That information can come in handy.  For future repositories, you may want to make a note of those *Git* commands.  We will not use those commands today so you can move on.
     
 1. Make a README file 
 
@@ -44,30 +44,38 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     
 1. Congratulations.  You've just created your first GitLab repository.  Click *test-one* in the top-left of your screen and you'll see your repository -- including the three files you just created.
 
+&nbsp; 
+
 ## Clone
 
-Using RStudio, clone your repository.  This will pull down the whole repo including the three files you just created.
+Using RStudio, clone your repository.  Cloning will pull down the whole repo to your local system -- including the three files you just created.
     
 ### Bring the repo down locally via RStudio
 
 1. Copy GitLab URL to clipboard 
 
-    - ![](images/copy_repo.png) -- Copy the repo URL
-	  - repo `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copyURL to clipboard (click icon)
+	  - The repo should be at a location like this. `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copy the *git* URL to the clipboard by clicking the icon
+	  - ![](images/copy_repo.png) -- Copy the repo URL
 	    
 1. Launch RStudio and create a *New Project...*
 
-    1. Menubar:  *File > New Project...* > Version Control > Git > paste the URL from the step above into *Repository URL:* <br>
+    1. From the RStudio menubar:  *File > New Project...* > Version Control > Git
+    
+        - Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio <br>
 	    
 	    ![](images/project_version_git.png)
 	    
     1. Create Project
+
+&nbsp; 
 
 ## Push: Edit and Commit
 
 This time you'll make local changes by editing your local repository.  After saving the changes you'll *add* and *commit* the changes.  Lastly, you will *push* your changes up to the remote repoistory.
 
 ![](images/push.png) 
+
+&nbsp;  
 
 ### Edit
 
@@ -89,17 +97,23 @@ This time you'll make local changes by editing your local repository.  After sav
     1. Click the *Push* arrow, then close, then close the commit dialogue box  
 1. View your changes back at GitLab:  `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`
 
+&nbsp; 
+
 ## Pull
 
 The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you make have to resolve some conflicts so get into the habit of pulling before you make edits.
 
 ![](images/git_push_pull.png)
 
+&nbsp;
+
 ## Public or Private Repositories
 
 - `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one` > Settings > Scroll to *Project Visibility* > right-hand drop-down list:  Private | Public
 - Add a Description (Optional)
 - Add Tags (Optional)  
+
+&nbsp; 
 
 ## Public Hubs v Duke's Hub
 
