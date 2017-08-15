@@ -53,9 +53,9 @@ During the workshop we will use <a href="https://gitlab.oit.duke.edu" target="_b
 
 ### Generate SSH keys in Advance of the Workshop
 
-I recommend generating your SSH keys in advance of the workshop, then add your public key to Duke's GitLab.  To do so, you should have already installed Git to your laptop.  
+I recommend generating your SSH keys in advance of the workshop.  Then add your public key to Duke's GitLab.  To do so, you should have already installed Git to your laptop.  
 
-Follow these instructions for generating and adding keys.  We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate your keys in advance.
+Follow these instructions for generating and adding keys.  We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.
 
 1. To begin, open a shell **from RStudio**
 

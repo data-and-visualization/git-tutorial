@@ -9,28 +9,65 @@ This must be done on each workstation you use to *push*.
 
 - https://gitlab.oit.duke.edu/help/ssh/README
 
-This step was covered in the [Outline Section](outline.html#genearte_ssh_keys_in_advance_of_the_workshop)
+This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in_advance_of_the_workshop)
 
 ## Make a Repository
-1. Duke's GitLab -- https://gitlab.oit.duke.edu
+1. Duke's GitLab -- <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a>
 1. Duke Shibboleth Login
 1. New Project
-1. Add a project name:  `test-one` > Create Project
 
-    - Notice command line instructions.  Could come in handy  
-1. Make a README file (click the README link)  > `Commit changes`
-1. Make a license file (click the LICENSE link) 
+    - ![](images/new_gitlab_project_button.png)
+    
+1. Add a project name:  
 
-	- click *Appply a license format* > choose *MIT* (or paste in a Creative Commons License) > `Commit changes`  
-1. Make a .gitignore file (click the .gitignore link)
+    - ![](images/project_name.png) -- `test-one` 
+    - ![](images/create_project.png) -- Create Project
+    - On the Next Page, notice the section below *Command line instructions*.  That information could come in handy.  For future repositories, you may want to make a note of those *Git* commands.  
+    
+1. Make a README file (Open in a New Tab, click the README link)
 
-    - click *Apply a .gitignore format* > choose *R* > `Commit changes`  
-1. Bring the repo down locally via RStudio
+    1. ![](images/readme.png)
+    1. `Commit changes`
+    
+1. Make a license file (Open in a New Tab, click the LICENSE link) 
 
-	1. Back at your GitLab repo `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copyURL to clipboard (click icon)
-	1. Launch RStudio, Menubar:  *File > New Project* > Version Control > Git > paste the URL from the step above into *Repository URL:*
+    1. ![](images/license.png)click *Appply a license format* > choose *MIT* (or paste in a Creative Commons License) 
+    1. `Commit changes`  
+    
+1. Make a .gitignore file (Open in a New Tab, click the .gitignore link)
 
-## Edit, Commit, and Push your Repo in RStudio
+    1. click *Apply a .gitignore format* 
+    
+        - choose *R* 
+        
+    1. `Commit changes`  
+    
+1. Congratulations.  You've just created your first GitLab repository.  Click *test-one* in the top-right of your screen and you'll see the three files you just created.
+
+## Clone
+
+Using RStudio, clone your repository.  This will pull down the whole repo including the three files you just created.
+    
+### Bring the repo down locally via RStudio
+
+	1. Copy GitLab URL to clipboard 
+	
+	    - ![](images/copy.png) -- Copy the repo URL
+	    - repo `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copyURL to clipboard (click icon)
+	    
+	1. Launch RStudio and create a *New Project...*
+	
+	    1. Menubar:  *File > New Project...* > Version Control > Git > paste the URL from the step above into *Repository URL:* <br>
+	    
+	    ![](images/project_version_git.png)
+	    
+	    1. Create Project
+
+## Push: Edit and Commit
+
+This time you'll make local changes by editing your local repository.  After saving the changes you'll *add* and *commit* the changes.  Lastly, you will *push* your changes up to the remote repoistory.
+
+### Edit
 
 1. In the Files Pane, Open the README.md file
 1. In the Editor Pane, modify your README with [Markdown](markdown.html)
