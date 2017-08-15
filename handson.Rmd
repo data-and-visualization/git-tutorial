@@ -16,33 +16,42 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 1. Duke Shibboleth Login
 1. New Project
 
-    - ![](images/new_gitlab_project_button.png)
+    > ![](images/new_gitlab_project_button.png)
     
 1. Add a project name.  Use the name *test-one*  
 
-    - ![](images/project_name.png) `-->` `test-one` 
-    - ![](images/create_project.png) -- Create Project
+    > ![](images/project_name.png) `-->` `test-one` 
+    
+    > ![](images/create_project.png) <br> Create Project
     - GitLab will present a new page.  Notice the section below the *Command line instructions* header.  That information can come in handy.  For future repositories, you may want to make a note of those *Git* commands.  We will not use those commands today so you can move on.
     
 1. Make a README file 
-
-    1. ![](images/readme.png) <br>Open in a New Tab, click the README link  
-    1. Commit changes
+    
+    1. > ![](images/readme.png) <br>Open in a New Tab, click the README link
+    1. Make a Heading with the word `#README` (See [Markdown](markdown.html) section)
+    1. After a blank line type: `This is my first GitLab repository.`
+    1. Commit changes  
+    
+    &nbsp; 
     
 1. Make a license file (Open in a New Tab, click the LICENSE link) 
 
-    1. ![](images/license.png) <br>click *Appply a license format* > choose *MIT* (or paste in a Creative Commons License) 
+    1. > ![](images/license.png) <br> *Appply a license format* 
+    
+        - choose *MIT* license, or paste a [Creative Commons](https://creativecommons.org/share-your-work/) License into license.md
     1. Commit changes
+    
+    &nbsp; 
     
 1. Make a .gitignore file (Open in a New Tab, click the .gitignore link)
 
-    1. click *Apply a .gitignore format* 
+    1. *Apply a .gitignore format* 
     
         - choose *R* 
         
     1. Commit changes
     
-1. Congratulations.  You've just created your first GitLab repository.  Click *test-one* in the top-left of your screen and you'll see your repository -- including the three files you just created.
+1. Congratulations.  You've just created your first GitLab repository.  Click *test-one* in the top-left of your GitLab repo screen.  Now you'll see your repository -- including the three files you just created.
 
 &nbsp; 
 
@@ -52,10 +61,10 @@ Using RStudio, clone your repository.  Cloning will pull down the whole repo to 
     
 ### Bring the repo down locally via RStudio
 
-1. Copy GitLab URL to clipboard 
+1. Copy GitLab repo URL to clipboard 
 
 	  - The repo should be at a location like this. `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copy the *git* URL to the clipboard by clicking the icon
-	  - ![](images/copy_repo.png) -- Copy the repo URL
+	  - > ![](images/copy_repo.png) <br> Copy the repo URL
 	    
 1. Launch RStudio and create a *New Project...*
 
@@ -63,7 +72,7 @@ Using RStudio, clone your repository.  Cloning will pull down the whole repo to 
     
         - Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio <br>
 	    
-	    ![](images/project_version_git.png)
+        - > ![](images/project_version_git.png)
 	    
     1. Create Project
 

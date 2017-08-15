@@ -332,35 +332,52 @@ div.tocify {
 <li>Duke’s GitLab – <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a></li>
 <li>Duke Shibboleth Login</li>
 <li><p>New Project</p>
-<ul>
-<li><img src="images/new_gitlab_project_button.png" title="fig:" /></li>
-</ul></li>
+<blockquote>
+<div class="figure">
+<img src="images/new_gitlab_project_button.png" />
+
+</div>
+</blockquote></li>
 <li><p>Add a project name. Use the name <em>test-one</em></p>
+<blockquote>
+<p><img src="images/project_name.png" /> <code>--&gt;</code> <code>test-one</code></p>
+</blockquote>
+<blockquote>
+<p><img src="images/create_project.png" /> <br> Create Project</p>
+</blockquote>
 <ul>
-<li><img src="images/project_name.png" /> <code>--&gt;</code> <code>test-one</code></li>
-<li><img src="images/create_project.png" /> – Create Project</li>
 <li>GitLab will present a new page. Notice the section below the <em>Command line instructions</em> header. That information can come in handy. For future repositories, you may want to make a note of those <em>Git</em> commands. We will not use those commands today so you can move on.</li>
 </ul></li>
 <li><p>Make a README file</p>
 <ol style="list-style-type: decimal">
-<li><img src="images/readme.png" /> <br>Open in a New Tab, click the README link<br />
-</li>
+<li><blockquote>
+<p><img src="images/readme.png" /> <br>Open in a New Tab, click the README link</p>
+</blockquote></li>
+<li>Make a Heading with the word <code>#README</code> (See <a href="markdown.html">Markdown</a> section)</li>
+<li>After a blank line type: <code>This is my first GitLab repository.</code></li>
 <li>Commit changes</li>
-</ol></li>
+</ol>
+<p> </p></li>
 <li><p>Make a license file (Open in a New Tab, click the LICENSE link)</p>
 <ol style="list-style-type: decimal">
-<li><img src="images/license.png" /> <br>click <em>Appply a license format</em> &gt; choose <em>MIT</em> (or paste in a Creative Commons License)</li>
+<li><blockquote>
+<p><img src="images/license.png" /> <br> <em>Appply a license format</em></p>
+</blockquote>
+<ul>
+<li>choose <em>MIT</em> license, or paste a <a href="https://creativecommons.org/share-your-work/">Creative Commons</a> License into license.md</li>
+</ul></li>
 <li>Commit changes</li>
-</ol></li>
+</ol>
+<p> </p></li>
 <li><p>Make a .gitignore file (Open in a New Tab, click the .gitignore link)</p>
 <ol style="list-style-type: decimal">
-<li><p>click <em>Apply a .gitignore format</em></p>
+<li><p><em>Apply a .gitignore format</em></p>
 <ul>
 <li>choose <em>R</em></li>
 </ul></li>
 <li><p>Commit changes</p></li>
 </ol></li>
-<li><p>Congratulations. You’ve just created your first GitLab repository. Click <em>test-one</em> in the top-left of your screen and you’ll see your repository – including the three files you just created.</p></li>
+<li><p>Congratulations. You’ve just created your first GitLab repository. Click <em>test-one</em> in the top-left of your GitLab repo screen. Now you’ll see your repository – including the three files you just created.</p></li>
 </ol>
 <p> </p>
 </div>
@@ -370,21 +387,25 @@ div.tocify {
 <div id="bring-the-repo-down-locally-via-rstudio" class="section level3">
 <h3>Bring the repo down locally via RStudio</h3>
 <ol style="list-style-type: decimal">
-<li><p>Copy GitLab URL to clipboard</p>
+<li><p>Copy GitLab repo URL to clipboard</p>
 <ul>
 <li>The repo should be at a location like this. <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code>, copy the <em>git</em> URL to the clipboard by clicking the icon</li>
-<li><img src="images/copy_repo.png" /> – Copy the repo URL</li>
+<li><blockquote>
+<p><img src="images/copy_repo.png" /> <br> Copy the repo URL</p>
+</blockquote></li>
 </ul></li>
 <li><p>Launch RStudio and create a <em>New Project…</em></p>
 <ol style="list-style-type: decimal">
 <li><p>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git</p>
 <ul>
-<li>Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em> field in RStudio <br></li>
-</ul>
+<li><p>Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em> field in RStudio <br></p></li>
+<li><blockquote>
 <div class="figure">
 <img src="images/project_version_git.png" />
 
-</div></li>
+</div>
+</blockquote></li>
+</ul></li>
 <li><p>Create Project</p></li>
 </ol></li>
 </ol>
