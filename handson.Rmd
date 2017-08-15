@@ -67,6 +67,8 @@ Using RStudio, clone your repository.  This will pull down the whole repo includ
 
 This time you'll make local changes by editing your local repository.  After saving the changes you'll *add* and *commit* the changes.  Lastly, you will *push* your changes up to the remote repoistory.
 
+![](images/push.png) 
+
 ### Edit
 
 1. In the Files Pane, Open the README.md file
@@ -75,6 +77,7 @@ This time you'll make local changes by editing your local repository.  After sav
     - Make a Subheading with the word "Purpose":  `##Purpose`
     - A blank line, then "This is my first Git repository.  I'm going to push this file via RStudio"
 1. Save the changes to this file
+
 
 ### Commit & Push
 
