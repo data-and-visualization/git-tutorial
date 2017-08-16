@@ -128,13 +128,15 @@ The next time you open your project in RStudio the first step you should take is
 
 - Public Hubs:  GitHub, GitLab, Bitbucket
 
-    - public by default
-    - can pay for privacy
-    - large user communities
+    - Public by default
+    - Can pay for privacy
+    - Large user community
 
 - Duke's GitLab can make 
 
     - Works with your NetID
     - Same Functionality as above
     - Price is right
-    - Can make any repo public, private by default 
+    - Private by default 
+    - Can make any repo public
+    - Can share and syncronize accross sites
