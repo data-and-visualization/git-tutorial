@@ -6,6 +6,15 @@
     <meta name="author" content="John Little" />
     <meta name="date" content="2017-09-11" />
     <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-0.9/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding-0.2.11/datatables.js"></script>
+    <link href="libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="duke_color_pallettes_slides.css" type="text/css" />
     <link rel="stylesheet" href="cc-fonts.css" type="text/css" />
   </head>
@@ -20,6 +29,12 @@ class: center, middle, inverse, title-slide
 
 ---
 
+exclude: true
+
+
+
+
+---
 exclude: false
 class: top, center
 background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
@@ -44,8 +59,11 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 ## Outline
 
 1. Git
+
 1. GitHub and GitLab and Bitbucket
+
 1. Markdown  
+
 1. Orchestrating with RStudio
 
 ---
@@ -58,34 +76,44 @@ class: bottom, right
 background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
 
-&lt;small&gt;
+
 Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/)
-&lt;/small&gt;
+
 
 ---
 exclude: true
 class: top, right
 background-image:  url(images/flickr_frits_ahlefeldt_hansel.jpg)
 
-&lt;small&gt;
-Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikingartist/6996819414/in/photolist-bEhwDu-6guogg-9F3WfM-27RqzL-bKvrKv-a1YzBK-654W7Q.jpg)&lt;/small&gt;
+
+Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikingartist/6996819414/in/photolist-bEhwDu-6guogg-9F3WfM-27RqzL-bKvrKv-a1YzBK-654W7Q.jpg)
 
 ---
 ## Repositories
 
 .pull-left[
 
-!["foo"](images/repository_small.jpg)
-&lt;small&gt;Image Credit: 
+![](images/repository_small.jpg)
+Image Credit: 
 [Dennis Reimann](https://www.flickr.com/photos/dbloete/274563369)
-&lt;/small&gt;
-]
 
-.pull-right[
 - Source Code Management
 
 - Track changes in any file set
+
 ]
+
+.pull-right[
+![](images/file-extensions.png)
+&lt;br&gt;Image Credit:  [OpenClipart.org](https://openclipart.org/detail/192197/file-extension-icons)
+
+
+]
+
+---
+class: center, middle, softblue
+
+## Social **git Repositories**
 
 ---
 ## Git Repositories
@@ -106,174 +134,121 @@ Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_D
 ]
 
 ---
-class: center, middle, softblue
+class: center
 
-## Social git Repositories
-
+![](images/social-collaboration.jpg)
+.pull-right[Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)]
+---
+class: center
 .pull-left[ ![](images/gitlab.png)  ]
 .pull-right[ ![](images/github.png)  ]
 
 ![](images/bitbucket.png)
 
 ---
-## This Template
+class: green, middle, center
 
-Combines
 
-- Xaringan slide library ([github](https://github.com/yihui/xaringan) | [vingette](https://slides.yihui.name/xaringan/))
+## Duke's GitLab
 
-- [Duke University Color Palette](https://styleguide.duke.edu/color-palette/)
+http://gitlab.oit.duke.edu
 
-## Clone Me
-
-at
-
-- https://github.com/libjohn/slide-template-dukeu
 
 ---
-## How to use this Template
+## Duke's GitLab v Public Hubs
 
-- Review the [install/get-started instructions](https://slides.yihui.name/xaringan/#8)
 
-- Yihui's [Tips and Techniques](https://slides.yihui.name/xaringan/#22)
 
-1. Create a new R Markdown document from the menu `File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation`
-
-1.  Paste this [Rmd template](https://raw.githubusercontent.com/libjohn/slide-template-dukeu/master/duke_slide_template.Rmd) over the Ninja Template
-
-    - *Yes I should make this an official template* (this is it, for now.)
     
-1. Review the [Template Slides](http://libjohn.github.io/slide-template/duke_slide_template.html) and Style Sheets ([Xaringan-example.css](https://github.com/libjohn/slide-template-dukeu/blob/master/libs/remark-css/example.css) | [duke.css](https://github.com/libjohn/slide-template-dukeu/blob/master/duke_color_pallettes_slides.css))  to learn more about how CSS will affect your composition
+<div id="htmlwidget-cf419f0dfd530766c4ed" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cf419f0dfd530766c4ed">{"x":{"filter":"none","data":[["Private","Public","NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","crosstalkOptions":{"key":null,"group":null},"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+
+Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
 ---
-## Two Column
+class: softblue, middle, center
 
+## Markdown
+
+---
+class: middle
 .pull-left[
-- You can generate a left column 
 
-    - by wrapping the left-hand text in \.pull-left\[ foo \]
+&amp;nbsp; 
 
-- TAGS 
+```
+# Heading
 
-- Splunk
+## Sub-heading
+
+### Another deeper heading
+ 
+Text attributes 
+ *italic*, **bold**, `monospace`.
+
+A [link](http://example.com).
+
+Bullet list:
+- apples  
+- oranges  
+- pears  
+
+Numbered list:
+1. apples
+2. oranges
+3. pears
+```
 ]
 
 .pull-right[
-- You can generate a right column 
+## Sub-heading
 
-    - by wrapping the right-hand text in \.pull-right\[ foo \]
+### Another deeper heading
 
-- foo
+*italicized*, **bold**, `monospace`
 
-- f00
+A [link](#14)
+
+Bullet list:
+- applies
+- oranges
+- pears
+
+Numbered list:
+1. apples
+2. oranges
+3. pears
+
 ]
 
 ---
-
-## Next Steps...
-
-### Text Analysis
-
-- Voyant - Text Analysis
-- Gephi - Network Graph Analysis
-- Lib Guides
-
-    - http://guides.library.duke.edu/text_analysis
-    - http://guides.library.duke.edu/digital_humanities 
-    
-- R and it's many packages
+class: bottom
+background-image: url(images/rmarkdown.png)
+Image Credit: [RStudio](http://rmarkdown.rstudio.com/)
 
 ---
-class: inverse
+class: orange, middle, center
 
-## inverse
+## **Reproducible Data Science** 
 
-### h3
+Integrate your reproducible workflow using *Literate Coding* practices in *R* then generate reports directly from analysis 
 
-**Accomplish** this with '`class: inverse`' as the first line below '`---`'
-
-Lorem Ipsum
-
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-
----
-class: softblue
-
-## softblue
-
-**Accomplish** this with '`class: softblue`' as the first line below '`---`'
-
-Lorem Ipsum
-
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-
-- one
-
-- [Google](http://google.com)
-
-- three
-
----
-class: orange
-
-## orange
-
-**Accomplish** this with '`class: orange`' as the first line below '`---`'
-
-Lorem Ipsum
-
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-
-- one
-
-- [Google](http://google.com)
-
-- three
-
----
-class: green
-
-## green
-
-- `class: green`
-
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-
-- one
-
-- [Green website inspirations](https://webdesignledger.com/50-green-web-designs-to-inspire-you/)
-
-- three
+### R Notebooks + R Markdown + Git
 
 
 ---
-class: h2orange
-background-image: url(http://www.publicdomainpictures.net/pictures/170000/velka/hand-holding-old-keys-1462981136Ul1.jpg)
+class: softblue, middle, center
 
-## CUSTOM: Two Column
+## Rstudio &amp; Git
 
-**Accomplish** this with '`class: hs2orange`' as the first line below '`---`'
+---
+## Orchestrating with RStudio
 
-Lorem Ipsum
+- Masks the CLI
 
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+- Easier to get started
 
-
-.left-column[
-- You can generate a left column 
-    - by wrapping the left-hand text in \.left-column\[ foo \]
-    - You'll want to custom edit the duke.css to suit your needs
-]
-
-.right-column[
-- You can generate a right column
-
-- by wrapping the right-hand text in \.right-column\[ foo \]
-
-- You'll want to custom edit the duke.css to suit your needs
-]
-
-&lt;!-- Image credit:  http://www.publicdomainpictures.net/view-image.php?image=167489  --&gt;
+- PowerUsers can still use commands
 
 ---
 ## Thank You For Attending
