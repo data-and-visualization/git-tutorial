@@ -16,5 +16,9 @@ output: html_document
 1. [Markdown](markdown.html)  
 1. [Resources](resources.html)
 
+## Slides
+
+[Slides](slides)
+
 
 

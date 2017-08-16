@@ -37,16 +37,76 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 
 1. Git
 1. GitHub and GitLab and Bitbucket
-
-    - Duke's GitLab  
-    
 1. Markdown  
 1. Orchestrating with RStudio
 
-	- Masks the CLI
-	- Easier to get started
-	- PowerUsers can still use commands
-	
+---
+class: center, middle, softblue
+
+## **Git** is a *Version Control System*
+
+---
+class: bottom, right
+background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
+
+
+<small>
+Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/)
+</small>
+
+---
+exclude: true
+class: top, right
+background-image:  url(images/flickr_frits_ahlefeldt_hansel.jpg)
+
+<small>
+Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikingartist/6996819414/in/photolist-bEhwDu-6guogg-9F3WfM-27RqzL-bKvrKv-a1YzBK-654W7Q.jpg)</small>
+
+---
+## Repositories
+
+.pull-left[
+
+!["foo"](images/repository_small.jpg)
+<small>Image Credit: 
+[Dennis Reimann](https://www.flickr.com/photos/dbloete/274563369)
+</small>
+]
+
+.pull-right[
+- Source Code Management
+
+- Track changes in any file set
+]
+
+---
+## Git Repositories
+
+.pull-left[
+![](images/repository.jpg)
+Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg)
+]
+
+.pull-right[
+
+- Social Coding
+
+- Sharing
+
+- Collaboration
+
+]
+
+---
+class: center, middle, softblue
+
+## Social git Repositories
+
+.pull-left[ ![](images/gitlab.png)  ]
+.pull-right[ ![](images/github.png)  ]
+
+![](images/bitbucket.png)
+
 ---
 ## This Template
 
