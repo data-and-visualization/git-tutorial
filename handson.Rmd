@@ -149,9 +149,6 @@ datatable(hubs, rownames = FALSE, options = list(dom = 't')) %>%
 ```
 
 
-
-
-
 &nbsp; 
 
 &nbsp;
