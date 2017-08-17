@@ -20,5 +20,9 @@ output: html_document
 
 [Slides](slides)
 
+## Intro to Tidy Analysis in R
+
+[Intro2R](/intro2r)
+
 
 

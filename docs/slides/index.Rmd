@@ -145,7 +145,7 @@ http://gitlab.oit.duke.edu
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 
-col1 <- c("Private", "Public", "NetId", "User Community") 
+col1 <- c("Private Repo", "Public Repo", "Duke NetId", "User Community") 
 col2 <- c("by Default", "Yes", "Yes", "Duke University -- <br>can syncronize <br>to public hubs")
 col3 <- c("$$", "by Default", "No", "Largest Available")
 
@@ -153,6 +153,8 @@ hubs <- tibble(col1, col2, col3) %>%
   rename(Category = col1,
          `Duke's GitLab` = col2,
          `Public Hubs` = col3)
+
+write_csv(hubs, "../data/hubs.csv")
 
 ```
 

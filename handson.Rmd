@@ -3,6 +3,15 @@ title: "Git Workshop - Hands-On"
 output: html_document
 ---
 
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(DT)
+```
+
+```{r loaddata, message=FALSE, warning=FALSE, include=FALSE}
+hubs <- read_csv("~/R/github/git-tutorial/data/hubs.csv")
+```
+
 ### Generate SSH Keys 
 
 This must be done on each workstation you use to *push*.  
@@ -28,7 +37,10 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 1. Make a README file 
     
     1. > ![](images/readme.png) <br>Open in a New Tab, click the README link
-    1. Make a Heading with the word `#README` (See [Markdown](markdown.html) section)
+    1. Make a top level heading with the word "README"
+    
+        - i.e. type:  `#README` 
+        - See [Markdown](markdown.html) for more information on Markdown tagging
     1. After a blank line type: `This is my first GitLab repository.`
     1. Commit changes  
     
@@ -57,7 +69,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 ## Clone
 
-Using RStudio, clone your repository.  Cloning will pull down the whole repo to your local system -- including the three files you just created.
+**Using RStudio**, clone your repository.  Cloning will pull down the whole repo to your local system -- including the three files you just created.
     
 ### Bring the repo down locally via RStudio
 
@@ -75,12 +87,13 @@ Using RStudio, clone your repository.  Cloning will pull down the whole repo to 
         - > ![](images/project_version_git.png)
 	    
     1. Create Project
+    1. You may get prompted with a message which asks if you are going to authenticate.  The answer is `yes`.
 
 &nbsp; 
 
 ## Push: Edit and Commit
 
-This time you'll make local changes by editing your local repository.  After saving the changes you'll *add* and *commit* the changes.  Lastly, you will *push* your changes up to the remote repoistory.
+**Continue in RStudio**.  This time you'll make local changes by editing your local repository.  After saving the changes you'll *add* and *commit* the changes.  Lastly, you will *push* your changes up to the remote repository.
 
 ![](images/push.png) 
 
@@ -91,8 +104,11 @@ This time you'll make local changes by editing your local repository.  After sav
 1. In the Files Pane, Open the README.md file
 1. In the Editor Pane, modify your README with [Markdown](markdown.html)
 
-    - Make a Subheading with the word "Purpose":  `##Purpose`
-    - A blank line, then "This is my first Git repository.  I'm going to push this file via RStudio"
+    - Make a Sub-heading with the word "Purpose"
+    
+        - i.e. `##Purpose`
+        
+    - After a blank line type: `This is my first Git repository.  I'm going to push this file to GitLab via RStudio.  Hello World.`
 1. Save the changes to this file
 
 
@@ -126,17 +142,14 @@ The next time you open your project in RStudio the first step you should take is
 
 ## Public Hubs v Duke's Hub
 
-- Public Hubs:  GitHub, GitLab, Bitbucket
+    
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+datatable(hubs, rownames = FALSE, options = list(dom = 't')) %>% 
+  formatStyle("Duke's GitLab", color = "silver", backgroundColor = "navy", fontWeight = "bold") %>% 
+  formatStyle("Public Hubs", backgroundColor = "lightblue")
+```
 
-    - Public by default
-    - Can pay for privacy
-    - Large user community
 
-- Duke's GitLab can make 
+&nbsp; 
 
-    - Works with your NetID
-    - Same Functionality as above
-    - Price is right
-    - Private by default 
-    - Can make any repo public
-    - Can share and syncronize accross sites
+&nbsp;

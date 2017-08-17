@@ -154,6 +154,8 @@ hubs <- tibble(col1, col2, col3) %>%
          `Duke's GitLab` = col2,
          `Public Hubs` = col3)
 
+write_csv(hubs, "../data/hubs.csv")
+
 ```
 
     

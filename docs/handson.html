@@ -13,7 +13,7 @@
 
 <title>Git Workshop - Hands-On</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -25,6 +25,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.2.11/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -353,9 +361,13 @@ div.tocify {
 <li><blockquote>
 <p><img src="images/readme.png" /> <br>Open in a New Tab, click the README link</p>
 </blockquote></li>
-<li>Make a Heading with the word <code>#README</code> (See <a href="markdown.html">Markdown</a> section)</li>
+<li><p>Make a top level heading with the word “README”</p>
+<ul>
+<li>i.e. type: <code>#README</code></li>
+<li>See <a href="markdown.html">Markdown</a> for more information on Markdown tagging</li>
+</ul></li>
 <li>After a blank line type: <code>This is my first GitLab repository.</code></li>
-<li>Commit changes</li>
+<li><p>Commit changes</p></li>
 </ol>
 <p> </p></li>
 <li><p>Make a license file (Open in a New Tab, click the LICENSE link)</p>
@@ -383,7 +395,7 @@ div.tocify {
 </div>
 <div id="clone" class="section level2">
 <h2>Clone</h2>
-<p>Using RStudio, clone your repository. Cloning will pull down the whole repo to your local system – including the three files you just created.</p>
+<p><strong>Using RStudio</strong>, clone your repository. Cloning will pull down the whole repo to your local system – including the three files you just created.</p>
 <div id="bring-the-repo-down-locally-via-rstudio" class="section level3">
 <h3>Bring the repo down locally via RStudio</h3>
 <ol style="list-style-type: decimal">
@@ -406,7 +418,8 @@ div.tocify {
 </div>
 </blockquote></li>
 </ul></li>
-<li><p>Create Project</p></li>
+<li>Create Project</li>
+<li><p>You may get prompted with a message which asks if you are going to authenticate. The answer is <code>yes</code>.</p></li>
 </ol></li>
 </ol>
 <p> </p>
@@ -414,7 +427,7 @@ div.tocify {
 </div>
 <div id="push-edit-and-commit" class="section level2">
 <h2>Push: Edit and Commit</h2>
-<p>This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repoistory.</p>
+<p><strong>Continue in RStudio</strong>. This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repository.</p>
 <div class="figure">
 <img src="images/push.png" />
 
@@ -426,8 +439,11 @@ div.tocify {
 <li>In the Files Pane, Open the README.md file</li>
 <li><p>In the Editor Pane, modify your README with <a href="markdown.html">Markdown</a></p>
 <ul>
-<li>Make a Subheading with the word “Purpose”: <code>##Purpose</code></li>
-<li>A blank line, then “This is my first Git repository. I’m going to push this file via RStudio”</li>
+<li><p>Make a Sub-heading with the word “Purpose”</p>
+<ul>
+<li>i.e. <code>##Purpose</code></li>
+</ul></li>
+<li>After a blank line type: <code>This is my first Git repository.  I'm going to push this file to GitLab via RStudio.  Hello World.</code></li>
 </ul></li>
 <li><p>Save the changes to this file</p></li>
 </ol>
@@ -468,23 +484,10 @@ div.tocify {
 </div>
 <div id="public-hubs-v-dukes-hub" class="section level2">
 <h2>Public Hubs v Duke’s Hub</h2>
-<ul>
-<li><p>Public Hubs: GitHub, GitLab, Bitbucket</p>
-<ul>
-<li>Public by default</li>
-<li>Can pay for privacy</li>
-<li>Large user community</li>
-</ul></li>
-<li><p>Duke’s GitLab can make</p>
-<ul>
-<li>Works with your NetID</li>
-<li>Same Functionality as above</li>
-<li>Price is right</li>
-<li>Private by default</li>
-<li>Can make any repo public</li>
-<li>Can share and syncronize accross sites</li>
-</ul></li>
-</ul>
+<div id="htmlwidget-96fb5324159f91bc9b40" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-96fb5324159f91bc9b40">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","crosstalkOptions":{"key":null,"group":null},"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<p> </p>
+<p> </p>
 </div>
 
 
