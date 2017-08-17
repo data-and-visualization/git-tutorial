@@ -24,5 +24,9 @@ output: html_document
 
 [Intro2R](/intro2r)
 
+## OSF Project
+
+[Reproducibility: Data Management, Git, & RStudio Workshop](https://osf.io/r6wfk/)
+
 
 
