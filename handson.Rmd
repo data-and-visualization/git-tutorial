@@ -142,12 +142,14 @@ The next time you open your project in RStudio the first step you should take is
 
 ## Public Hubs v Duke's Hub
 
-    
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 datatable(hubs, rownames = FALSE, options = list(dom = 't')) %>% 
   formatStyle("Duke's GitLab", color = "silver", backgroundColor = "navy", fontWeight = "bold") %>% 
   formatStyle("Public Hubs", backgroundColor = "lightblue")
 ```
+
+
+
 
 
 &nbsp; 
