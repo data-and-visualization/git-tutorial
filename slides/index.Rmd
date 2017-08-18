@@ -28,17 +28,28 @@ background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/
 ## Data & Visualization Services
 ### [library.duke.edu/data](http://library.duke.edu/data)
 
-Slides `->` [foo_URL](#)
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+[rfun.netlify.com/git/slides](http://rfun.netlify.com/git/slides/) <br>for slide annotations, keystroke: *P* 
 
 ???
 
 This is a presenter comment for the presenter mode
 
 use 'p' to toggle the presenter mode or '?' or 'h' to toggle the help / key-shortcut options
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
-
-
 
 ---
 
@@ -65,6 +76,9 @@ background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
 Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/)
 
+???
+
+Versioning can be used as a kind of Breadcrumb system that helps track previous research progress.  One can easily "roll back" to an earlier moment in their workflow.
 
 ---
 exclude: true
@@ -96,10 +110,26 @@ Image Credit:
 
 ]
 
+???
+
+### Source Code Mangement
+By this I simply mean version control on a personal level.  Once can "branch" stages of their research and more easily keep track of the progress.
+
+### Tracking changes in **any file set**
+I want to emphasize that *R* and *Git* are ideal for *reproducible Data Science*.  However, the added factor of **R Markdown** -- when combined with various R packaes -- makes R a flexible report generation system arguably more *open* and *reproducible* than other proprietary collaborations systems.
+
 ---
 class: center, middle, softblue
 
 ## Social **git Repositories**
+
+???
+
+Social Coding = collaboration
+
+Introduce the idea of "LOCKSS" cloud version.  "Lots of Copies Keeps Stuff Safe."  Can work in various locations on various computers (e.g. at home and at work) without worying about version or file location.
+
+Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
 
 ---
 ## Git Repositories
@@ -117,6 +147,8 @@ Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_D
 
 - Collaboration
 
+- Track Issues
+
 ]
 
 ---
@@ -124,6 +156,11 @@ class: center
 
 ![](images/social-collaboration.jpg)
 .pull-right[Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)]
+
+???
+
+Effective collaboration extends the diversity of input and feedback available to you.  
+
 ---
 class: center
 .pull-left[ ![](images/gitlab.png)  ]
@@ -131,13 +168,25 @@ class: center
 
 ![](images/bitbucket.png)
 
+???
+
+Git is not GitHub
+
+GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
+
 ---
 class: green, middle, center
 
 
 ## Duke's GitLab
 
-http://gitlab.oit.duke.edu
+[gitlab.oit.duke.edu](http://gitlab.oit.duke.edu)
+
+???
+
+Duke's GitLab instance means you don't have to pay and can still syncronize to larger networks (e.g. GitHub) at any point.
+
+I use it mostly for private work and development.  I like my public presence at GitHub.  Both can be accessed via RStudio.
 
 
 ---
@@ -228,6 +277,10 @@ class: bottom
 background-image: url(images/rmarkdown.png)
 Image Credit: [RStudio](http://rmarkdown.rstudio.com/)
 
+???
+
+R Markdown -- when combined with various R packaes -- makes R a flexible report generation system.  Thus R Notebooks become "literate code" where reports are an outcome of analysis.  If analysis changes at "run-time" reports can change as integrated parts of the whole.  Thus **You Don't have to be a coder** to benefit from Version Control and R Markdown.  The two method/features can be used to compose all of your reporting needs, including MS Word, PDF, LaTex, WebPages, WebSites, Slides, etc.
+
 ---
 class: orange, middle, center
 
@@ -236,6 +289,10 @@ class: orange, middle, center
 Integrate your reproducible workflow using *Literate Coding* practices in *R* then generate reports directly from analysis 
 
 ### R Notebooks + R Markdown + Git
+
+???
+
+This is where **Open** becomes **Awesome** 
 
 
 ---
@@ -251,6 +308,10 @@ class: softblue, middle, center
 - Easier to get started
 
 - PowerUsers can still use commands
+
+???
+
+Now move to the [hands-on](/handson.html) guided exercises.
 
 ---
 ## Thank You For Attending
