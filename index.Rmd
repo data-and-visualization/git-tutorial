@@ -16,17 +16,14 @@ output: html_document
 1. [Markdown](markdown.html)  
 1. [Resources](resources.html)
 
-## Slides
+
+## Supporting Materials
 
 [Slides](slides)
 
-## Intro to Tidy Analysis in R
+[Introduction to R: Data Transformations, Analysis, and Data Structures](/intro2r)
 
-[Intro2R](/intro2r)
-
-## OSF Project
-
-[Reproducibility: Data Management, Git, & RStudio Workshop](https://osf.io/r6wfk/)
+OSF Project Page [*Reproducibility: Data Management, Git, & RStudio Workshop*](https://osf.io/r6wfk/)
 
 
 
