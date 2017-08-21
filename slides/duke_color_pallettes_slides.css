@@ -92,13 +92,16 @@ h4 {
 
 .small-txt{
   font-size: 50%;
+  
 }
 .small-beige{
   font-size: 50%;
-  background-color:  beige;
-  opacity: 0.75;
-  float: right;
-  margin-top: auto;
+  background-color:  beige; 
+  opacity: 0.65;
+  float: left;
+  padding: 2px 3px;
 }
+
+
 
 

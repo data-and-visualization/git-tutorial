@@ -74,9 +74,7 @@ class: bottom, right
 background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
  
-.small-beige[ 
- &nbsp; Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/) &nbsp;
-]
+.small-beige[ Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/) ]
 
 ???
 
@@ -95,9 +93,10 @@ Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikinga
 
 .pull-left[
 
-![](images/repository_small.jpg)
-.small-txt[Image Credit: 
+![inbox stack](images/repository_small.jpg "inbox stack") .small-txt[Image Credit: 
 [Dennis Reimann](https://www.flickr.com/photos/dbloete/274563369)]
+
+
 
 - Source Code Management
 
