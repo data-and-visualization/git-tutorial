@@ -43,6 +43,7 @@ background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/
 
 &nbsp;  
 
+
 [rfun.netlify.com/git/slides](http://rfun.netlify.com/git/slides/) <br>for slide annotations, keystroke: *P* 
 
 ???
@@ -72,9 +73,10 @@ class: center, middle, softblue
 class: bottom, right
 background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
-
-
-Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/)
+ 
+.small-beige[ 
+ &nbsp; Image Credit: [Brandon Rasmussen](https://www.flickr.com/photos/137029081@N02/30943501632/in/photostream/) &nbsp;
+]
 
 ???
 
@@ -94,8 +96,8 @@ Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikinga
 .pull-left[
 
 ![](images/repository_small.jpg)
-Image Credit: 
-[Dennis Reimann](https://www.flickr.com/photos/dbloete/274563369)
+.small-txt[Image Credit: 
+[Dennis Reimann](https://www.flickr.com/photos/dbloete/274563369)]
 
 - Source Code Management
 
@@ -105,7 +107,7 @@ Image Credit:
 
 .pull-right[
 ![](images/file-extensions.png)
-<br>Image Credit:  [OpenClipart.org](https://openclipart.org/detail/192197/file-extension-icons)
+.small-txt[<br>Image Credit:  [OpenClipart.org](https://openclipart.org/detail/192197/file-extension-icons)]
 
 
 ]
@@ -136,7 +138,7 @@ Share trackable progress of your reproducible activity -- even if you are only s
 
 .pull-left[
 ![](images/repository.jpg)
-Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg)
+.small-txt[Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg)]
 ]
 
 .pull-right[
@@ -155,7 +157,11 @@ Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_D
 class: center
 
 ![](images/social-collaboration.jpg)
-.pull-right[Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)]
+.pull-right[
+  .small-txt[
+Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
+  ]
+]
 
 ???
 
@@ -275,7 +281,10 @@ Numbered list:
 ---
 class: bottom
 background-image: url(images/rmarkdown.png)
-Image Credit: [RStudio](http://rmarkdown.rstudio.com/)
+
+.small-txt[
+  Image Credit: [RStudio](http://rmarkdown.rstudio.com/)
+]
 
 ???
 
