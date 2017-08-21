@@ -32,7 +32,7 @@ Footnote:
 
 - Method 1
 now is the time.[^random_id]
-[random_id]: citation and/or link text here
+[^random_id]: citation and/or link text here
 
 - Method 2 
 (possibly only works in R Markdown)
