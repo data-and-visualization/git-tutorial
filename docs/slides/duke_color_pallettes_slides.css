@@ -90,4 +90,18 @@ h4 {
   font-weight: normal;
 }
 
+.small-txt{
+  font-size: 50%;
+  
+}
+.small-beige{
+  font-size: 50%;
+  background-color:  beige; 
+  opacity: 0.65;
+  float: left;
+  padding: 2px 3px;
+}
+
+
+
 
