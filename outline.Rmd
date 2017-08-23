@@ -31,15 +31,19 @@ I recommend accepting the install defaults for the following:
 
 - **Git**: <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
 
-    1. Download and install Git <br> ![](images/git_os.png "Click on the link to your OS") 
+    1. Download and install Git
     1. Run the install and accept all the defaults
+    
+![](images/git_os.png "Click on the link to your OS")
     
 - **R**: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a>
 
     - If you have not installed R before choose *install R for the first time*
     - If you already have R installed on your workstation I recommend running the latest version, but any reasonably current version should be fine.
     
-- **RStudio**: <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#download</a> <br>  ![](images/rstudio_download.png "Click *Download Rstudio Desktop*")
+- **RStudio**: <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#download</a> 
+
+![](images/rstudio_download.png)
     
 
 If you haven't yet, install each of the above applications.  
@@ -49,7 +53,9 @@ If you haven't yet, install each of the above applications.
 
 During the workshop we will use <a href="https://gitlab.oit.duke.edu" target="_blank">Duke's GitLab</a>.  To complete the hands-on portion of the workshop, you **must log-in** -- **in advance** of the workshop -- and ensure you have NetID access to <a href="https://gitlab.oit.duke.edu" target="_blank"> https://gitlab.oit.duke.edu</a>.  If you do not have access to **Duke's** GitLab, [contact OIT](https://oit.duke.edu/help).
 
-- Be certain you log-in via "Duke Shibboleth Login" using your NetID <br> ![](images/gitlab_shib_login.png)  
+- Be certain you log-in via "Duke Shibboleth Login" using your NetID
+
+![](images/gitlab_shib_login.png)  
 
 ### Generate SSH keys in Advance of the Workshop
 
@@ -59,7 +65,9 @@ Follow these instructions for generating and adding keys.  We will cover key con
 
 1. To begin, open a shell **from RStudio**
 
-    - In RStudio > Menubar > `Tools > Shell...` <br> ![](images/shell.png)
+    - In RStudio > Menubar > `Tools > Shell...`
+
+![](images/shell.png)
     
 1. Follow the instructions <a href="https://gitlab.oit.duke.edu/help/ssh/README" target="_blank">https://gitlab.oit.duke.edu/help/ssh/README</a>
 

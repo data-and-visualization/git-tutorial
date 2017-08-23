@@ -25,33 +25,35 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 1. Duke Shibboleth Login
 1. New Project
 
-    > ![](images/new_gitlab_project_button.png)
+![](images/new_gitlab_project_button.png)
     
 1. Add a project name.  Use the name *test-one*  
 
-    > ![](images/project_name.png) `-->` `test-one` 
+![](images/project_name.png "replace 'my-awesome-project' with 'test-one'") 
     
-    > ![](images/create_project.png) <br> Create Project
+![](images/create_project.png) <br> Create Project
     - GitLab will present a new page.  Notice the section below the *Command line instructions* header.  That information can come in handy.  For future repositories, you may want to make a note of those *Git* commands.  We will not use those commands today so you can move on.
-    
+
 1. Make a README file 
-    
-    1. > ![](images/readme.png) <br>Open in a New Tab, click the README link
+![](images/readme.png)
+<figcaption>Open in a new tab for each link: README, LICENSE, and .gitignore</figcaption>
+
     1. Make a top level heading with the word "README"
     
-        - i.e. type:  `#README` 
+        - i.e. type:  `# README` 
         - See [Markdown](markdown.html) for more information on Markdown tagging
     1. After a blank line type: `This is my first GitLab repository.`
     1. Commit changes  
     
     &nbsp; 
     
-1. Make a license file (Open in a New Tab, click the LICENSE link) 
-
-    1. > ![](images/license.png) <br> *Appply a license format* 
     
-        - choose *MIT* license, or paste a [Creative Commons](https://creativecommons.org/share-your-work/) License into license.md
-    1. Commit changes
+1. Make a license file (Open in a New Tab, click the LICENSE link)
+![](images/license.png) 
+<figcaption>Appply a license format</figcaption>
+
+    - choose *MIT* license, or paste a [Creative Commons](https://creativecommons.org/share-your-work/) License into license.md
+    - Commit changes
     
     &nbsp; 
     
@@ -76,18 +78,19 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 1. Copy GitLab repo URL to clipboard 
 
 	  - The repo should be at a location like this. `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copy the *git* URL to the clipboard by clicking the icon
-	  - > ![](images/copy_repo.png) <br> Copy the repo URL
+![](images/copy_repo.png)
+<figcaption>Copy the repo URL</figcaption>
 	    
 1. Launch RStudio and create a *New Project...*
 
     1. From the RStudio menubar:  *File > New Project...* > Version Control > Git
-    
-        - Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio <br>
-	    
-        - > ![](images/project_version_git.png)
-	    
+![](images/project_version_git.png)
+<figcaption>Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption>
+
     1. Create Project
-    1. You may get prompted with a message which asks if you are going to authenticate.  The answer is `yes`.
+    1. You may be prompted with a message which asks if you about the "authenticity of host".  I like to verify the IP number is correct; then the answer is `yes`.
+    
+![](images/yes.png)
 
 &nbsp; 
 
@@ -106,7 +109,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
     - Make a Sub-heading with the word "Purpose"
     
-        - i.e. `##Purpose`
+        - i.e. `## Purpose`
         
     - After a blank line type: `This is my first Git repository.  I'm going to push this file to GitLab via RStudio.  Hello World.`
 1. Save the changes to this file
@@ -120,13 +123,14 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     1. Click *commit* and provide a message:  `this is my first edit of a README and supporting files`
     1. Click the *commit* button to engage your commit  process with the message, then close
     1. Click the *Push* arrow, then close, then close the commit dialogue box  
+![](images/commit_push.png)
 1. View your changes back at GitLab:  `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`
 
 &nbsp; 
 
 ## Pull
 
-The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you make have to resolve some conflicts so get into the habit of pulling before you make edits.
+The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
 
 ![](images/git_push_pull.png)
 
