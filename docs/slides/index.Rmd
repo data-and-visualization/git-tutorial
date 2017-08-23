@@ -2,7 +2,7 @@
 title: "Hands-on:<br>Configuring and Using Git with RStudio"
 subtitle: "<br>Practical Reproducibility"
 author: "John Little"
-date: "2017-09-11"
+date: "2017-09-18"
 output:
   xaringan::moon_reader:
     lib_dir: libs
