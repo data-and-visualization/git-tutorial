@@ -326,44 +326,38 @@ div.tocify {
 </div>
 
 
-<div class="main_content">
-<h3 id="generate-ssh-keys">Generate SSH Keys</h3>
+<div id="generate-ssh-keys" class="section level3">
+<h3>Generate SSH Keys</h3>
 <p>This must be done on each workstation you use to <em>push</em>.</p>
 <ul>
 <li><a href="https://gitlab.oit.duke.edu/help/ssh/README" class="uri">https://gitlab.oit.duke.edu/help/ssh/README</a></li>
 </ul>
 <p>This step was covered in the <a href="outline.html#generate_ssh_keys_in_advance_of_the_workshop">Outline Section</a></p>
-<h2 id="make-a-repository">Make a Repository</h2>
+</div>
+<div id="make-a-repository" class="section level2">
+<h2>Make a Repository</h2>
 <ol style="list-style-type: decimal">
 <li>Duke’s GitLab – <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a></li>
 <li>Duke Shibboleth Login</li>
-<li>New Project<br>
-<figure>
+<li>New Project</li>
+</ol>
+<div class="figure">
 <img src="images/new_gitlab_project_button.png" />
-</figure></li>
-<li>Add a project name. Use the name <em>test-one</em><br>
-<figure>
+
+</div>
+<ol style="list-style-type: decimal">
+<li>Add a project name. Use the name <em>test-one</em></li>
+</ol>
+<div class="figure">
 <img src="images/project_name.png" title="replace &#39;my-awesome-project&#39; with &#39;test-one&#39;" />
-<figcaption>
-replace ‘my-awesome-project’ with ‘test-one’
-</figcaption>
-</figure>
-<figure>
-<img src="images/create_project.png" />
-<figcaption>
-Create Project
-</figcaption>
-</figure>
-<ul>
-<li>GitLab will present a new page. Notice the section below the <em>Command line instructions</em> header. That information can come in handy. For future repositories, you may want to make a note of those <em>Git</em> commands. We will not use those commands today so you can move on.</li>
-</ul></li>
-<li>Make a README file <br>
-<figure>
-<img src="images/readme.png" />
+
+</div>
+<p><img src="images/create_project.png" /> <br> Create Project - GitLab will present a new page. Notice the section below the <em>Command line instructions</em> header. That information can come in handy. For future repositories, you may want to make a note of those <em>Git</em> commands. We will not use those commands today so you can move on.</p>
+<ol style="list-style-type: decimal">
+<li>Make a README file <img src="images/readme.png" />
 <figcaption>
 Open in a new tab for each link: README, LICENSE, and .gitignore
 </figcaption>
-</figure>
 <ol style="list-style-type: decimal">
 <li><p>Make a top level heading with the word “README”</p>
 <ul>
@@ -372,18 +366,17 @@ Open in a new tab for each link: README, LICENSE, and .gitignore
 </ul></li>
 <li>After a blank line type: <code>This is my first GitLab repository.</code></li>
 <li><p>Commit changes</p></li>
-</ol></li>
-<li>Make a license file (Open in a New Tab, click the LICENSE link) <br>
-<figure>
-<img src="images/license.png" />
+</ol>
+<p> </p></li>
+<li>Make a license file (Open in a New Tab, click the LICENSE link) <img src="images/license.png" />
 <figcaption>
 Appply a license format
 </figcaption>
-</figure>
 <ul>
 <li>choose <em>MIT</em> license, or paste a <a href="https://creativecommons.org/share-your-work/">Creative Commons</a> License into license.md</li>
 <li>Commit changes</li>
-</ul></li>
+</ul>
+<p> </p></li>
 <li><p>Make a .gitignore file (Open in a New Tab, click the .gitignore link)</p>
 <ol style="list-style-type: decimal">
 <li><p><em>Apply a .gitignore format</em></p>
@@ -395,43 +388,47 @@ Appply a license format
 <li><p>Congratulations. You’ve just created your first GitLab repository. Click <em>test-one</em> in the top-left of your GitLab repo screen. Now you’ll see your repository – including the three files you just created.</p></li>
 </ol>
 <p> </p>
-<h2 id="clone">Clone</h2>
+</div>
+<div id="clone" class="section level2">
+<h2>Clone</h2>
 <p><strong>Using RStudio</strong>, clone your repository. Cloning will pull down the whole repo to your local system – including the three files you just created.</p>
-<h3 id="bring-the-repo-down-locally-via-rstudio">Bring the repo down locally via RStudio</h3>
+<div id="bring-the-repo-down-locally-via-rstudio" class="section level3">
+<h3>Bring the repo down locally via RStudio</h3>
 <ol style="list-style-type: decimal">
 <li><p>Copy GitLab repo URL to clipboard</p>
 <ul>
-<li>The repo should be at a location like this. <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code>, copy the <em>git</em> URL to the clipboard by clicking the icon <br>
-<figure>
-<img src="images/copy_repo.png" />
+<li>The repo should be at a location like this. <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code>, copy the <em>git</em> URL to the clipboard by clicking the icon <img src="images/copy_repo.png" />
 <figcaption>
 Copy the repo URL
-</figcaption>
-</figure></li>
+</figcaption></li>
 </ul></li>
 <li><p>Launch RStudio and create a <em>New Project…</em></p>
 <ol style="list-style-type: decimal">
-<li>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git <br>
-<figure>
-<img src="images/project_version_git.png" />
+<li>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git <img src="images/project_version_git.png" />
 <figcaption>
 Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em> field in RStudio
-</figcaption>
-</figure></li>
+</figcaption></li>
 <li>Create Project</li>
 <li>You may be prompted with a message which asks if you about the “authenticity of host”. I like to verify the IP number is correct; then the answer is <code>yes</code>.</li>
 </ol></li>
 </ol>
-<figure>
+<div class="figure">
 <img src="images/yes.png" />
-</figure>
-<h2 id="push-edit-and-commit">Push: Edit and Commit</h2>
-<p><strong>Continue in RStudio</strong>. This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repository.</p>
-<figure>
-<img src="images/push.png" />
-</figure>
+
+</div>
 <p> </p>
-<h3 id="edit">Edit</h3>
+</div>
+</div>
+<div id="push-edit-and-commit" class="section level2">
+<h2>Push: Edit and Commit</h2>
+<p><strong>Continue in RStudio</strong>. This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repository.</p>
+<div class="figure">
+<img src="images/push.png" />
+
+</div>
+<p> </p>
+<div id="edit" class="section level3">
+<h3>Edit</h3>
 <ol style="list-style-type: decimal">
 <li>In the Files Pane, Open the README.md file</li>
 <li><p>In the Editor Pane, modify your README with <a href="markdown.html">Markdown</a></p>
@@ -444,7 +441,9 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 </ul></li>
 <li><p>Save the changes to this file</p></li>
 </ol>
-<h3 id="commit-push">Commit &amp; Push</h3>
+</div>
+<div id="commit-push" class="section level3">
+<h3>Commit &amp; Push</h3>
 <ol style="list-style-type: decimal">
 <li><p>In the Git pane:</p>
 <ol style="list-style-type: decimal">
@@ -452,30 +451,35 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 <li>Click <em>commit</em> and provide a message: <code>this is my first edit of a README and supporting files</code></li>
 <li>Click the <em>commit</em> button to engage your commit process with the message, then close</li>
 <li>Click the <em>Push</em> arrow, then close, then close the commit dialogue box<br />
-<br>
-<figure>
-<img src="images/commit_push.png" />
-</figure></li>
+<img src="images/commit_push.png" /></li>
 </ol></li>
 <li><p>View your changes back at GitLab: <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code></p></li>
 </ol>
 <p> </p>
-<h2 id="pull">Pull</h2>
+</div>
+</div>
+<div id="pull" class="section level2">
+<h2>Pull</h2>
 <p>The next time you open your project in RStudio the first step you should take is to <em>Pull</em> from the GitLab repo. Then make your changes, then commit and push. If you forget to <em>Pull</em> you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.</p>
-<figure>
+<div class="figure">
 <img src="images/git_push_pull.png" />
-</figure>
+
+</div>
 <p> </p>
-<h2 id="public-or-private-repositories">Public or Private Repositories</h2>
+</div>
+<div id="public-or-private-repositories" class="section level2">
+<h2>Public or Private Repositories</h2>
 <ul>
 <li><code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code> &gt; Settings &gt; Scroll to <em>Project Visibility</em> &gt; right-hand drop-down list: Private | Public</li>
 <li>Add a Description (Optional)</li>
 <li>Add Tags (Optional)</li>
 </ul>
 <p> </p>
-<h2 id="public-hubs-v-dukes-hub">Public Hubs v Duke’s Hub</h2>
-<div id="htmlwidget-a7c3b51ffd53437151df" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a7c3b51ffd53437151df">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","crosstalkOptions":{"key":null,"group":null},"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+</div>
+<div id="public-hubs-v-dukes-hub" class="section level2">
+<h2>Public Hubs v Duke’s Hub</h2>
+<div id="htmlwidget-cfb03fa411f84a9f1cfd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cfb03fa411f84a9f1cfd">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","crosstalkOptions":{"key":null,"group":null},"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 <p> </p>
 <p> </p>
 </div>
