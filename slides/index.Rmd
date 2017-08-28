@@ -44,7 +44,7 @@ background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/
 &nbsp;  
 
 
-[rfun.netlify.com/git/slides](http://rfun.library.duke.edu/git/slides/) <br>for slide annotations, keystroke: *P* 
+[rfun.netlify.com/git/slides](http://rfun.netlify.com/git/slides/) <br>for slide annotations, keystroke: *P* 
 
 ???
 
