@@ -5,6 +5,7 @@ a, a > code {
 
 h1, h2, h3 {
   color: #0736A4;
+  clear: both;
 }
  
 .orange {
@@ -79,16 +80,35 @@ h4 {
   list-style-type: none;
 }
 
-img{
+/* img{
   display: block;
   margin: 10px 100px;
   padding:3px;
   border:4px solid LightGrey;
   background-color: Grey;
-}
+} 
 
-figcaption { 
+/* figcaption { 
     padding: 0;
     margin: 0 90px;
     background-color: grey;
-}
+}  */
+
+
+figure {
+  float: left;
+  clear: left;
+  width: 50%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  border-radius: 15px;
+  margin: 1% 10%; 
+  padding: 0.5em;
+}  /* when using this, must clear the following tag.  In this case <br>  */
+
+br {
+  clear: both;
+}  /* Use "clear" in companion with the "figure" styles */

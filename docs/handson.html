@@ -25,14 +25,11 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.2.11/datatables.js"></script>
+<script src="site_libs/htmlwidgets-0.8/htmlwidgets.js"></script>
+<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
 <link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -307,7 +304,7 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="http://github.com/libjohn/git-tutorial">
+  <a href="https://github.com/data-and-visualization/git-tutorial">
     <span class="fa fa-github"></span>
      
   </a>
@@ -339,25 +336,32 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li>Duke’s GitLab – <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a></li>
 <li>Duke Shibboleth Login</li>
-<li>New Project</li>
-</ol>
-<div class="figure">
+<li>New Project <br>
+<figure>
 <img src="images/new_gitlab_project_button.png" />
-
-</div>
-<ol style="list-style-type: decimal">
-<li>Add a project name. Use the name <em>test-one</em></li>
-</ol>
-<div class="figure">
+</figure>
+<br></li>
+<li>Add a project name. Use the name <em>test-one</em> <br>
+<figure>
 <img src="images/project_name.png" title="replace &#39;my-awesome-project&#39; with &#39;test-one&#39;" />
-
-</div>
-<p><img src="images/create_project.png" /> <br> Create Project - GitLab will present a new page. Notice the section below the <em>Command line instructions</em> header. That information can come in handy. For future repositories, you may want to make a note of those <em>Git</em> commands. We will not use those commands today so you can move on.</p>
-<ol style="list-style-type: decimal">
-<li>Make a README file <img src="images/readme.png" />
+</figure>
+<p><br></p></li>
+<li>Create Project<br>
+<figure>
+<img src="images/create_project.png" />
+</figure>
+<p><br></p>
+<ul>
+<li>GitLab will present a new page. Notice the section below the <em>Command line instructions</em> header. That information can come in handy. For future repositories, you may want to make a note of those Git commands. We will not use those commands today so you can move on. <br> </li>
+</ul></li>
+<li>Make a README file <br>
+<figure>
+<img src="images/readme.png" />
 <figcaption>
 Open in a new tab for each link: README, LICENSE, and .gitignore
 </figcaption>
+</figure>
+<p><br></p>
 <ol style="list-style-type: decimal">
 <li><p>Make a top level heading with the word “README”</p>
 <ul>
@@ -368,10 +372,14 @@ Open in a new tab for each link: README, LICENSE, and .gitignore
 <li><p>Commit changes</p></li>
 </ol>
 <p> </p></li>
-<li>Make a license file (Open in a New Tab, click the LICENSE link) <img src="images/license.png" />
+<li>Make a license file (Open in a New Tab, click the LICENSE link) <br>
+<figure>
+<img src="images/license.png" />
 <figcaption>
 Appply a license format
 </figcaption>
+</figure>
+<p><br></p>
 <ul>
 <li>choose <em>MIT</em> license, or paste a <a href="https://creativecommons.org/share-your-work/">Creative Commons</a> License into license.md</li>
 <li>Commit changes</li>
@@ -397,25 +405,33 @@ Appply a license format
 <ol style="list-style-type: decimal">
 <li><p>Copy GitLab repo URL to clipboard</p>
 <ul>
-<li>The repo should be at a location like this. <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code>, copy the <em>git</em> URL to the clipboard by clicking the icon <img src="images/copy_repo.png" />
+<li>The repo should be at a location like this. <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code>, copy the <em>git</em> URL to the clipboard by clicking the icon <br>
+<figure>
+<img src="images/copy_repo.png" />
 <figcaption>
 Copy the repo URL
-</figcaption></li>
+</figcaption>
+</figure>
+<br></li>
 </ul></li>
 <li><p>Launch RStudio and create a <em>New Project…</em></p>
 <ol style="list-style-type: decimal">
-<li>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git <img src="images/project_version_git.png" />
+<li>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git <br>
+<figure>
+<img src="images/project_version_git.png" />
 <figcaption>
 Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em> field in RStudio
-</figcaption></li>
+</figcaption>
+</figure>
+<br></li>
 <li>Create Project</li>
-<li>You may be prompted with a message which asks if you about the “authenticity of host”. I like to verify the IP number is correct; then the answer is <code>yes</code>.</li>
+<li>You may be prompted with a message which asks if you about the “authenticity of host”. I like to verify the IP number is correct; then the answer is <code>yes</code>.<br>
+<figure>
+<img src="images/yes.png" />
+</figure>
+<br></li>
 </ol></li>
 </ol>
-<div class="figure">
-<img src="images/yes.png" />
-
-</div>
 <p> </p>
 </div>
 </div>
@@ -478,8 +494,8 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 </div>
 <div id="public-hubs-v-dukes-hub" class="section level2">
 <h2>Public Hubs v Duke’s Hub</h2>
-<div id="htmlwidget-cfb03fa411f84a9f1cfd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cfb03fa411f84a9f1cfd">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","crosstalkOptions":{"key":null,"group":null},"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-eb67c70eeb9b344d876c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eb67c70eeb9b344d876c">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 <p> </p>
 <p> </p>
 </div>

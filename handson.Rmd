@@ -9,7 +9,7 @@ library(DT)
 ```
 
 ```{r loaddata, message=FALSE, warning=FALSE, include=FALSE}
-hubs <- read_csv("~/R/github/git-tutorial/data/hubs.csv")
+hubs <- read_csv("data/hubs.csv")
 ```
 
 ### Generate SSH Keys 
@@ -23,20 +23,15 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 ## Make a Repository
 1. Duke's GitLab -- <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a>
 1. Duke Shibboleth Login
-1. New Project
+1. New Project <br><figure>![](images/new_gitlab_project_button.png)</figure><br>
+1. Add a project name.  Use the name *test-one*  <br> <figure>![](images/project_name.png "replace 'my-awesome-project' with 'test-one'")</figure><br>
 
-![](images/new_gitlab_project_button.png)
-    
-1. Add a project name.  Use the name *test-one*  
+1. Create Project<br><figure>![](images/create_project.png)</figure><br>
 
-![](images/project_name.png "replace 'my-awesome-project' with 'test-one'") 
-    
-![](images/create_project.png) <br> Create Project
-    - GitLab will present a new page.  Notice the section below the *Command line instructions* header.  That information can come in handy.  For future repositories, you may want to make a note of those *Git* commands.  We will not use those commands today so you can move on.
+    - GitLab will present a new page.  Notice the section below the *Command line instructions* header.  That information can come in handy.  For future repositories, you may want to make a note of those Git commands.  We will not use those commands today so you can move on. <br>&nbsp;
 
-1. Make a README file 
-![](images/readme.png)
-<figcaption>Open in a new tab for each link: README, LICENSE, and .gitignore</figcaption>
+1. Make a README file <br><figure>![](images/readme.png)
+<figcaption>Open in a new tab for each link: README, LICENSE, and .gitignore</figcaption></figure><br>
 
     1. Make a top level heading with the word "README"
     
@@ -48,9 +43,8 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     &nbsp; 
     
     
-1. Make a license file (Open in a New Tab, click the LICENSE link)
-![](images/license.png) 
-<figcaption>Appply a license format</figcaption>
+1. Make a license file (Open in a New Tab, click the LICENSE link) <br><figure>![](images/license.png) 
+<figcaption>Appply a license format</figcaption></figure><br>
 
     - choose *MIT* license, or paste a [Creative Commons](https://creativecommons.org/share-your-work/) License into license.md
     - Commit changes
@@ -77,20 +71,14 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 1. Copy GitLab repo URL to clipboard 
 
-	  - The repo should be at a location like this. `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copy the *git* URL to the clipboard by clicking the icon
-![](images/copy_repo.png)
-<figcaption>Copy the repo URL</figcaption>
+	  - The repo should be at a location like this. `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copy the *git* URL to the clipboard by clicking the icon <br><figure>![](images/copy_repo.png)
+<figcaption>Copy the repo URL</figcaption></figure><br>
 	    
 1. Launch RStudio and create a *New Project...*
 
-    1. From the RStudio menubar:  *File > New Project...* > Version Control > Git
-![](images/project_version_git.png)
-<figcaption>Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption>
-
+    1. From the RStudio menubar:  *File > New Project...* > Version Control > Git <br><figure>![](images/project_version_git.png)<figcaption>Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption></figure><br>
     1. Create Project
-    1. You may be prompted with a message which asks if you about the "authenticity of host".  I like to verify the IP number is correct; then the answer is `yes`.
-    
-![](images/yes.png)
+    1. You may be prompted with a message which asks if you about the "authenticity of host".  I like to verify the IP number is correct; then the answer is `yes`.<br><figure>![](images/yes.png)</figure><br>
 
 &nbsp; 
 
