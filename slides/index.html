@@ -8,15 +8,13 @@
     <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-0.9/htmlwidgets.js"></script>
     <script src="libs/jquery-1.12.4/jquery.min.js"></script>
-    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="libs/datatables-binding-0.2.11/datatables.js"></script>
+    <script src="libs/datatables-binding-0.2/datatables.js"></script>
     <link href="libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
     <script src="libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
-    <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-    <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="duke_color_pallettes_slides.css" type="text/css" />
     <link rel="stylesheet" href="cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="figures.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -70,14 +68,20 @@ use 'p' to toggle the presenter mode or '?' or 'h' to toggle the help / key-shor
 
 ## Outline
 
-1. Git
+.pull-left[1. Git
 
 1. GitHub and GitLab and Bitbucket
 
 1. Markdown  
 
 1. Orchestrating with RStudio
+]
 
+.pull-right[
+
+&lt;figure&gt;&lt;img src="https://imgs.xkcd.com/comics/git.png"&gt;&lt;figcaption&gt; Image Credit: XKCD.  &lt;a href="https://xkcd.com/1597/"&gt;Git&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+]
 ---
 class: center, middle, softblue
 
@@ -95,21 +99,11 @@ background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 Versioning can be used as a kind of Breadcrumb system that helps track previous research progress.  One can easily "roll back" to an earlier moment in their workflow.
 
 ---
-exclude: true
-class: top, right
-background-image:  url(images/flickr_frits_ahlefeldt_hansel.jpg)
-
-
-Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikingartist/6996819414/in/photolist-bEhwDu-6guogg-9F3WfM-27RqzL-bKvrKv-a1YzBK-654W7Q.jpg)
-
----
 ## Repositories
 
 .pull-left[
 
-![inbox stack](images/repository_small.jpg "inbox stack") .small-txt[Image Credit: 
-[Dennis Reimann](https://www.flickr.com/photos/dbloete/274563369)]
-
+&lt;figure&gt;&lt;img src="images/repository_small.jpg" alt="image stack"&gt;&lt;figcaption&gt; Image Credit: &lt;a href="https://www.flickr.com/photos/dbloete/274563369"&gt;Dennis Reimann&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;br&gt;
 
 
 - Source Code Management
@@ -119,8 +113,8 @@ Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikinga
 ]
 
 .pull-right[
-![](images/file-extensions.png)
-.small-txt[&lt;br&gt;Image Credit:  [OpenClipart.org](https://openclipart.org/detail/192197/file-extension-icons)]
+
+&lt;figure&gt;&lt;img src="images/file-extensions.png"&gt;&lt;figcaption&gt; Image Credit: &lt;a href="https://openclipart.org/detail/192197/file-extension-icons"&gt;OpenClipart.org&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;br&gt;
 
 
 ]
@@ -131,7 +125,7 @@ Image Credit: [Frits Ahlefeldt Hiking.org](https://www.flickr.com/photos/hikinga
 By this I simply mean version control on a personal level.  Once can "branch" stages of their research and more easily keep track of the progress.
 
 ### Tracking changes in **any file set**
-I want to emphasize that *R* and *Git* are ideal for *reproducible Data Science*.  However, the added factor of **R Markdown** -- when combined with various R packaes -- makes R a flexible report generation system arguably more *open* and *reproducible* than other proprietary collaborations systems.
+I want to emphasize that *R* and *Git* are ideal for *reproducible Data Science*.  However, the added factor of **R Markdown** -- when combined with various R packages -- makes R a flexible report generation system arguably more *open* and *reproducible* than other proprietary collaborations systems.
 
 ---
 class: center, middle, softblue
@@ -142,7 +136,7 @@ class: center, middle, softblue
 
 Social Coding = collaboration
 
-Introduce the idea of "LOCKSS" cloud version.  "Lots of Copies Keeps Stuff Safe."  Can work in various locations on various computers (e.g. at home and at work) without worying about version or file location.
+Introduce the idea of "LOCKSS" cloud version.  "Lots of Copies Keeps Stuff Safe."  Can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.
 
 Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
 
@@ -150,8 +144,9 @@ Share trackable progress of your reproducible activity -- even if you are only s
 ## Git Repositories
 
 .pull-left[
-![](images/repository.jpg)
-.small-txt[Image Credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg)]
+
+&lt;figure&gt;&lt;img src="images/repository.jpg"&gt;&lt;figcaption&gt; Image Credit: &lt;a href="https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;br&gt;
+
 ]
 
 .pull-right[
@@ -203,7 +198,7 @@ class: green, middle, center
 
 ???
 
-Duke's GitLab instance means you don't have to pay and can still syncronize to larger networks (e.g. GitHub) at any point.
+Duke's GitLab instance means you don't have to pay and can still synchronize to larger networks (e.g. GitHub) at any point.
 
 I use it mostly for private work and development.  I like my public presence at GitHub.  Both can be accessed via RStudio.
 
@@ -214,8 +209,8 @@ I use it mostly for private work and development.  I like my public presence at 
 
 
     
-<div id="htmlwidget-f6b9ec0fef566b1de506" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f6b9ec0fef566b1de506">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","crosstalkOptions":{"key":null,"group":null},"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-b22c254e482836a5bb7e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b22c254e482836a5bb7e">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
@@ -285,7 +280,9 @@ background-image: url(images/rmarkdown.png)
 
 ???
 
-R Markdown -- when combined with various R packaes -- makes R a flexible report generation system.  Thus R Notebooks become "literate code" where reports are an outcome of analysis.  If analysis changes at "run-time" reports can change as integrated parts of the whole.  Thus **You Don't have to be a coder** to benefit from Version Control and R Markdown.  The two method/features can be used to compose all of your reporting needs, including MS Word, PDF, LaTex, WebPages, WebSites, Slides, etc.
+R Markdown -- when combined with various R packages -- makes R a flexible report generation system.  Thus R Notebooks become "literate code" where reports are an outcome of analysis.  If analysis changes at "run-time" reports can change as integrated parts of the whole.  
+
+Notably:  **You Don't have to be a coder** to benefit from Version Control and R Markdown.  The two method/features can be used to compose all of your reporting needs, including MS Word, PDF, LaTex, WebPages, WebSites, Slides, etc.
 
 ---
 class: orange, middle, center
@@ -313,7 +310,7 @@ class: softblue, middle, center
 
 - Easier to get started
 
-- PowerUsers can still use commands
+- Power Users can still use commands
 
 ???
 
@@ -371,7 +368,8 @@ C bn
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
