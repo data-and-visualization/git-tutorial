@@ -5,6 +5,8 @@ output: html_document
 
 ## Very Basic Markdown Tags
 
+<figure>![](http://socviz.co/assets/markdown-margin.png)<figcaption>Image Credit:  Kieran Healy in [*Data Visualization for Social Science*](http://socviz.co/) </figcaption></figure><br>
+
 ```{}
 # Heading
 
@@ -35,8 +37,8 @@ now is the time.[^random_id]
 [^random_id]: citation and/or link text here
 
 - Method 2 
-(possibly only works in R Markdown)
 now is the time.^[citation and/or link text here]
+(Method 2 only works in R Markdown)
 
 
 

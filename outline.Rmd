@@ -34,7 +34,7 @@ I recommend accepting the install defaults for the following:
     1. Download and install Git
     1. Run the install and accept all the defaults
     
-![](images/git_os.png "Click on the link to your OS")
+<br><figure>![](images/git_os.png)<figcaption>Click on the link to your OS</figcaption></figure><br>
     
 - **R**: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a>
 
@@ -43,7 +43,7 @@ I recommend accepting the install defaults for the following:
     
 - **RStudio**: <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#download</a> 
 
-![](images/rstudio_download.png)
+<br><figure>![](images/rstudio_download.png)</figure><br>
     
 
 If you haven't yet, install each of the above applications.  
@@ -55,7 +55,7 @@ During the workshop we will use <a href="https://gitlab.oit.duke.edu" target="_b
 
 - Be certain you log-in via "Duke Shibboleth Login" using your NetID
 
-![](images/gitlab_shib_login.png)  
+<br><figure>![](images/gitlab_shib_login.png)</figure><br> 
 
 ### Generate SSH keys in Advance of the Workshop
 
@@ -67,7 +67,7 @@ Follow these instructions for generating and adding keys.  We will cover key con
 
     - In RStudio > Menubar > `Tools > Shell...`
 
-![](images/shell.png)
+<br><figure>![](images/shell.png)</figure><br>
     
 1. Follow the instructions <a href="https://gitlab.oit.duke.edu/help/ssh/README" target="_blank">https://gitlab.oit.duke.edu/help/ssh/README</a>
 

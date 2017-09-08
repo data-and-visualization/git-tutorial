@@ -25,7 +25,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<script src="site_libs/htmlwidgets-0.8/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
 <script src="site_libs/datatables-binding-0.2/datatables.js"></script>
 <link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
@@ -343,7 +343,10 @@ div.tocify {
 <br></li>
 <li>Add a project name. Use the name <em>test-one</em> <br>
 <figure>
-<img src="images/project_name.png" title="replace &#39;my-awesome-project&#39; with &#39;test-one&#39;" />
+<img src="images/project_name.png" />
+<figcaption>
+replace ‘my-awesome-project’ with ‘test-one’
+</figcaption>
 </figure>
 <p><br></p></li>
 <li>Create Project<br>
@@ -438,11 +441,10 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 <div id="push-edit-and-commit" class="section level2">
 <h2>Push: Edit and Commit</h2>
 <p><strong>Continue in RStudio</strong>. This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repository.</p>
-<div class="figure">
+<br>
+<figure>
 <img src="images/push.png" />
-
-</div>
-<p> </p>
+</figure>
 <div id="edit" class="section level3">
 <h3>Edit</h3>
 <ol style="list-style-type: decimal">
@@ -467,7 +469,11 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 <li>Click <em>commit</em> and provide a message: <code>this is my first edit of a README and supporting files</code></li>
 <li>Click the <em>commit</em> button to engage your commit process with the message, then close</li>
 <li>Click the <em>Push</em> arrow, then close, then close the commit dialogue box<br />
-<img src="images/commit_push.png" /></li>
+<br>
+<figure>
+<img src="images/commit_push.png" />
+</figure>
+<br></li>
 </ol></li>
 <li><p>View your changes back at GitLab: <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code></p></li>
 </ol>
@@ -477,11 +483,10 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 <div id="pull" class="section level2">
 <h2>Pull</h2>
 <p>The next time you open your project in RStudio the first step you should take is to <em>Pull</em> from the GitLab repo. Then make your changes, then commit and push. If you forget to <em>Pull</em> you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.</p>
-<div class="figure">
+<br>
+<figure>
 <img src="images/git_push_pull.png" />
-
-</div>
-<p> </p>
+</figure>
 </div>
 <div id="public-or-private-repositories" class="section level2">
 <h2>Public or Private Repositories</h2>
@@ -494,8 +499,8 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 </div>
 <div id="public-hubs-v-dukes-hub" class="section level2">
 <h2>Public Hubs v Duke’s Hub</h2>
-<div id="htmlwidget-eb67c70eeb9b344d876c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-eb67c70eeb9b344d876c">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-a50120345af04c57964b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a50120345af04c57964b">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 <p> </p>
 <p> </p>
 </div>

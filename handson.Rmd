@@ -24,7 +24,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 1. Duke's GitLab -- <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a>
 1. Duke Shibboleth Login
 1. New Project <br><figure>![](images/new_gitlab_project_button.png)</figure><br>
-1. Add a project name.  Use the name *test-one*  <br> <figure>![](images/project_name.png "replace 'my-awesome-project' with 'test-one'")</figure><br>
+1. Add a project name.  Use the name *test-one*  <br> <figure>![](images/project_name.png)<figcaption>replace 'my-awesome-project' with 'test-one'</figcaption></figure><br>
 
 1. Create Project<br><figure>![](images/create_project.png)</figure><br>
 
@@ -86,9 +86,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 **Continue in RStudio**.  This time you'll make local changes by editing your local repository.  After saving the changes you'll *add* and *commit* the changes.  Lastly, you will *push* your changes up to the remote repository.
 
-![](images/push.png) 
-
-&nbsp;  
+<br><figure>![](images/push.png)</figure>
 
 ### Edit
 
@@ -111,7 +109,8 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     1. Click *commit* and provide a message:  `this is my first edit of a README and supporting files`
     1. Click the *commit* button to engage your commit  process with the message, then close
     1. Click the *Push* arrow, then close, then close the commit dialogue box  
-![](images/commit_push.png)
+<br><figure>![](images/commit_push.png)</figure><br>
+
 1. View your changes back at GitLab:  `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`
 
 &nbsp; 
@@ -120,9 +119,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
 
-![](images/git_push_pull.png)
-
-&nbsp;
+<br><figure>![](images/git_push_pull.png)</figure>
 
 ## Public or Private Repositories
 
