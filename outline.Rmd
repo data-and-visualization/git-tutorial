@@ -1,9 +1,9 @@
 ---
-title: "Git Workshop - Overview"
+title: "Git & R/RStudio Prerequisites:  Software Installation"
 output: html_document
 ---
 
-## Workshop Outline
+## Hands-on Outline
 
 1. Git
 1. GitHub and GitLab and Bitbucket

@@ -1,5 +1,5 @@
 ---
-title: "Git Workshop - Home"
+title: "Git & R/RStudio Hands-on"
 output: html_document
 ---
 
@@ -19,7 +19,7 @@ output: html_document
 
 ## Supporting Materials
 
-[Slides](slides)
+[Hands-on Slides](slides)
 
 [Introduction to R: Data Transformations, Analysis, and Data Structures](/intro2r)
 

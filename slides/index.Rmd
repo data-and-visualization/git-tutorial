@@ -202,7 +202,7 @@ I use it mostly for private work and development.  I like my public presence at 
 
 col1 <- c("Private Repo", "Public Repo", "Duke NetId", "User Community") 
 col2 <- c("by Default", "Yes", "Yes", "Duke University -- <br>can syncronize <br>to public hubs")
-col3 <- c("$$", "by Default", "No", "Largest Available")
+col3 <- c("$$ @ GitHub", "by Default", "No", "Largest Available")
 
 hubs <- tibble(col1, col2, col3) %>% 
   rename(Category = col1,
