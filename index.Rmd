@@ -29,3 +29,5 @@ OSF Project Page [*Reproducibility: Data Management, Git, & RStudio Workshop*](h
 
 <figure>![](https://imgs.xkcd.com/comics/git.png)<figcaption>KXCD.  Git:  https://xkcd.com/1597/</figcaption></figure>
 
+foo
+
