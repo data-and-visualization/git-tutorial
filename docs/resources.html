@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Resources</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -57,8 +54,8 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="libs-local/duke.css" type="text/css" />
-<link rel="stylesheet" href="libs-local/cc-fonts.css" type="text/css" />
+<link rel="stylesheet" href="libs-local\duke.css" type="text/css" />
+<link rel="stylesheet" href="libs-local\cc-fonts.css" type="text/css" />
 
 </head>
 
@@ -154,107 +151,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -301,27 +197,29 @@ div.tocify {
 
 
 
+<h1 class="title toc-ignore">Resources</h1>
 
 </div>
 
 
-<div id="resources" class="section level2">
-<h2>Resources</h2>
 <ul>
-<li><a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">RMarkdown Cheatsheet</a></li>
-<li>Data Carpentry <a href="http://www.datacarpentry.org/rr-version-control/">Reproducible Research Version Control</a></li>
-<li>Duke’s Co-Lab <a href="https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about">Introduction to Git</a></li>
 <li><p>Duke’s <a href="https://gitlab.oit.duke.edu/">GitLab</a></p>
 <ul>
 <li><a href="https://gitlab.oit.duke.edu/help/ssh/README">Managing SSH keys</a></li>
 </ul></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">RMarkdown Cheatsheet</a></li>
+<li>Data Carpentry <a href="http://www.datacarpentry.org/rr-version-control/">Reproducible Research Version Control</a></li>
+<li><p>Interactive tools to learn Git at the Command Line</p>
+<ul>
+<li>Duke’s Co-Lab <a href="https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about">Introduction to Git</a></li>
+<li><a href="https://try.github.io/levels/1/challenges/1">Got 15 minutes</a></li>
+<li><a href="https://www.codecademy.com/learn/learn-git">Learn Git. A free Codeacademy course</a> – Free</li>
+</ul></li>
 <li><a href="http://happygitwithr.com/">Happy Git and GitHub for the useR</a></li>
 <li><a href="http://kbroman.org/Tools4RR/assets/lectures/07_clearcode.pdf">Writing clear code: Tools for Reproducible Research</a></li>
 <li><a href="http://kbroman.org/steps2rr/">Initial Steps Toward Reproducible Research</a></li>
-<li><a href="https://try.github.io/levels/1/challenges/1">Got 15 minutes</a> - Interactive tool to learn Git at the Command Line</li>
-<li><p><a href="https://www.codecademy.com/learn/learn-git">Learn Git | Course | Codeacademy</a> – Free</p></li>
+<li><p>Making your research reproducible with TIER + R + GitHub [Slides]. Cetinkaya-Rundel, M. (2016). Open Science Framework. Retrieved from <a href="https://osf.io/phyau" class="uri">https://osf.io/phyau</a></p></li>
 </ul>
-</div>
 
 &nbsp;
 
@@ -337,8 +235,6 @@ Shareable via Creative Commons:  CC <a href="https://creativecommons.org/license
 </p>
 
 
-</div>
-</div>
 
 </div>
 

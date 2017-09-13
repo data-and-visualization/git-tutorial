@@ -33,6 +33,27 @@ exclude: true
 
 
 ---
+class: middle, center
+
+Hands-on portion of the workshop:
+
+## Reproducibility: Data Management, Git, &amp; RStudio Workshop
+https://osf.io/r6wfk/
+
+&amp;nbsp;
+
+Part 2 of the 
+### [RFun](http://rfun.library.duke.edu) Learning Series of Workshops
+http://rfun.library.duke.edu
+
+---
+class: middle, center
+
+### Hands-on and perhaps not purley intellectual
+
+&lt;iframe width="800" height="550"src="https://www.youtube.com/embed/MnKoQbFXemE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
 exclude: false
 class: top, center
 background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
@@ -96,7 +117,7 @@ background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
 ???
 
-Versioning can be used as a kind of Breadcrumb system that helps track previous research progress.  One can easily "roll back" to an earlier moment in their workflow.
+Versioning can be used as a kind of breadcrumb system that helps track the research process.  Using version control, one can easily "roll back" to an earlier moment in the research workflow.
 
 ---
 ## Repositories
@@ -122,10 +143,11 @@ Versioning can be used as a kind of Breadcrumb system that helps track previous 
 ???
 
 ### Source Code Mangement
-By this I simply mean version control on a personal level.  Once can "branch" stages of their research and more easily keep track of the progress.
+By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successfull operations.  In this way it becomes easier to keep track of the process and the progress.
 
 ### Tracking changes in **any file set**
-I want to emphasize that *R* and *Git* are ideal for *reproducible Data Science*.  However, the added factor of **R Markdown** -- when combined with various R packages -- makes R a flexible report generation system arguably more *open* and *reproducible* than other proprietary collaborations systems.
+
+Git can be used to track any files. 
 
 ---
 class: center, middle, softblue
@@ -136,9 +158,23 @@ class: center, middle, softblue
 
 Social Coding = collaboration
 
-Introduce the idea of "LOCKSS" cloud version.  "Lots of Copies Keeps Stuff Safe."  Can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.
+Introduce the idea of LOCKSS: "Lots of Copies Keeps Stuff Safe."  Now you have copies in the cloud and on local workstations.  You can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.
 
 Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
+
+---
+class: center
+.pull-left[ ![](images/gitlab.png)  ]
+.pull-right[ ![](images/github.png)  ]
+
+![](images/bitbucket.png)
+
+???
+
+- Git is not GitHub
+
+- GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
+
 
 ---
 ## Git Repositories
@@ -176,19 +212,6 @@ Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
 Effective collaboration extends the diversity of input and feedback available to you.  
 
 ---
-class: center
-.pull-left[ ![](images/gitlab.png)  ]
-.pull-right[ ![](images/github.png)  ]
-
-![](images/bitbucket.png)
-
-???
-
-Git is not GitHub
-
-GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
-
----
 class: green, middle, center
 
 
@@ -197,6 +220,8 @@ class: green, middle, center
 [gitlab.oit.duke.edu](http://gitlab.oit.duke.edu)
 
 ???
+
+- Duke has it's own instance of GitLab
 
 Duke's GitLab instance means you don't have to pay and can still synchronize to larger networks (e.g. GitHub) at any point.
 
@@ -209,8 +234,8 @@ I use it mostly for private work and development.  I like my public presence at 
 
 
     
-<div id="htmlwidget-2c945e3360f8a0166537" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2c945e3360f8a0166537">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-ba96c319f88ba07ed30d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ba96c319f88ba07ed30d">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
@@ -218,6 +243,22 @@ Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 class: softblue, middle, center
 
 ## Markdown
+
+---
+class: bottom
+background-image: url(images/rmarkdown.png)
+
+.small-txt[
+  Image Credit: [RStudio](http://rmarkdown.rstudio.com/)
+]
+
+???
+
+R Markdown -- when combined with various R packages -- makes R a flexible report generation system.  Thus R Notebooks become "literate code" where reports are an outcome of analysis.  If analysis changes at "run-time" reports can change as integrated parts of the whole.  
+
+Notably:  **You Don't have to be a coder** to benefit from Version Control and R Markdown.  The two method/features can be used to compose all of your reporting needs, including MS Word, PDF, LaTex, WebPages, WebSites, Slides, e-books, etc.
+
+I want to emphasize that *R* and *Git* are ideal for *reproducible research*.  However, the added factor of **R Markdown** -- when combined with various R packages -- makes R a flexible report generation system arguably more *open* and *reproducible* than other proprietary collaborations systems.
 
 ---
 class: middle
@@ -256,7 +297,7 @@ Numbered list:
 
 *italicized*, **bold**, `monospace`
 
-A [link](#14)
+A [link](http://google.com)
 
 Bullet list:
 - applies
@@ -271,23 +312,9 @@ Numbered list:
 ]
 
 ---
-class: bottom
-background-image: url(images/rmarkdown.png)
-
-.small-txt[
-  Image Credit: [RStudio](http://rmarkdown.rstudio.com/)
-]
-
-???
-
-R Markdown -- when combined with various R packages -- makes R a flexible report generation system.  Thus R Notebooks become "literate code" where reports are an outcome of analysis.  If analysis changes at "run-time" reports can change as integrated parts of the whole.  
-
-Notably:  **You Don't have to be a coder** to benefit from Version Control and R Markdown.  The two method/features can be used to compose all of your reporting needs, including MS Word, PDF, LaTex, WebPages, WebSites, Slides, etc.
-
----
 class: orange, middle, center
 
-## **Reproducible Data Science** 
+## **Reproducible Research** 
 
 Integrate your reproducible workflow using *Literate Coding* practices in *R* then generate reports directly from analysis 
 
@@ -304,6 +331,7 @@ class: softblue, middle, center
 ## Rstudio &amp; Git
 
 ---
+
 ## Orchestrating with RStudio
 
 - Masks the CLI
@@ -311,6 +339,13 @@ class: softblue, middle, center
 - Easier to get started
 
 - Power Users can still use commands
+
+&amp;nbsp;
+
+
+![](images/RStudio-Logo-Blue-Gradient.png)
+
+Next:  [Hands-on](../handson.html)
 
 ???
 

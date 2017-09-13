@@ -1,6 +1,8 @@
 ---
 title: "Git & R/RStudio Hands-on"
-output: html_document
+output: 
+  html_document:
+    toc: FALSE
 ---
 
 ## Workshop Resource Page

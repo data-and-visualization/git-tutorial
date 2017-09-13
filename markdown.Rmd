@@ -1,6 +1,8 @@
 ---
 title: "Markdown QuickStart"
-output: html_document
+output: 
+  html_document:
+    toc: FALSE
 ---
 
 ## Very Basic Markdown Tags
