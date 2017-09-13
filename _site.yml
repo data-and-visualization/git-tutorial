@@ -3,7 +3,6 @@ output_dir: docs
 exclude:
   - README.md
   - license.md
-  - 
 navbar:
   title: "Reproducibility: Git & RStudio"
   left:
@@ -25,6 +24,8 @@ output:
   html_document:
     theme: flatly
     highlight: tango
+    include:
+      after_body: libs-local/footer.html
     toc: true
     toc_depth: 3
     toc_float:
