@@ -1,5 +1,9 @@
 name: "Git & RStudio"
 output_dir: docs
+exclude:
+  - README.md
+  - license.md
+  - 
 navbar:
   title: "Reproducibility: Git & RStudio"
   left:
@@ -20,10 +24,12 @@ navbar:
 output:
   html_document:
     theme: flatly
-    highlight: textmate
+    highlight: tango
     toc: true
     toc_depth: 3
     toc_float:
       collapsed: false
-    css: ["duke.css"]
-    #css: ["flatly.min.css", "duke.css"]
+    css: 
+      - libs-local/duke.css
+      - libs-local/cc-fonts.css
+    df_print: paged
