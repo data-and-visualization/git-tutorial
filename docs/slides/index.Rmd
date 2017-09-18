@@ -39,13 +39,6 @@ Part 2 of the
 http://rfun.library.duke.edu
 
 ---
-class: middle, center
-
-### Hands-on and perhaps not purley intellectual
-
-<iframe width="800" height="550"src="https://www.youtube.com/embed/MnKoQbFXemE" frameborder="0" allowfullscreen></iframe>
-
----
 exclude: false
 class: top, center
 background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
@@ -76,6 +69,13 @@ background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/
 This is a presenter comment for the presenter mode
 
 use 'p' to toggle the presenter mode or '?' or 'h' to toggle the help / key-shortcut options
+
+---
+class: middle, center
+
+### Hands-on and perhaps not purley intellectual
+
+<iframe width="800" height="550"src="https://www.youtube.com/embed/MnKoQbFXemE" frameborder="0" allowfullscreen></iframe>
 
 ---
 
