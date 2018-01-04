@@ -61,15 +61,42 @@ During the workshop we will use <a href="https://gitlab.oit.duke.edu" target="_b
 
 I recommend generating your SSH keys in advance of the workshop.  Then add your public key to Duke's GitLab.  To do so, you should have already installed Git to your laptop.  
 
-Follow these instructions for generating and adding keys.  We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.
+We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.  The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete [GitLab instructions](https://gitlab.oit.duke.edu/help/ssh/README)  
 
-1. To begin, open a shell **from RStudio**
+1. To begin, open the **Terminal** *in RStudio*.  If you're using the latest version of Rstudio, the *Terminal* is a tab in the console quadrant (typically the bottom-right)
 
-    - In RStudio > Menubar > `Tools > Shell...`
+    - Iin RStudio: Menubar `Tools > Terminal > New Terminal` 
+    - If you have an older version of RStudio (and don't have a *Terminal*), you'll have to use the *[shell](images/shell_old.png)*, typically from within RStudio.  (Then follow the instructions at GitLab -- link above.)
 
 <br><figure>![](images/shell.png)</figure><br>
-    
-1. Follow the instructions <a href="https://gitlab.oit.duke.edu/help/ssh/README" target="_blank">https://gitlab.oit.duke.edu/help/ssh/README</a>
 
-    - You can stop *after* step 5 of *[Generating a new SSH key pair](https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair)*
-1. Close the Shell
+    
+2. Determine if you already have an SSH key pair.  In the *Termnal* tab, type:  `cat ~/.ssh/id_rsa.pub`
+    
+    - If you see a string starting with `ssh-rsa` you already have an SSH key pair and can simply copy that key (Step 5)
+        
+    - If you get some kind of error, you'll have to generate a key in the next step (Step 3)
+        
+1. In the *Terminal* tab, type:  `ssh-keygen -t rsa -C "your.email@example.com" -b 4096`
+
+    - Use your Duke Email address  
+    
+1. You will be prompted to input a file path.  i.e. the location where you'll save your SSH key pair.
+
+    - If you don't already have an SSH key pair use the suggested path by pressing enter
+    
+     - After setting the file path you will be prompted to input a password.  This will secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required.  You can skip creating a password by pressing enter
+
+        - **Note**:  If you want to change the password of your SSH key pair, you can use `ssh-keygen -p <keyname>`  
+    
+1. Copy the public SSH key to the clipboard buffer
+
+    - In the *Termnal* tab, type the appropriate code below:
+        - **macOS**:  `cat ~/.ssh/id_rsa.pub | pbcopy`
+        - **Windows**:  `cat ~/.ssh/id_rsa.pub | clip`
+    
+1. The final step is to add your public SSH key to GitLab.
+
+    - Navigate to the *SSH Keys* tab in your *Profile Settings.* Paste your key in the *Key* section and give it a relevant *Title*. Use an identifiable title like *Work Laptop - Windows 7* or *Home MacBook Pro 15.*
+    
+    - If you manually copied your public SSH key make sure you copied the entire key starting with `ssh-rsa` and ending with your email.

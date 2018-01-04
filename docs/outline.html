@@ -381,11 +381,12 @@ Click on the link to your OS
 <div id="generate-ssh-keys-in-advance-of-the-workshop" class="section level3">
 <h3>Generate SSH keys in Advance of the Workshop</h3>
 <p>I recommend generating your SSH keys in advance of the workshop. Then add your public key to Duke’s GitLab. To do so, you should have already installed Git to your laptop.</p>
-<p>Follow these instructions for generating and adding keys. We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.</p>
+<p>We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance. The instructions below are based on those found at Duke’s GitLab. If the instructions below are not clear you should consult the more complete <a href="https://gitlab.oit.duke.edu/help/ssh/README">GitLab instructions</a></p>
 <ol style="list-style-type: decimal">
-<li><p>To begin, open a shell <strong>from RStudio</strong></p>
+<li><p>To begin, open the <strong>Terminal</strong> <em>in RStudio</em>. If you’re using the latest version of Rstudio, the <em>Terminal</em> is a tab in the console quadrant (typically the bottom-right)</p>
 <ul>
-<li>In RStudio &gt; Menubar &gt; <code>Tools &gt; Shell...</code></li>
+<li>Iin RStudio: Menubar <code>Tools &gt; Terminal &gt; New Terminal</code></li>
+<li>If you have an older version of RStudio (and don’t have a <em>Terminal</em>), you’ll have to use the <em><a href="images/shell_old.png">shell</a></em>, typically from within RStudio. (Then follow the instructions at GitLab – link above.)</li>
 </ul></li>
 </ol>
 <br>
@@ -393,12 +394,37 @@ Click on the link to your OS
 <img src="images/shell.png" />
 </figure>
 <p><br></p>
-<ol style="list-style-type: decimal">
-<li><p>Follow the instructions <a href="https://gitlab.oit.duke.edu/help/ssh/README" target="_blank">https://gitlab.oit.duke.edu/help/ssh/README</a></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Determine if you already have an SSH key pair. In the <em>Termnal</em> tab, type: <code>cat ~/.ssh/id_rsa.pub</code></p>
 <ul>
-<li>You can stop <em>after</em> step 5 of <em><a href="https://gitlab.oit.duke.edu/help/ssh/README#generating-a-new-ssh-key-pair">Generating a new SSH key pair</a></em></li>
+<li><p>If you see a string starting with <code>ssh-rsa</code> you already have an SSH key pair and can simply copy that key (Step 5)</p></li>
+<li><p>If you get some kind of error, you’ll have to generate a key in the next step (Step 3)</p></li>
 </ul></li>
-<li><p>Close the Shell</p></li>
+<li><p>In the <em>Terminal</em> tab, type: <code>ssh-keygen -t rsa -C &quot;your.email@example.com&quot; -b 4096</code></p>
+<ul>
+<li>Use your Duke Email address</li>
+</ul></li>
+<li><p>You will be prompted to input a file path. i.e. the location where you’ll save your SSH key pair.</p>
+<ul>
+<li><p>If you don’t already have an SSH key pair use the suggested path by pressing enter</p></li>
+<li><p>After setting the file path you will be prompted to input a password. This will secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required. You can skip creating a password by pressing enter</p>
+<ul>
+<li><strong>Note</strong>: If you want to change the password of your SSH key pair, you can use <code>ssh-keygen -p &lt;keyname&gt;</code></li>
+</ul></li>
+</ul></li>
+<li><p>Copy the public SSH key to the clipboard buffer</p>
+<ul>
+<li>In the <em>Termnal</em> tab, type the appropriate code below:
+<ul>
+<li><strong>macOS</strong>: <code>cat ~/.ssh/id_rsa.pub | pbcopy</code></li>
+<li><strong>Windows</strong>: <code>cat ~/.ssh/id_rsa.pub | clip</code></li>
+</ul></li>
+</ul></li>
+<li><p>The final step is to add your public SSH key to GitLab.</p>
+<ul>
+<li><p>Navigate to the <em>SSH Keys</em> tab in your <em>Profile Settings.</em> Paste your key in the <em>Key</em> section and give it a relevant <em>Title</em>. Use an identifiable title like <em>Work Laptop - Windows 7</em> or <em>Home MacBook Pro 15.</em></p></li>
+<li><p>If you manually copied your public SSH key make sure you copied the entire key starting with <code>ssh-rsa</code> and ending with your email.</p></li>
+</ul></li>
 </ol>
 </div>
 </div>
