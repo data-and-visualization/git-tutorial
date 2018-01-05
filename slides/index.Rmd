@@ -34,35 +34,10 @@ https://osf.io/r6wfk/
 
 &nbsp;
 
-Part 2 of the 
-### [RFun](http://rfun.library.duke.edu) Learning Series of Workshops
-http://rfun.library.duke.edu
+Part of the 
+### [RFun](http://rfun.library.duke.edu) Learning Series
 
----
-exclude: false
-class: top, center
-background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
-
-## Data & Visualization Services
-### [library.duke.edu/data](http://library.duke.edu/data)
-
-
-&nbsp;  
-
-&nbsp;  
-
-&nbsp;  
-
-&nbsp;  
-
-&nbsp;  
-
-&nbsp;  
-
-&nbsp;  
-
-
-[rfun.library.duke.edu/git/slides](http://rfun.library.duke.edu/git/slides/) <br>for slide annotations, keystroke: *P* 
+[Other Rfun Workshops](https://rfun.library.duke.edu/categories/workshops/)
 
 ???
 
@@ -70,12 +45,82 @@ This is a presenter comment for the presenter mode
 
 use 'p' to toggle the presenter mode or '?' or 'h' to toggle the help / key-shortcut options
 
+
+---
+class: middle
+
+## Why Rstudio?
+
+- Reproducibility is a Top Priority
+
+- R / RStudio for Composition, Analysis, Reproducible Publishing
+
+    - RStudio orchestrates Git
+
+- Git for Version Control
+
+    - Git can be a pain to configure but works well in the background
+    - Leapfrog beyond the barrier of a painful configuration
+
+- GitLab (GitHub) for open sharing and collaborating via Repositories
+
+---
+class:  middle
+
+![](images/git_workflow.png) 
+
+---
+class:  middle
+
+![](images/git_workflow_adv.png)
+
+---
+## R/RStudio 
+		
+- Git orchestrator (integrates with an documented repository)
+- Literate Code editor (readable by Humans)
+- Data Science coding language
+
+    - Manages Code?  Check!
+    - Or it can be used just like a word processor and a Desktop Publisher
+    - Project Management containter 
+    
+        - Project files are integrated
+        
 ---
 class: middle, center
 
-### Hands-on and perhaps not purley intellectual
+# Therefore
 
-<iframe width="800" height="550"src="https://www.youtube.com/embed/MnKoQbFXemE" frameborder="0" allowfullscreen></iframe>
+## Idiosyncratic critical steps 
+
+--
+
+of your processes 
+
+--
+
+**are not** reduced to
+
+--
+
+## weird bits of undocumented manual magic
+        
+---
+## Reproducibility
+
+- Open Reproducible Projects = R Markdown + R Notebooks + literate code + Git
+
+- Future Self is your most trusted and most often consulted collaborator 
+
+--
+
+    - Six months into the future
+    
+--
+
+    - Six years into the future
+
 
 ---
 
@@ -358,6 +403,29 @@ Next:  [Hands-on](../handson.html)
 ???
 
 Now move to the [hands-on](/handson.html) guided exercises.
+
+---
+exclude: false
+class: top, center
+background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
+
+## Data & Visualization Services
+### [library.duke.edu/data](http://library.duke.edu/data)
+
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
+
+&nbsp;  
 
 ---
 ## Thank You For Attending
