@@ -90,21 +90,13 @@ class:  middle
 ---
 class: middle, center
 
-# Therefore
+Avoid
 
-## Idiosyncratic critical steps 
+## Idiosyncratic Critical Steps 
 
---
+so your processes **are not** reduced to
 
-of your processes 
-
---
-
-**are not** reduced to
-
---
-
-## weird bits of undocumented manual magic
+## Weird Bits of Undocumented Manual Magic
         
 ---
 ## Reproducibility
