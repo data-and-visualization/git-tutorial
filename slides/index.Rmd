@@ -47,22 +47,60 @@ use 'p' to toggle the presenter mode or '?' or 'h' to toggle the help / key-shor
 
 
 ---
+class: middle, center
+
+### Goal
+
+# Compose a Reproducible Document
+
+---
 class: middle
 
-## Why Rstudio?
+## Literate Code --> Reproducible Reports
 
-- Reproducibility is a Top Priority
+## Collaborative
+
+## Transparent Process
+
+---
+class: middle
+
+## Why RStudio?
+
+- **Reproducibility** is a Top Priority
 
 - R / RStudio for Composition, Analysis, Reproducible Publishing
 
-    - RStudio orchestrates Git
+    - **RStudio orchestrates Git**
 
-- Git for Version Control
+- **Git for Version Control**
 
     - Git can be a pain to configure but works well in the background
     - Leapfrog beyond the barrier of a painful configuration
 
-- GitLab (GitHub) for open sharing and collaborating via Repositories
+- **GitLab (GitHub) for open sharing and collaborating** via repositories
+
+---
+class: middle
+Karl Broman's *[initial steps toward reproducible research](http://kbroman.org/steps2rr/)*
+
+- Organize your data and code
+- [Everything with a script](http://kbroman.org/steps2rr/pages/scripts.html)
+- Automate the process
+- Turn scripts into reproducible reports
+- Turn repeated code into functions
+- Package functions for reuse
+- Use version control
+- License your software
+
+---
+class:  middle
+
+## Broman: Everything with a script
+
+The most basic aspect of **reproducible research** is that **everything you do** (convert data files, clean data, analyze data) should be **accomplished via code.** 
+
+*Pointing and clicking, and copy-paste, are not reproducible.*  
 
 ---
 class:  middle
@@ -75,19 +113,6 @@ class:  middle
 ![](images/git_workflow_adv.png)
 
 ---
-## R/RStudio 
-		
-- Git orchestrator (integrates with an documented repository)
-- Literate Code editor (readable by Humans)
-- Data Science coding language
-
-    - Manages Code?  Check!
-    - Or it can be used just like a word processor and a Desktop Publisher
-    - Project Management containter 
-    
-        - Project files are integrated
-        
----
 class: middle, center
 
 Avoid
@@ -98,22 +123,6 @@ so your processes **are not** reduced to
 
 ## Weird Bits of Undocumented Manual Magic
         
----
-## Reproducibility
-
-- Open Reproducible Projects = R Markdown + R Notebooks + literate code + Git
-
-- Future Self is your most trusted and most often consulted collaborator 
-
---
-
-    - Six months into the future
-    
---
-
-    - Six years into the future
-
-
 ---
 
 ## Outline
@@ -172,7 +181,7 @@ Versioning can be used as a kind of breadcrumb system that helps track the resea
 ???
 
 ### Source Code Mangement
-By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successfull operations.  In this way it becomes easier to keep track of the process and the progress.
+By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successful operations.  In this way it becomes easier to keep track of the process and the progress.
 
 ### Tracking changes in **any file set**
 
@@ -192,17 +201,10 @@ Introduce the idea of LOCKSS: "Lots of Copies Keeps Stuff Safe."  Now you have c
 Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
 
 ---
-class: center
-.pull-left[ ![](images/gitlab.png)  ]
-.pull-right[ ![](images/github.png)  ]
+<figure><img src="images/The_Bookworm_-_Grohmann_Museum.jpg"><figcaption> Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg <br><a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg">Wikimedia Commons</a></figcaption></figure>
 
-![](images/bitbucket.png)
-
-???
-
-- Git is not GitHub
-
-- GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
+---
+<figure><img src="images/800px-Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"><figcaption> Image Credit: Picture by Christin & Monica Ho <a href="https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_(9915619823).jpg">Wikimedia Commons</a></figcaption></figure>
 
 
 ---
@@ -210,7 +212,8 @@ class: center
 
 .pull-left[
 
-<figure><img src="images/repository.jpg"><figcaption> Image Credit: <a href="https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg">Wikimedia Commons</a></figcaption></figure><br>
+<figure><img src="images/repository.jpg"><figcaption> Image Credit: 
+<a href="https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg">Wikimedia Commons</a></figcaption></figure><br>
 
 ]
 
@@ -239,6 +242,22 @@ Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
 ???
 
 Effective collaboration extends the diversity of input and feedback available to you.  
+
+---
+class: center
+.pull-left[ ![](images/gitlab.png)  ]
+.pull-right[ ![](images/github.png)  ]
+
+![](images/bitbucket.png) 
+
+???
+
+- Git is not GitHub
+
+- GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
+
+
+
 
 ---
 class: green, middle, center
@@ -359,11 +378,15 @@ Numbered list:
 ---
 class: orange, middle, center
 
-## **Reproducible Research** 
+## **Literate Code** 
 
 Integrate your reproducible workflow using *Literate Coding* practices in *R* then generate reports directly from analysis 
 
-### R Notebooks + R Markdown + Git
+Analysis + 
+### (Literate Code = R Markdown + R Notebooks) +
+Version Control
+
+
 
 ???
 
@@ -395,6 +418,39 @@ Next:  [Hands-on](../handson.html)
 ???
 
 Now move to the [hands-on](/handson.html) guided exercises.
+
+---
+class: orange
+## R/RStudio 
+		
+- Git orchestrator (integrates with a documented repository)
+
+- Literate Code editor (readable by humans)
+
+- Data Science coding language
+
+    - Manages Code
+    - Word processor 
+    - Desktop Publisher
+    - Analysis Engine
+    - Chart Generator
+    - Project files are integrated
+    
+---
+class: orange
+## Reproducibility
+
+Open Reproducible Projects = 
+
+- Analysis + 
+- Literate Code (R Markdown + R Notebooks) + 
+- Version Control (Git + Social Repositories)
+
+Future Self is your most trusted and most often consulted collaborator 
+
+- Six months into the future
+- Six years into the future
+
 
 ---
 exclude: false
