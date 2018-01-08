@@ -42,35 +42,10 @@ https://osf.io/r6wfk/
 
 &amp;nbsp;
 
-Part 2 of the 
-### [RFun](http://rfun.library.duke.edu) Learning Series of Workshops
-http://rfun.library.duke.edu
+Part of the 
+### [RFun](http://rfun.library.duke.edu) Learning Series
 
----
-exclude: false
-class: top, center
-background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
-
-## Data &amp; Visualization Services
-### [library.duke.edu/data](http://library.duke.edu/data)
-
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-
-[rfun.library.duke.edu/git/slides](http://rfun.library.duke.edu/git/slides/) &lt;br&gt;for slide annotations, keystroke: *P* 
+[Other Rfun Workshops](https://rfun.library.duke.edu/categories/workshops/)
 
 ???
 
@@ -78,13 +53,84 @@ This is a presenter comment for the presenter mode
 
 use 'p' to toggle the presenter mode or '?' or 'h' to toggle the help / key-shortcut options
 
+
 ---
 class: middle, center
 
-### Hands-on and perhaps not purley intellectual
+### Goal
 
-&lt;iframe width="800" height="550"src="https://www.youtube.com/embed/MnKoQbFXemE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+# Compose a Reproducible Document
 
+---
+class: middle
+
+## Literate Code --&gt; Reproducible Reports
+
+## Collaborative
+
+## Transparent Process
+
+---
+class: middle
+
+## Why RStudio?
+
+- **Reproducibility** is a Top Priority
+
+- R / RStudio for Composition, Analysis, Reproducible Publishing
+
+    - **RStudio orchestrates Git**
+
+- **Git for Version Control**
+
+    - Git can be a pain to configure but works well in the background
+    - Leapfrog beyond the barrier of a painful configuration
+
+- **GitLab (GitHub) for open sharing and collaborating** via repositories
+
+---
+class: middle
+Karl Broman's *[initial steps toward reproducible research](http://kbroman.org/steps2rr/)*
+
+- Organize your data and code
+- [Everything with a script](http://kbroman.org/steps2rr/pages/scripts.html)
+- Automate the process
+- Turn scripts into reproducible reports
+- Turn repeated code into functions
+- Package functions for reuse
+- Use version control
+- License your software
+
+---
+class:  middle
+
+## Broman: Everything with a script
+
+The most basic aspect of **reproducible research** is that **everything you do** (convert data files, clean data, analyze data) should be **accomplished via code.** 
+
+*Pointing and clicking, and copy-paste, are not reproducible.*  
+
+---
+class:  middle
+
+![](images/git_workflow.png) 
+
+---
+class:  middle
+
+![](images/git_workflow_adv.png)
+
+---
+class: middle, center
+
+Avoid
+
+## Idiosyncratic Critical Steps 
+
+so your processes **are not** reduced to
+
+## Weird Bits of Undocumented Manual Magic
+        
 ---
 
 ## Outline
@@ -143,7 +189,7 @@ Versioning can be used as a kind of breadcrumb system that helps track the resea
 ???
 
 ### Source Code Mangement
-By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successfull operations.  In this way it becomes easier to keep track of the process and the progress.
+By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successful operations.  In this way it becomes easier to keep track of the process and the progress.
 
 ### Tracking changes in **any file set**
 
@@ -163,17 +209,10 @@ Introduce the idea of LOCKSS: "Lots of Copies Keeps Stuff Safe."  Now you have c
 Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
 
 ---
-class: center
-.pull-left[ ![](images/gitlab.png)  ]
-.pull-right[ ![](images/github.png)  ]
+&lt;figure&gt;&lt;img src="images/The_Bookworm_-_Grohmann_Museum.jpg"&gt;&lt;figcaption&gt; Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg &lt;br&gt;&lt;a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
 
-![](images/bitbucket.png)
-
-???
-
-- Git is not GitHub
-
-- GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
+---
+&lt;figure&gt;&lt;img src="images/800px-Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"&gt;&lt;figcaption&gt; Image Credit: Picture by Christin &amp; Monica Ho &lt;a href="https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
 
 
 ---
@@ -181,7 +220,8 @@ class: center
 
 .pull-left[
 
-&lt;figure&gt;&lt;img src="images/repository.jpg"&gt;&lt;figcaption&gt; Image Credit: &lt;a href="https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;br&gt;
+&lt;figure&gt;&lt;img src="images/repository.jpg"&gt;&lt;figcaption&gt; Image Credit: 
+&lt;a href="https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;br&gt;
 
 ]
 
@@ -212,6 +252,22 @@ Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
 Effective collaboration extends the diversity of input and feedback available to you.  
 
 ---
+class: center
+.pull-left[ ![](images/gitlab.png)  ]
+.pull-right[ ![](images/github.png)  ]
+
+![](images/bitbucket.png) 
+
+???
+
+- Git is not GitHub
+
+- GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
+
+
+
+
+---
 class: green, middle, center
 
 
@@ -234,8 +290,8 @@ I use it mostly for private work and development.  I like my public presence at 
 
 
     
-<div id="htmlwidget-08ecfa8dc9ed5b526159" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-08ecfa8dc9ed5b526159">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-34a59b0c5c863d3ef7ea" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-34a59b0c5c863d3ef7ea">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
@@ -314,11 +370,15 @@ Numbered list:
 ---
 class: orange, middle, center
 
-## **Reproducible Research** 
+## **Literate Code** 
 
 Integrate your reproducible workflow using *Literate Coding* practices in *R* then generate reports directly from analysis 
 
-### R Notebooks + R Markdown + Git
+Analysis + 
+### (Literate Code = R Markdown + R Notebooks) +
+Version Control
+
+
 
 ???
 
@@ -350,6 +410,62 @@ Next:  [Hands-on](../handson.html)
 ???
 
 Now move to the [hands-on](/handson.html) guided exercises.
+
+---
+class: orange
+## R/RStudio 
+		
+- Git orchestrator (integrates with a documented repository)
+
+- Literate Code editor (readable by humans)
+
+- Data Science coding language
+
+    - Manages Code
+    - Word processor 
+    - Desktop Publisher
+    - Analysis Engine
+    - Chart Generator
+    - Project files are integrated
+    
+---
+class: orange
+## Reproducibility
+
+Open Reproducible Projects = 
+
+- Analysis + 
+- Literate Code (R Markdown + R Notebooks) + 
+- Version Control (Git + Social Repositories)
+
+Future Self is your most trusted and most often consulted collaborator 
+
+- Six months into the future
+- Six years into the future
+
+
+---
+exclude: false
+class: top, center
+background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
+
+## Data &amp; Visualization Services
+### [library.duke.edu/data](http://library.duke.edu/data)
+
+
+&amp;nbsp;  
+
+&amp;nbsp;  
+
+&amp;nbsp;  
+
+&amp;nbsp;  
+
+&amp;nbsp;  
+
+&amp;nbsp;  
+
+&amp;nbsp;  
 
 ---
 ## Thank You For Attending
