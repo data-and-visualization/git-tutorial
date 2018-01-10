@@ -56,7 +56,7 @@ class: middle, center
 ---
 class: middle
 
-## Literate Code --> Reproducible Reports
+## Literate Code --> Reproducible Research
 
 ## Collaborative
 
@@ -102,16 +102,28 @@ The most basic aspect of **reproducible research** is that **everything you do**
 
 *Pointing and clicking, and copy-paste, are not reproducible.*  
 
+
+???
+
+Goal:  Compose a Reproducible Document **in RStudio**
+
 ---
-class:  middle
+class:  middle, center
+
+## Version Control
 
 ![](images/git_workflow.png) 
+???
 
+RStudio will manage the most commonly used Git commands
 ---
-class:  middle
+class:  middle, center
+
+## Version Control
 
 ![](images/git_workflow_adv.png)
-
+???
+Collaboration adds complexity the but the basic git commands are the same.
 ---
 class: middle, center
 
@@ -122,7 +134,20 @@ Avoid
 so your processes **are not** reduced to
 
 ## Weird Bits of Undocumented Manual Magic
-        
+
+???
+
+For Example...
+
+1. Create Summary **Table in STATA**
+
+2. **Copy** Table to MS **Excel**
+
+3. **Format Table** for readability in Excel
+
+4. Generate **Visualizations** in Excel
+
+5. Integrate Excel Table into **Word > PDF**
 ---
 
 ## Outline
@@ -155,7 +180,17 @@ background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
 ???
 
-Versioning can be used as a kind of breadcrumb system that helps track the research process.  Using version control, one can easily "roll back" to an earlier moment in the research workflow.
+Versioning can be used 
+
+- as a kind of **breadcrumb system** that helps track the **research process/workflow**
+
+- Using version control, one can **easily "roll back"** to an earlier moment in the research workflow.
+
+- Leave a documented 
+
+    - **trail of where you've been**
+    - how you got there
+    - generated as you go
 
 ---
 ## Repositories
@@ -181,11 +216,11 @@ Versioning can be used as a kind of breadcrumb system that helps track the resea
 ???
 
 ### Source Code Mangement
-By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successful operations.  In this way it becomes easier to keep track of the process and the progress.
+By this I simply mean **version control on a personal level**.  Once can "branch" stages of research and merge successful operations.  In this way it becomes easier to keep track of the process and the progress.
 
 ### Tracking changes in **any file set**
 
-Git can be used to track any files. 
+**Git** can be used to **track any files**. 
 
 ---
 class: center, middle, softblue
@@ -194,18 +229,49 @@ class: center, middle, softblue
 
 ???
 
-Social Coding = collaboration
+- **Social Coding** = collaboration
 
-Introduce the idea of LOCKSS: "Lots of Copies Keeps Stuff Safe."  Now you have copies in the cloud and on local workstations.  You can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.
+- Introduce the idea of **LOCKSS**: "Lots of Copies Keeps Stuff Safe."  Now you have copies in the cloud and on local workstations.  You can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.  (This assumes you've installed **multiple keys**)
 
-Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
+- Share **trackable progress** of your reproducible activity
+
+    - even if you are only **sharing with yourself** 
 
 ---
+
+.pull-left[
 <figure><img src="images/The_Bookworm_-_Grohmann_Museum.jpg"><figcaption> Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg <br><a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg">Wikimedia Commons</a></figcaption></figure>
+]
+.pull-right[
+## Private Repository
+
+- Research Output?
+
+- Statement of Authorship?
+
+- Resarch History / Workflow?
+
+- Collaborators?
+
+- Audience?
+
+]
+
+???
+
+How does this process **affect Reproducibility?**
+
+Library ~= Repository
 
 ---
-<figure><img src="images/800px-Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"><figcaption> Image Credit: Picture by Christin & Monica Ho <a href="https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_(9915619823).jpg">Wikimedia Commons</a></figcaption></figure>
+class: bottom, right
+background-image: url(images/Edit-a-thon_lrg.jpg)
 
+.small-beige[ Image Credit: Picture by [Christin & Monica Ho](https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_%289915619823%29.jpg) ]
+
+???
+
+## Public Repository
 
 ---
 ## Git Repositories

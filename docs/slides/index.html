@@ -64,7 +64,7 @@ class: middle, center
 ---
 class: middle
 
-## Literate Code --&gt; Reproducible Reports
+## Literate Code --&gt; Reproducible Research
 
 ## Collaborative
 
@@ -110,16 +110,28 @@ The most basic aspect of **reproducible research** is that **everything you do**
 
 *Pointing and clicking, and copy-paste, are not reproducible.*  
 
+
+???
+
+Goal:  Compose a Reproducible Document **in RStudio**
+
 ---
-class:  middle
+class:  middle, center
+
+## Version Control
 
 ![](images/git_workflow.png) 
+???
 
+RStudio will manage the most commonly used Git commands
 ---
-class:  middle
+class:  middle, center
+
+## Version Control
 
 ![](images/git_workflow_adv.png)
-
+???
+Collaboration adds complexity the but the basic git commands are the same.
 ---
 class: middle, center
 
@@ -130,7 +142,20 @@ Avoid
 so your processes **are not** reduced to
 
 ## Weird Bits of Undocumented Manual Magic
-        
+
+???
+
+For Example...
+
+1. Create Summary **Table in STATA**
+
+2. **Copy** Table to MS **Excel**
+
+3. **Format Table** for readability in Excel
+
+4. Generate **Visualizations** in Excel
+
+5. Integrate Excel Table into **Word &gt; PDF**
 ---
 
 ## Outline
@@ -163,7 +188,17 @@ background-image:  url(images/flickr_RupertsDogBoye_trail.jpg)
 
 ???
 
-Versioning can be used as a kind of breadcrumb system that helps track the research process.  Using version control, one can easily "roll back" to an earlier moment in the research workflow.
+Versioning can be used 
+
+- as a kind of **breadcrumb system** that helps track the **research process/workflow**
+
+- Using version control, one can **easily "roll back"** to an earlier moment in the research workflow.
+
+- Leave a documented 
+
+    - **trail of where you've been**
+    - how you got there
+    - generated as you go
 
 ---
 ## Repositories
@@ -189,11 +224,11 @@ Versioning can be used as a kind of breadcrumb system that helps track the resea
 ???
 
 ### Source Code Mangement
-By this I simply mean version control on a personal level.  Once can "branch" stages of research and merge successful operations.  In this way it becomes easier to keep track of the process and the progress.
+By this I simply mean **version control on a personal level**.  Once can "branch" stages of research and merge successful operations.  In this way it becomes easier to keep track of the process and the progress.
 
 ### Tracking changes in **any file set**
 
-Git can be used to track any files. 
+**Git** can be used to **track any files**. 
 
 ---
 class: center, middle, softblue
@@ -202,17 +237,46 @@ class: center, middle, softblue
 
 ???
 
-Social Coding = collaboration
+- **Social Coding** = collaboration
 
-Introduce the idea of LOCKSS: "Lots of Copies Keeps Stuff Safe."  Now you have copies in the cloud and on local workstations.  You can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.
+- Introduce the idea of **LOCKSS**: "Lots of Copies Keeps Stuff Safe."  Now you have copies in the cloud and on local workstations.  You can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.  (This assumes you've installed **multiple keys**)
 
-Share trackable progress of your reproducible activity -- even if you are only sharing with yourself until you "publish".
+- Share **trackable progress** of your reproducible activity
+
+    - even if you are only **sharing with yourself** 
 
 ---
+
+.pull-left[
 &lt;figure&gt;&lt;img src="images/The_Bookworm_-_Grohmann_Museum.jpg"&gt;&lt;figcaption&gt; Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg &lt;br&gt;&lt;a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+]
+.pull-right[
+## Private Repository
+
+- Research Output?
+
+- Statement of Authorship?
+
+- Resarch History / Workflow?
+
+- Collaborators?
+
+- Audience?
+
+]
+
+???
+
+How does this process **affect Reproducibility?**
 
 ---
-&lt;figure&gt;&lt;img src="images/800px-Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"&gt;&lt;figcaption&gt; Image Credit: Picture by Christin &amp; Monica Ho &lt;a href="https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+class: bottom, right
+background-image: url(images/Edit-a-thon.jpg)
+
+.small-beige[ Image Credit: Picture by [Christin &amp; Monica Ho](https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_%289915619823%29.jpg) ]
+
+---
+&lt;figure&gt;&lt;img src="images/800px-Edit-a-thon_at_the_MoMu_library_%289915619823%28.jpg"&gt;&lt;figcaption&gt; Image Credit: Picture by Christin &amp; Monica Ho &lt;a href="https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_(9915619823).jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
 
 
 ---
@@ -290,8 +354,8 @@ I use it mostly for private work and development.  I like my public presence at 
 
 
     
-<div id="htmlwidget-34a59b0c5c863d3ef7ea" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-34a59b0c5c863d3ef7ea">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-70e3247d1f30d684af1e" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-70e3247d1f30d684af1e">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
