@@ -272,16 +272,36 @@ How does this process **affect Reproducibility?**
 Library ~= Repository
 
 ---
-class: bottom, right
+class: bottom
 background-image: url(images/Edit-a-thon_lrg.jpg)
 
 .small-beige[ Image Credit: Picture by [Christin &amp; Monica Ho](https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_%289915619823%29.jpg) ]
 
 ???
 
-## Public Repository
+## Public Git Repository
+
+- Social Coding
+
+- Digital and Multi-Media
+
+- Sharing
+
+- Collaboration
+
+- Track Issues
+
+
+Effective collaboration **extends** the diversity of **input and feedback available** to you.
+
+- Stop emailing code/research/documents
+
+- Never loose work / track progress
+
+- Build a Portfolio
 
 ---
+exclude: TRUE
 ## Git Repositories
 
 .pull-left[
@@ -304,6 +324,7 @@ background-image: url(images/Edit-a-thon_lrg.jpg)
 ]
 
 ---
+exclude: TRUE
 class: center
 
 ![](images/social-collaboration.jpg)
@@ -345,9 +366,15 @@ class: green, middle, center
 
 - Duke has it's own instance of GitLab
 
-Duke's GitLab instance means you don't have to pay and can still synchronize to larger networks (e.g. GitHub) at any point.
+Duke's GitLab instance means 
 
-I use it mostly for private work and development.  I like my public presence at GitHub.  Both can be accessed via RStudio.
+- FREE. ...  you don't have to payfor private repos
+
+- Can synchronize to larger networks (e.g. GitHub) at any point.
+
+
+
+I mostly use Duke's GitLab for private work and development.  But I like my public presence at GitHub.  Both can be accessed via RStudio.
 
 
 ---
@@ -356,8 +383,8 @@ I use it mostly for private work and development.  I like my public presence at 
 
 
     
-<div id="htmlwidget-b48dfce0c6c3e541e7b6" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b48dfce0c6c3e541e7b6">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-a945dff3e4d9d5c9b242" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a945dff3e4d9d5c9b242">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
@@ -365,6 +392,8 @@ Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 class: softblue, middle, center
 
 ## Markdown
+
+?? Liteate Code = R Notebooks + R Markdown
 
 ---
 class: bottom
@@ -380,7 +409,7 @@ R Markdown -- when combined with various R packages -- makes R a flexible report
 
 Notably:  **You Don't have to be a coder** to benefit from Version Control and R Markdown.  The two method/features can be used to compose all of your reporting needs, including MS Word, PDF, LaTex, WebPages, WebSites, Slides, e-books, etc.
 
-I want to emphasize that *R* and *Git* are ideal for *reproducible research*.  However, the added factor of **R Markdown** -- when combined with various R packages -- makes R a flexible report generation system arguably more *open* and *reproducible* than other proprietary collaborations systems.
+I want to emphasize that *R* and *Git* are ideal for *reproducible research*.  However, the added factor of **R Markdown** -- when combined with various R packages -- makes R a flexible report generation system, arguably more *open* and *reproducible* than other proprietary collaborations systems.
 
 ---
 class: middle
@@ -450,11 +479,20 @@ Version Control
 
 This is where **Open** becomes **Awesome** 
 
+slides:  4, 11, 24
+
 
 ---
 class: softblue, middle, center
 
-## Rstudio &amp; Git
+## RStudio &amp; Git
+
+
+???
+
+Why R 
+
+- Version Contol, via Git, orchestrated by RStudio
 
 ---
 
@@ -477,6 +515,8 @@ Next:  [Hands-on](../handson.html)
 
 Now move to the [hands-on](/handson.html) guided exercises.
 
+slide:  8, (9), 26
+
 ---
 class: orange
 ## R/RStudio 
@@ -487,12 +527,16 @@ class: orange
 
 - Data Science coding language
 
-    - Manages Code
+    - Analysis Engine
+    - Manage Code
     - Word processor 
     - Desktop Publisher
-    - Analysis Engine
-    - Chart Generator
-    - Project files are integrated
+    - Visualization Generator
+    - Projects
+    
+???
+
+## Why R
     
 ---
 class: orange
@@ -508,6 +552,10 @@ Future Self is your most trusted and most often consulted collaborator
 
 - Six months into the future
 - Six years into the future
+
+???
+
+## Why Reproducibility
 
 
 ---
@@ -539,25 +587,32 @@ background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/
 .pull-left[
 ### I am ...
 
-- John Little
+- **John Little**
 - https://johnlittle.info
-- http://github.com/libjohn
+- https://github.com/libjohn
 
 #### Schedule Me
 
 - [http:&amp;#47;&amp;#47;v.gd&amp;#47;littleconsult](http://duke.libcal.com/appointment/2695)
+
+### With...
+
+- **Drew Keener**
+- [library.duke.edu/data/../staff/](https://library.duke.edu/data/about/staff/)
+
 ]
 
 .pull-right[
 ### We are...
 - Data &amp; Visualization Services
-- http://library.duke.edu/data
+- [library.duke.edu/**data**](http://library.duke.edu/data)
 - The /Edge, Bostock (1st Floor)
 
 #### Walk-in Hours
 - [Schedule](http://library.duke.edu/data/about/schedule)
 
 #### Our Workshops
+- [Rfun](http://rfun.library.duke.edu/)
 - [Current Workshops](http://library.duke.edu/data/news)
 - [Past Workshops](http://library.duke.edu/data/news/past-workshops)
 
