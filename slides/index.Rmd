@@ -605,7 +605,8 @@ background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/
 
 ### With...
 
-- **Drew Keener**
+- Sophia Lafferty-Hess
+- Jen Darragh
 - [library.duke.edu/data/../staff/](https://library.duke.edu/data/about/staff/)
 
 ]
