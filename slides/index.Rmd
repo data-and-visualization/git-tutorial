@@ -2,7 +2,7 @@
 title: "Hands-on:<br>Configuring and Using Git with RStudio"
 subtitle: "<br>Practical Reproducibility"
 author: "John Little"
-date: "2017-09-18"
+date: "2018-01-29"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -249,7 +249,7 @@ class: center, middle, softblue
 
 - Statement of Authorship?
 
-- Resarch History / Workflow?
+- Research History / Workflow?
 
 - Collaborators?
 
@@ -360,7 +360,7 @@ class: green, middle, center
 
 Duke's GitLab instance means 
 
-- FREE. ...  you don't have to payfor private repos
+- FREE. ...  you don't have to pay for private repos
 
 - Can synchronize to larger networks (e.g. GitHub) at any point.
 
@@ -401,7 +401,7 @@ class: softblue, middle, center
 
 ## Markdown
 
-?? Liteate Code = R Notebooks + R Markdown
+Literate Code = R Notebooks + R Markdown
 
 ---
 class: bottom
@@ -500,7 +500,7 @@ class: softblue, middle, center
 
 Why R 
 
-- Version Contol, via Git, orchestrated by RStudio
+- Version Control, via Git, orchestrated by RStudio
 
 ---
 
