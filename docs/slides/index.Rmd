@@ -86,8 +86,8 @@ Karl Broman's *[initial steps toward reproducible research](http://kbroman.org/s
 
 - Organize your data and code
 - [Everything with a script](http://kbroman.org/steps2rr/pages/scripts.html)
-- **Automate the process**
-- **Turn scripts into reproducible reports**
+- Automate the process
+- Turn scripts into reproducible reports
 - Turn repeated code into functions
 - Package functions for reuse
 - Use version control
@@ -124,7 +124,6 @@ class:  middle, center
 ![](images/git_workflow_adv.png)
 ???
 Collaboration adds complexity the but the basic git commands are the same.
-
 ---
 class: middle, center
 
@@ -250,7 +249,7 @@ class: center, middle, softblue
 
 - Statement of Authorship?
 
-- Resarch History / Workflow?
+- Research History / Workflow?
 
 - Collaborators?
 
@@ -361,7 +360,7 @@ class: green, middle, center
 
 Duke's GitLab instance means 
 
-- FREE. ...  you don't have to payfor private repos
+- FREE. ...  you don't have to pay for private repos
 
 - Can synchronize to larger networks (e.g. GitHub) at any point.
 
@@ -402,7 +401,7 @@ class: softblue, middle, center
 
 ## Markdown
 
-?? Liteate Code = R Notebooks + R Markdown
+Literate Code = R Notebooks + R Markdown
 
 ---
 class: bottom
@@ -501,7 +500,7 @@ class: softblue, middle, center
 
 Why R 
 
-- Version Contol, via Git, orchestrated by RStudio
+- Version Control, via Git, orchestrated by RStudio
 
 ---
 
@@ -565,17 +564,6 @@ Future Self is your most trusted and most often consulted collaborator
 ???
 
 ## Why Reproducibility
-
----
-class:  middle, center
-
-## Version Control
-
-![](images/git_workflow_adv.png)
-
-???
-
-Maestro
 
 
 ---

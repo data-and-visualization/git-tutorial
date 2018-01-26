@@ -19,7 +19,7 @@ navbar:
   right:
     - icon: fa-github
 #    - text: "GitHub"
-      href: https://github.com/libjohn/git-tutorial         
+      href: https://github.com/data-and-visualization/git-tutorial/         
 output:
   html_document:
     theme: flatly
