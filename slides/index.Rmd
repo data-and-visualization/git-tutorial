@@ -223,6 +223,11 @@ By this I simply mean **version control on a personal level**.  Once can "branch
 **Git** can be used to **track any files**. 
 
 ---
+class: bottom, right
+background-image:  url(images/git_push_pull.png)
+
+
+---
 class: center, middle, softblue
 
 ## Social **git Repositories**
