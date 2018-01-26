@@ -15,7 +15,7 @@ output: html_document
 
 	- Masks the CLI
 	- Easier to get started
-	- PowerUsers can still use commands
+	- Power Users can still use commands
 	
 ## Prerequisites
 
@@ -63,9 +63,9 @@ I recommend generating your SSH keys in advance of the workshop.  Then add your 
 
 We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.  The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete [GitLab instructions](https://gitlab.oit.duke.edu/help/ssh/README)  
 
-1. To begin, open the **Terminal** *in RStudio*.  If you're using the latest version of Rstudio, the *Terminal* is a tab in the console quadrant (typically the bottom-right)
+1. To begin, open the **Terminal** *in RStudio*.  If you're using the latest version of RStudio, the *Terminal* is a tab in the console quadrant (typically the bottom-right)
 
-    - Iin RStudio: Menubar `Tools > Terminal > New Terminal` 
+    - In RStudio: Menubar `Tools > Terminal > New Terminal` 
     - If you have an older version of RStudio (and don't have a *Terminal*), you'll have to use the *[shell](images/shell_old.png)*, typically from within RStudio.  (Then follow the instructions at GitLab -- link above.)
 
 <br><figure>![](images/shell.png)</figure><br>
