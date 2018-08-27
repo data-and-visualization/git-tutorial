@@ -15,7 +15,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 1. New repository <br><figure>![](images/new_github_repo.png)</figure><br>
 
-1. Add a repository name.  Use the name *test-one*  <br> <figure>![](images/project_name_github.png)<figcaption>replace 'my-awesome-project' with 'test-one'</figcaption></figure><br>
+1. Add a repository name.  Use the name *test-one*  <br> <figure>![](images/project_name_github.png)<figcaption>Type  'test-one' and add a short description</figcaption></figure><br>
 
 
 1. Change "Add .gitignore" from **None** to **R**
@@ -95,7 +95,7 @@ The next time you open your project in RStudio the first step you should take is
 
 <br><figure>![](images/git_push_pull.png)</figure><br>
 
-Advance to Hands-On, Part 2:  [Branch / Merge / Revert](branch.html)
+Advance to Hands-On, Part 2:  [Branch / Merge / Revert](handson_branch.html)
 
 &nbsp; 
 
