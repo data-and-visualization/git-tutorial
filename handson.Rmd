@@ -5,10 +5,6 @@ output:
     self_contained: false
 ---
 
-```{r, message=FALSE, warning=FALSE, include=FALSE}
-library(tidyverse)
-```
-
 ### Generate SSH Keys 
 
 This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in_advance_of_the_workshop).  This must be done on each workstation you use to *push*.  
