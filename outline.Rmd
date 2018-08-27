@@ -1,15 +1,14 @@
 ---
 title: "Git & R/RStudio Prerequisites:  Software Installation"
-output: html_document
+output: 
+  html_document:
+    self_contained: false
 ---
 
 ## Hands-on Outline
 
 1. Git
 1. GitHub and GitLab and Bitbucket
-
-    - Duke's GitLab  
-    
 1. Markdown  
 1. Orchestrating with RStudio
 
@@ -49,19 +48,21 @@ I recommend accepting the install defaults for the following:
 If you haven't yet, install each of the above applications.  
 
 
-### **Duke's** GitLab -- Verify *your NetID* Access
+### Create GitHub Account and Verify Access
+We will use  <a href="https://github.com" target="_blank">GitHub</a> to create an initial public host for the repository you create during the workshop.  (GitHub is free.  If you choose not to continue using GitHub, you can easily [delete the account](https://help.github.com/articles/deleting-your-user-account/). )   If you already have a GitHub account, you do not need to create another for this workshop.  
 
-During the workshop we will use <a href="https://gitlab.oit.duke.edu" target="_blank">Duke's GitLab</a>.  To complete the hands-on portion of the workshop, you **must log-in** -- **in advance** of the workshop -- and ensure you have NetID access to <a href="https://gitlab.oit.duke.edu" target="_blank"> https://gitlab.oit.duke.edu</a>.  If you do not have access to **Duke's** GitLab, [contact OIT](https://oit.duke.edu/help).
+1. Sign up for GitHub using the form on their front page:  https://github.com.  Use your Duke email address
+1. ![](images/github_account2.png), Then Create the Account  
 
-- Be certain you log-in via "Duke Shibboleth Login" using your NetID
-
-<br><figure>![](images/gitlab_shib_login.png)</figure><br> 
+#### Additional Private Repository Options
+- Students can use the [GitHub Student Pack] (https://education.github.com/pack) that affords free unlimited private repositories
+- Other unlimited private repository options include the [Duke University instance of GitLab](https://gitlab.oit.duke.edu), [GitLab.com](http://gitlab.com), or [BitBucket](https://bitbucket.org/).  Using the `git remote` features it is easy to create private repositories at one social coding site while also publishing public repositories to another social coding site.  I've been very happy using Duke's GitLab for my private repositories and GitHub for my public profile.
 
 ### Generate SSH keys in Advance of the Workshop
 
-I recommend generating your SSH keys in advance of the workshop.  Then add your public key to Duke's GitLab.  To do so, you should have already installed Git to your laptop.  
+I recommend generating your SSH keys in advance of the workshop.  Then add your public key to GitHub.  To do so, you should have already installed Git to your laptop.  
 
-We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.  The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete [GitLab instructions](https://gitlab.oit.duke.edu/help/ssh/README)  
+We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.  The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete GitHub instructions to [generate and add an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)  
 
 1. To begin, open the **Terminal** *in RStudio*.  If you're using the latest version of RStudio, the *Terminal* is a tab in the console quadrant (typically the bottom-left)
 
@@ -74,11 +75,11 @@ We will cover key configuration in the workshop although you will find the expla
     
     - If you see a string starting with `ssh-rsa` you already have an SSH key pair and can simply copy that key (Step 5)
         
-    - If you get some kind of error, you'll have to generate a key in the next step (Step 3)
+    - If you get some kind of error, you'll have to generate a key in the next step
         
 1. In the *Terminal* tab, type:  `ssh-keygen -t rsa -C "your.email@example.com" -b 4096`
 
-    - Use your Duke Email address  
+    - I recommend using your Duke Email address but it must be the address you used to create your GitHub account
     
 1. You will be prompted to input a file path.  i.e. the location where you'll save your SSH key pair.
 
@@ -94,8 +95,8 @@ We will cover key configuration in the workshop although you will find the expla
         - **macOS**:  `cat ~/.ssh/id_rsa.pub | pbcopy`
         - **Windows**:  `cat ~/.ssh/id_rsa.pub | clip`
     
-1. The final step is to add your public SSH key to GitLab.
+1. The final step is to add your public SSH key to GitHub.
 
-    - Navigate to the *SSH Keys* tab in your *Profile Settings.* Paste your key in the *Key* section and give it a relevant *Title*. Use an identifiable title like *Work Laptop - Windows 7* or *Home MacBook Pro 15.*
+    - Navigate to the *SSH and GPG keys* section of your GitHub *Settings*.  Click the green **New SSH key** button and paste your key in the *Key* section.  Give the key a relevant *Title*  Use an identifiable title like *Work Laptop - Windows 7* or *Home MacBook Pro 15.*
     
     - If you manually copied your public SSH key make sure you copied the entire key starting with `ssh-rsa` and ending with your email.

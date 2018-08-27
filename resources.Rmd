@@ -2,6 +2,7 @@
 title: Resources
 output: 
   html_document:
+    self_contained: false
     toc: FALSE
 ---
 

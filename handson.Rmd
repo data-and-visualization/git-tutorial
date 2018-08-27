@@ -1,6 +1,8 @@
 ---
 title: "Git Workshop - Hands-On"
-output: html_document
+output: 
+  html_document:
+    self_contained: false
 ---
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
@@ -14,52 +16,32 @@ hubs <- read_csv("data/hubs.csv")
 
 ### Generate SSH Keys 
 
-This must be done on each workstation you use to *push*.  
+This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in_advance_of_the_workshop).  This must be done on each workstation you use to *push*.  
 
-- https://gitlab.oit.duke.edu/help/ssh/README
-
-This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in_advance_of_the_workshop)
 
 ## Make a Repository
-1. Duke's GitLab -- <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a>
-1. Duke Shibboleth Login
-1. New Project <br><figure>![](images/new_gitlab_project_button.png)</figure><br>
-1. Add a project name.  Use the name *test-one*  <br> <figure>![](images/project_name.png)<figcaption>replace 'my-awesome-project' with 'test-one'</figcaption></figure><br>
+1.Login to GitHub -- <a href="https://github.com" target="_blank">https://github.com</a>
 
-1. Create Project<br><figure>![](images/create_project.png)</figure><br>
+1. New repository <br><figure>![](images/new_github_repo.png)</figure><br>
 
-    - GitLab will present a new page.  Notice the section below the *Command line instructions* header.  That information can come in handy.  For future repositories, you may want to make a note of those Git commands.  We will not use those commands today so you can move on. <br>&nbsp;
+1. Add a repository name.  Use the name *test-one*  <br> <figure>![](images/project_name_github.png)<figcaption>replace 'my-awesome-project' with 'test-one'</figcaption></figure><br>
 
-1. Make a README file <br><figure>![](images/readme.png)
-<figcaption>Open in a new tab for each link: README, LICENSE, and .gitignore</figcaption></figure><br>
 
-    1. Make a top level heading with the word "README"
-    
-        - i.e. type:  `# README` 
+1. Change "Add .gitignore" from **None** to **R**
+1. Change "Add a license" from **None** to ** MIT License**
+1. Click **Create repository** 
+
+    - GitHub will present a new page.
+
+1. Click the green "Add a README" button 
+
+    1. Make a top level heading with the word "#README"
+   
         - See [Markdown](markdown.html) for more information on Markdown tagging
     1. After a blank line type: `This is my first GitLab repository.`
-    1. Commit changes  
+    1. Click the green **Commit new file** button  
     
-    &nbsp; 
-    
-    
-1. Make a license file (Open in a New Tab, click the LICENSE link) <br><figure>![](images/license.png) 
-<figcaption>Appply a license format</figcaption></figure><br>
-
-    - choose *MIT* license, or paste a [Creative Commons](https://creativecommons.org/share-your-work/) License into license.md
-    - Commit changes
-    
-    &nbsp; 
-    
-1. Make a .gitignore file (Open in a New Tab, click the .gitignore link)
-
-    1. *Apply a .gitignore format* 
-    
-        - choose *R* 
-        
-    1. Commit changes
-    
-1. Congratulations.  You've just created your first GitLab repository.  Click *test-one* in the top-left of your GitLab repo screen.  Now you'll see your repository -- including the three files you just created.
+1. Congratulations.  You've just created your first GitHub repository.  Now you can see your repository -- including the three files you just created.
 
 &nbsp; 
 
@@ -69,9 +51,10 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     
 ### Bring the repo down locally via RStudio
 
-1. Copy GitLab repo URL to clipboard 
+1. Copy GitHub repo URL to clipboard by clicking on the green **Clone or Download** button
 
-	  - The repo should be at a location like this. `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`, copy the *git* URL to the clipboard by clicking the icon <br><figure>![](images/copy_repo.png)
+	  - The repo should be at a location like this. `https://github.com/<<your-NetID>>/test-one`
+	  - Click the **Use SSH** link, then the clipboard icon to copy the repository address.  This will copy the *git* URL to the clipboard <br><figure>![](images/copy_repo_github.png)
 <figcaption>Copy the repo URL</figcaption></figure><br>
 	    
 1. Launch RStudio and create a *New Project...*
@@ -117,27 +100,9 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 ## Pull
 
-The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then commit and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
+The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then **commit** and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
 
 <br><figure>![](images/git_push_pull.png)</figure>
-
-## Public or Private Repositories
-
-- `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one` > Settings > Scroll to *Project Visibility* > right-hand drop-down list:  Private | Public
-- Add a Description (Optional)
-- Add Tags (Optional)  
-
-&nbsp; 
-
-## Public Hubs v Duke's Hub
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-datatable(hubs, rownames = FALSE, options = list(dom = 't'),
-          escape = FALSE) %>% 
-  formatStyle("Duke's GitLab", color = "silver", backgroundColor = "navy", fontWeight = "bold") %>% 
-  formatStyle("Public Hubs", backgroundColor = "lightblue")
-```
-
 
 &nbsp; 
 

@@ -2,6 +2,7 @@
 title: "Markdown QuickStart"
 output: 
   html_document:
+    self_contained: false
     toc: FALSE
 ---
 

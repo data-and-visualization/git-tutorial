@@ -2,6 +2,7 @@
 title: "Git & R/RStudio Hands-on"
 output: 
   html_document:
+    self_contained: false
     toc: FALSE
 ---
 

@@ -13,7 +13,7 @@
 
 <title>Git Workshop - Hands-On</title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -25,12 +25,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
-<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
-<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 
 
 
@@ -85,6 +82,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -313,78 +313,41 @@ div.tocify {
 
 <div id="generate-ssh-keys" class="section level3">
 <h3>Generate SSH Keys</h3>
-<p>This must be done on each workstation you use to <em>push</em>.</p>
-<ul>
-<li><a href="https://gitlab.oit.duke.edu/help/ssh/README" class="uri">https://gitlab.oit.duke.edu/help/ssh/README</a></li>
-</ul>
-<p>This step was covered in the <a href="outline.html#generate_ssh_keys_in_advance_of_the_workshop">Outline Section</a></p>
+<p>This step was covered in the <a href="outline.html#generate_ssh_keys_in_advance_of_the_workshop">Outline Section</a>. This must be done on each workstation you use to <em>push</em>.</p>
 </div>
 <div id="make-a-repository" class="section level2">
 <h2>Make a Repository</h2>
+<p>1.Login to GitHub – <a href="https://github.com" target="_blank">https://github.com</a></p>
 <ol style="list-style-type: decimal">
-<li>Duke’s GitLab – <a href="https://gitlab.oit.duke.edu" target="_blank">https://gitlab.oit.duke.edu</a></li>
-<li>Duke Shibboleth Login</li>
-<li>New Project <br>
+<li>New repository <br>
 <figure>
-<img src="images/new_gitlab_project_button.png" />
+<img src="images/new_github_repo.png" />
 </figure>
-<br></li>
-<li>Add a project name. Use the name <em>test-one</em> <br>
+<p><br></p></li>
+<li>Add a repository name. Use the name <em>test-one</em> <br>
 <figure>
-<img src="images/project_name.png" />
+<img src="images/project_name_github.png" />
 <figcaption>
 replace ‘my-awesome-project’ with ‘test-one’
 </figcaption>
 </figure>
 <p><br></p></li>
-<li>Create Project<br>
-<figure>
-<img src="images/create_project.png" />
-</figure>
-<p><br></p>
+<li>Change “Add .gitignore” from <strong>None</strong> to <strong>R</strong></li>
+<li>Change “Add a license” from <strong>None</strong> to ** MIT License**</li>
+<li><p>Click <strong>Create repository</strong></p>
 <ul>
-<li>GitLab will present a new page. Notice the section below the <em>Command line instructions</em> header. That information can come in handy. For future repositories, you may want to make a note of those Git commands. We will not use those commands today so you can move on. <br> </li>
+<li>GitHub will present a new page.</li>
 </ul></li>
-<li>Make a README file <br>
-<figure>
-<img src="images/readme.png" />
-<figcaption>
-Open in a new tab for each link: README, LICENSE, and .gitignore
-</figcaption>
-</figure>
-<p><br></p>
+<li><p>Click the green “Add a README” button</p>
 <ol style="list-style-type: decimal">
-<li><p>Make a top level heading with the word “README”</p>
+<li><p>Make a top level heading with the word “#README”</p>
 <ul>
-<li>i.e. type: <code># README</code></li>
 <li>See <a href="markdown.html">Markdown</a> for more information on Markdown tagging</li>
 </ul></li>
 <li>After a blank line type: <code>This is my first GitLab repository.</code></li>
-<li><p>Commit changes</p></li>
-</ol>
-<p> </p></li>
-<li>Make a license file (Open in a New Tab, click the LICENSE link) <br>
-<figure>
-<img src="images/license.png" />
-<figcaption>
-Appply a license format
-</figcaption>
-</figure>
-<p><br></p>
-<ul>
-<li>choose <em>MIT</em> license, or paste a <a href="https://creativecommons.org/share-your-work/">Creative Commons</a> License into license.md</li>
-<li>Commit changes</li>
-</ul>
-<p> </p></li>
-<li><p>Make a .gitignore file (Open in a New Tab, click the .gitignore link)</p>
-<ol style="list-style-type: decimal">
-<li><p><em>Apply a .gitignore format</em></p>
-<ul>
-<li>choose <em>R</em></li>
-</ul></li>
-<li><p>Commit changes</p></li>
+<li><p>Click the green <strong>Commit new file</strong> button</p></li>
 </ol></li>
-<li><p>Congratulations. You’ve just created your first GitLab repository. Click <em>test-one</em> in the top-left of your GitLab repo screen. Now you’ll see your repository – including the three files you just created.</p></li>
+<li><p>Congratulations. You’ve just created your first GitHub repository. Now you can see your repository – including the three files you just created.</p></li>
 </ol>
 <p> </p>
 </div>
@@ -394,11 +357,12 @@ Appply a license format
 <div id="bring-the-repo-down-locally-via-rstudio" class="section level3">
 <h3>Bring the repo down locally via RStudio</h3>
 <ol style="list-style-type: decimal">
-<li><p>Copy GitLab repo URL to clipboard</p>
+<li><p>Copy GitHub repo URL to clipboard by clicking on the green <strong>Clone or Download</strong> button</p>
 <ul>
-<li>The repo should be at a location like this. <code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code>, copy the <em>git</em> URL to the clipboard by clicking the icon <br>
+<li>The repo should be at a location like this. <code>https://github.com/&lt;&lt;your-NetID&gt;&gt;/test-one</code></li>
+<li>Click the <strong>Use SSH</strong> link, then the clipboard icon to copy the repository address. This will copy the <em>git</em> URL to the clipboard <br>
 <figure>
-<img src="images/copy_repo.png" />
+<img src="images/copy_repo_github.png" />
 <figcaption>
 Copy the repo URL
 </figcaption>
@@ -470,25 +434,11 @@ Paste the GitLab repo URL (from the step above) into the <em>Repository URL:</em
 </div>
 <div id="pull" class="section level2">
 <h2>Pull</h2>
-<p>The next time you open your project in RStudio the first step you should take is to <em>Pull</em> from the GitLab repo. Then make your changes, then commit and push. If you forget to <em>Pull</em> you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.</p>
+<p>The next time you open your project in RStudio the first step you should take is to <em>Pull</em> from the GitLab repo. Then make your changes, then <strong>commit</strong> and push. If you forget to <em>Pull</em> you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.</p>
 <br>
 <figure>
 <img src="images/git_push_pull.png" />
 </figure>
-</div>
-<div id="public-or-private-repositories" class="section level2">
-<h2>Public or Private Repositories</h2>
-<ul>
-<li><code>https://gitlab.oit.duke.edu/&lt;&lt;your-NetID&gt;&gt;/test-one</code> &gt; Settings &gt; Scroll to <em>Project Visibility</em> &gt; right-hand drop-down list: Private | Public</li>
-<li>Add a Description (Optional)</li>
-<li>Add Tags (Optional)</li>
-</ul>
-<p> </p>
-</div>
-<div id="public-hubs-v-dukes-hub" class="section level2">
-<h2>Public Hubs v Duke’s Hub</h2>
-<div id="htmlwidget-9f566698ee6496fb5324" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9f566698ee6496fb5324">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- <br>can syncronize <br>to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 <p> </p>
 <p> </p>
 </div>
