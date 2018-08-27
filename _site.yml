@@ -11,7 +11,11 @@ navbar:
     - text: "Overview"
       href: outline.html
     - text: "Hands-On"
-      href: handson.html
+      menu:
+        - text: "Init / Clone / Pull & Push"
+          href: handson.html
+        - text: "Branch / Merge / Revert"
+          href: "handson_branch.html"
     - text: "Markdown"
       href: markdown.html
     - text: "Resources"

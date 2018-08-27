@@ -1,5 +1,5 @@
 ---
-title: "Git Workshop - Hands-On"
+title: "Git: Init / Clone / Pull & Push"
 output: 
   html_document:
     self_contained: false
@@ -7,11 +7,6 @@ output:
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
-library(DT)
-```
-
-```{r loaddata, message=FALSE, warning=FALSE, include=FALSE}
-hubs <- read_csv("data/hubs.csv")
 ```
 
 ### Generate SSH Keys 
@@ -102,7 +97,9 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 
 The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then **commit** and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
 
-<br><figure>![](images/git_push_pull.png)</figure>
+<br><figure>![](images/git_push_pull.png)</figure><br>
+
+Advance to Hands-On, Part 2:  [Branch / Merge / Revert](branch.html)
 
 &nbsp; 
 

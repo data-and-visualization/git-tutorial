@@ -1,0 +1,21 @@
+---
+title: "Git: Branch / Merge / Revert"
+output: 
+  html_document:
+    self_contained: false
+---
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+```
+
+1. Make Branch "version2"
+    1. checkout version2
+    1. Add stuff (todo.md)
+1. Checkout Main Branch
+    1. update README.Rmd
+    1. Look at the various tracks
+1. Merge.
+1. Conflict
+1. Revert
+    

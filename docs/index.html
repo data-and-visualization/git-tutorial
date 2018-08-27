@@ -176,8 +176,20 @@ $(document).ready(function () {
 <li>
   <a href="outline.html">Overview</a>
 </li>
-<li>
-  <a href="handson.html">Hands-On</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Hands-On
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="handson.html">Init / Clone / Pull &amp; Push</a>
+    </li>
+    <li>
+      <a href="handson_branch.html">Branch / Merge / Revert</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="markdown.html">Markdown</a>
