@@ -1,8 +1,8 @@
 ---
-title: "Hands-on:<br>Configuring and Using Git with RStudio"
+title: "Git: Hands-on"
 subtitle: "<br>Practical Reproducibility"
 author: "John Little"
-date: "2018-01-29"
+date: "2018-09-25"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -27,17 +27,13 @@ library(DT)
 ---
 class: middle, center
 
-Hands-on portion of the workshop:
-
-## Reproducibility: Data Management, Git, & RStudio Workshop
-https://osf.io/r6wfk/
-
-&nbsp;
-
 Part of the 
+### Building Blocks for Reproducibility
+
+&
+
 ### [RFun](http://rfun.library.duke.edu) Learning Series
 
-[Other Rfun Workshops](https://rfun.library.duke.edu/categories/workshops/)
 
 ???
 
@@ -53,10 +49,16 @@ class: middle, center
 
 # Compose a Reproducible Document
 
----
-class: middle
+Use Git to manage version control
 
-## Literate Code --> Reproducible Research
+Add &#8226; Commit &#8226; Branch &#8226; Merge &#8226; Revert
+
+(Pull &#8226; Push &#8226; Clone &#8226; Fork &#8226; Collaborate)
+
+---
+class: middle, center
+
+## Reproducible Research<br>(Literate Code)
 
 ## Collaborative
 
@@ -69,16 +71,24 @@ class: middle
 
 - **Reproducibility** is a Top Priority
 
-- R / RStudio for Composition, Analysis, Reproducible Publishing
-
-    - **RStudio orchestrates Git**
+- Seamless operation with [Markdown](https://rmarkdown.rstudio.com/)
 
 - **Git for Version Control**
 
     - Git can be a pain to configure but works well in the background
     - Leapfrog beyond the barrier of a painful configuration
 
-- **GitLab (GitHub) for open sharing and collaborating** via repositories
+- **RStudio orchestrates Git**
+
+    - Alternative:  GitKracken (if you have the [GitHub Student](https://education.github.com/pack) Pack)
+    - Alternative:  [SourceTree](https://www.sourcetreeapp.com/) (defaults with [BitBucket](https://bitbucket.org/))
+
+
+- **Social Coding**
+
+    - GitHub (especially with Student Pack)
+    - GitLab (OIT instance) 
+    - Bitbucket.org or GitLab.com 
 
 ---
 class: middle
@@ -117,6 +127,7 @@ class:  middle, center
 
 RStudio will manage the most commonly used Git commands
 ---
+exclude: true
 class:  middle, center
 
 ## Version Control
@@ -149,7 +160,7 @@ For Example...
 
 5. Integrate Excel Table into **Word > PDF**
 ---
-
+exclude: true
 ## Outline
 
 .pull-left[1. Git
@@ -204,6 +215,8 @@ Versioning can be used
 
 - Track changes in any file set
 
+- Add &#8226; Commit &#8226; Branch &#8226; Merge &#8226; Revert
+
 ]
 
 .pull-right[
@@ -228,6 +241,7 @@ background-image:  url(images/git_push_pull.png)
 
 
 ---
+exclude: true
 class: center, middle, softblue
 
 ## Social **git Repositories**
@@ -243,7 +257,7 @@ class: center, middle, softblue
     - even if you are only **sharing with yourself** 
 
 ---
-
+exclude: true
 .pull-left[
 <figure><img src="images/The_Bookworm_-_Grohmann_Museum.jpg"><figcaption> Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg <br><a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg">Wikimedia Commons</a></figcaption></figure>
 ]
@@ -269,6 +283,7 @@ How does this process **affect Reproducibility?**
 Library ~= Repository
 
 ---
+exclude: true
 class: bottom
 background-image: url(images/Edit-a-thon_lrg.jpg)
 
@@ -336,6 +351,7 @@ Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
 Effective collaboration extends the diversity of input and feedback available to you.  
 
 ---
+exclude: true
 class: center
 .pull-left[ ![](images/gitlab.png)  ]
 .pull-right[ ![](images/github.png)  ]
@@ -352,6 +368,7 @@ class: center
 
 
 ---
+exclude: true
 class: green, middle, center
 
 
@@ -375,6 +392,7 @@ I mostly use Duke's GitLab for private work and development.  But I like my publ
 
 
 ---
+exclude: true
 ## Duke's GitLab v Public Hubs
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
@@ -402,6 +420,7 @@ datatable(hubs, rownames = FALSE, options = list(dom = 't')) %>%
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
 ---
+exclude: true
 class: softblue, middle, center
 
 ## Markdown
@@ -412,7 +431,15 @@ Literate Code = R Notebooks + R Markdown
 
 Turn scripts into reproducible reports
 
+
 ---
+class: softblue, middle, center
+
+## Markdown
+
+---
+
+
 class: bottom
 background-image: url(images/rmarkdown.png)
 
@@ -480,6 +507,7 @@ Numbered list:
 ]
 
 ---
+exclude: true
 class: orange, middle, center
 
 ## **Literate Code** 
@@ -500,6 +528,7 @@ slides:  4, 11, 25
 
 
 ---
+exclude: true
 class: softblue, middle, center
 
 ## RStudio & Git
@@ -512,7 +541,7 @@ Why R
 - Version Control, via Git, orchestrated by RStudio
 
 ---
-
+exclude: true
 ## Orchestrating with RStudio
 
 - Masks the CLI
@@ -535,6 +564,14 @@ Now move to the [hands-on](/handson.html) guided exercises.
 slide:  8, (9), 27
 
 ---
+class: middle, center
+
+## Hands-on
+
+[Excercise](../handson.html)
+
+---
+exclude: true
 class: orange
 ## R/RStudio 
 		
@@ -556,6 +593,7 @@ class: orange
 ## Why R
     
 ---
+exclude: true
 class: orange
 ## Reproducibility
 

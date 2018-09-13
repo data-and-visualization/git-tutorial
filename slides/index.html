@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hands-on: Configuring and Using Git with RStudio</title>
+    <title>Git: Hands-on</title>
     <meta charset="utf-8">
     <meta name="author" content="John Little" />
-    <meta name="date" content="2018-01-29" />
-    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-0.9/htmlwidgets.js"></script>
+    <meta name="date" content="2018-09-25" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
     <script src="libs/jquery-1.12.4/jquery.min.js"></script>
-    <script src="libs/datatables-binding-0.2/datatables.js"></script>
-    <link href="libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding-0.4/datatables.js"></script>
+    <link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="duke_color_pallettes_slides.css" type="text/css" />
     <link rel="stylesheet" href="cc-fonts.css" type="text/css" />
     <link rel="stylesheet" href="figures.css" type="text/css" />
@@ -20,10 +23,10 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Hands-on:<br>Configuring and Using Git with RStudio
+# Git: Hands-on
 ## <br>Practical Reproducibility
 ### John Little
-### 2018-01-29
+### 2018-09-25
 
 ---
 
@@ -35,17 +38,13 @@ exclude: true
 ---
 class: middle, center
 
-Hands-on portion of the workshop:
-
-## Reproducibility: Data Management, Git, &amp; RStudio Workshop
-https://osf.io/r6wfk/
-
-&amp;nbsp;
-
 Part of the 
+### Building Blocks for Reproducibility
+
+&amp;
+
 ### [RFun](http://rfun.library.duke.edu) Learning Series
 
-[Other Rfun Workshops](https://rfun.library.duke.edu/categories/workshops/)
 
 ???
 
@@ -61,10 +60,16 @@ class: middle, center
 
 # Compose a Reproducible Document
 
----
-class: middle
+Use Git to manage version control
 
-## Literate Code --&gt; Reproducible Research
+Add &amp;#8226; Commit &amp;#8226; Branch &amp;#8226; Merge &amp;#8226; Revert
+
+(Pull &amp;#8226; Push &amp;#8226; Clone &amp;#8226; Fork &amp;#8226; Collaborate)
+
+---
+class: middle, center
+
+## Reproducible Research&lt;br&gt;(Literate Code)
 
 ## Collaborative
 
@@ -77,16 +82,24 @@ class: middle
 
 - **Reproducibility** is a Top Priority
 
-- R / RStudio for Composition, Analysis, Reproducible Publishing
-
-    - **RStudio orchestrates Git**
+- Seamless operation with [Markdown](https://rmarkdown.rstudio.com/)
 
 - **Git for Version Control**
 
     - Git can be a pain to configure but works well in the background
     - Leapfrog beyond the barrier of a painful configuration
 
-- **GitLab (GitHub) for open sharing and collaborating** via repositories
+- **RStudio orchestrates Git**
+
+    - Alternative:  GitKracken (if you have the [GitHub Student](https://education.github.com/pack) Pack)
+    - Alternative:  [SourceTree](https://www.sourcetreeapp.com/) (defaults with [BitBucket](https://bitbucket.org/))
+
+
+- **Social Coding**
+
+    - GitHub (especially with Student Pack)
+    - GitLab (OIT instance) 
+    - Bitbucket.org or GitLab.com 
 
 ---
 class: middle
@@ -125,6 +138,7 @@ class:  middle, center
 
 RStudio will manage the most commonly used Git commands
 ---
+exclude: true
 class:  middle, center
 
 ## Version Control
@@ -157,7 +171,7 @@ For Example...
 
 5. Integrate Excel Table into **Word &gt; PDF**
 ---
-
+exclude: true
 ## Outline
 
 .pull-left[1. Git
@@ -212,6 +226,8 @@ Versioning can be used
 
 - Track changes in any file set
 
+- Add &amp;#8226; Commit &amp;#8226; Branch &amp;#8226; Merge &amp;#8226; Revert
+
 ]
 
 .pull-right[
@@ -236,6 +252,7 @@ background-image:  url(images/git_push_pull.png)
 
 
 ---
+exclude: true
 class: center, middle, softblue
 
 ## Social **git Repositories**
@@ -251,7 +268,7 @@ class: center, middle, softblue
     - even if you are only **sharing with yourself** 
 
 ---
-
+exclude: true
 .pull-left[
 &lt;figure&gt;&lt;img src="images/The_Bookworm_-_Grohmann_Museum.jpg"&gt;&lt;figcaption&gt; Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg &lt;br&gt;&lt;a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
 ]
@@ -277,6 +294,7 @@ How does this process **affect Reproducibility?**
 Library ~= Repository
 
 ---
+exclude: true
 class: bottom
 background-image: url(images/Edit-a-thon_lrg.jpg)
 
@@ -344,6 +362,7 @@ Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
 Effective collaboration extends the diversity of input and feedback available to you.  
 
 ---
+exclude: true
 class: center
 .pull-left[ ![](images/gitlab.png)  ]
 .pull-right[ ![](images/github.png)  ]
@@ -360,6 +379,7 @@ class: center
 
 
 ---
+exclude: true
 class: green, middle, center
 
 
@@ -383,17 +403,19 @@ I mostly use Duke's GitLab for private work and development.  But I like my publ
 
 
 ---
+exclude: true
 ## Duke's GitLab v Public Hubs
 
 
 
     
-<div id="htmlwidget-19e488c4d2b9f3f5f59b" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-19e488c4d2b9f3f5f59b">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; if (value!==null) $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; if (value!==null) $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-808e27621eeb99a059be" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-808e27621eeb99a059be">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 
 Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
 
 ---
+exclude: true
 class: softblue, middle, center
 
 ## Markdown
@@ -404,7 +426,15 @@ Literate Code = R Notebooks + R Markdown
 
 Turn scripts into reproducible reports
 
+
 ---
+class: softblue, middle, center
+
+## Markdown
+
+---
+
+
 class: bottom
 background-image: url(images/rmarkdown.png)
 
@@ -472,6 +502,7 @@ Numbered list:
 ]
 
 ---
+exclude: true
 class: orange, middle, center
 
 ## **Literate Code** 
@@ -492,6 +523,7 @@ slides:  4, 11, 25
 
 
 ---
+exclude: true
 class: softblue, middle, center
 
 ## RStudio &amp; Git
@@ -504,7 +536,7 @@ Why R
 - Version Control, via Git, orchestrated by RStudio
 
 ---
-
+exclude: true
 ## Orchestrating with RStudio
 
 - Masks the CLI
@@ -527,6 +559,14 @@ Now move to the [hands-on](/handson.html) guided exercises.
 slide:  8, (9), 27
 
 ---
+class: middle, center
+
+## Hands-on
+
+[Excercise](../handson.html)
+
+---
+exclude: true
 class: orange
 ## R/RStudio 
 		
@@ -548,6 +588,7 @@ class: orange
 ## Why R
     
 ---
+exclude: true
 class: orange
 ## Reproducibility
 
@@ -650,15 +691,33 @@ C bn
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  }
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
 });
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
