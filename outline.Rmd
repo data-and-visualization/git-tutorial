@@ -55,7 +55,7 @@ We will use  <a href="https://github.com" target="_blank">GitHub</a> to create a
 1. ![](images/github_account2.png), Then Create the Account  
 
 #### Additional Private Repository Options
-- Students can use the [GitHub Student Pack] (https://education.github.com/pack) that affords free unlimited private repositories
+- Students can use the [GitHub Student Pack](https://education.github.com/pack) that affords free unlimited private repositories
 - Other unlimited private repository options include the [Duke University instance of GitLab](https://gitlab.oit.duke.edu), [GitLab.com](http://gitlab.com), or [BitBucket](https://bitbucket.org/).  Using the `git remote` features it is easy to create private repositories at one social coding site while also publishing public repositories to another social coding site.  I've been very happy using Duke's GitLab for my private repositories and GitHub for my public profile.
 
 ### Generate SSH keys in Advance of the Workshop
