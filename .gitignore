@@ -15,6 +15,7 @@
 /*.Rcheck/
 
 # Output from site build
+/docs/*
 
 
 # RStudio files
