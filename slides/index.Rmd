@@ -83,12 +83,19 @@ class: middle
     - Alternative:  GitKracken (if you have the [GitHub Student](https://education.github.com/pack) Pack)
     - Alternative:  [SourceTree](https://www.sourcetreeapp.com/) (defaults with [BitBucket](https://bitbucket.org/))
 
+---
+class: middle
 
-- **Social Coding**
+# Part 2:  Social Coding
 
-    - GitHub (especially with Student Pack)
-    - GitLab (OIT instance) 
-    - Bitbucket.org or GitLab.com 
+- GitHub (especially with Student Pack)
+- GitLab (OIT instance) 
+- Bitbucket.org or GitLab.com 
+
+---
+class: middle, center, softblue
+
+# Reproducibility
 
 ---
 class: middle
@@ -118,24 +125,6 @@ The most basic aspect of **reproducible research** is that **everything you do**
 Goal:  Compose a Reproducible Document **in RStudio**
 
 ---
-class:  middle, center
-
-## Version Control
-
-![](images/git_workflow.png) 
-???
-
-RStudio will manage the most commonly used Git commands
----
-exclude: true
-class:  middle, center
-
-## Version Control
-
-![](images/git_workflow_adv.png)
-???
-Collaboration adds complexity the but the basic git commands are the same.
----
 class: middle, center
 
 Avoid
@@ -159,6 +148,46 @@ For Example...
 4. Generate **Visualizations** in Excel
 
 5. Integrate Excel Table into **Word > PDF**
+
+
+---
+class: middle, center, softblue
+
+# Version Control
+
+
+---
+class:  middle, center
+
+## Version Control
+
+![](images/git_workflow.png) 
+???
+
+RStudio will manage the most commonly used Git commands
+---
+exclude: true
+class:  middle, center
+
+## Version Control
+
+![](images/git_workflow_adv.png)
+???
+Collaboration adds complexity the but the basic git commands are the same.
+
+
+---
+class:  middle, center
+
+![](images/git_push_pull.png)
+
+
+---
+class:  middle, center
+background-size: contain
+
+![](images/git_add_commit.png)
+
 ---
 exclude: true
 ## Outline
@@ -234,11 +263,6 @@ By this I simply mean **version control on a personal level**.  Once can "branch
 ### Tracking changes in **any file set**
 
 **Git** can be used to **track any files**. 
-
----
-class: bottom, right
-background-image:  url(images/git_push_pull.png)
-
 
 ---
 exclude: true
