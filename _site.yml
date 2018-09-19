@@ -16,7 +16,7 @@ navbar:
           href: handson.html
         - text: "Branch / Merge / Revert"
           href: "handson_branch.html"
-        - text: "Pull Rquests / Remotes"
+        - text: "Pull Requests / Remotes"
           href: "handson_pr.html"
     - text: "Markdown"
       href: markdown.html
