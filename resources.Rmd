@@ -6,19 +6,44 @@ output:
     toc: FALSE
 ---
 
-- Duke’s [GitLab](https://gitlab.oit.duke.edu/)
+## Social Coding Sites
+
+- https://github.com
+- https://gitlab.com
+- https://bitbucket.org 
+
+- Duke’s [GitLab](https://gitlab.oit.duke.edu/) Instance
 
     - [Managing SSH keys](https://gitlab.oit.duke.edu/help/ssh/README)
     
-- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
-- Data Carpentry [Reproducible Research Version Control](http://www.datacarpentry.org/rr-version-control/)
-- Interactive tools to learn Git at the Command Line
 
-    - Duke’s Co-Lab [Introduction to Git](https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about)
-    - [Got 15 minutes](https://try.github.io/levels/1/challenges/1) 
-    - [Learn Git.  A free Codeacademy course ](https://www.codecademy.com/learn/learn-git) -- Free  
-    
+### Interactive tools to learn Git at the Command Line
+
+- Duke’s Co-Lab [Introduction to Git](https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about)
+- [Got 15 minutes](https://try.github.io/levels/1/challenges/1) 
+- [Learn Git.  A free Codeacademy course ](https://www.codecademy.com/learn/learn-git) -- Free  
+- [Tips & Tricks (web)](http://codingdomain.com/git/tricks/)
+
+### YouTube Intro Playlist
+- https://www.youtube.com/playlist?list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j 
+
+### Free Book
+
 - [Happy Git and GitHub for the useR](http://happygitwithr.com/)
+- [10 Common Problems / Solutions](https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd)
+
+### Carpentry
+
+- Data Carpentry [Reproducible Research Version Control](http://www.datacarpentry.org/rr-version-control/)
+
+
+
+## Markdown
+
+- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+## Reproducibility
+
 - [Writing clear code: Tools for Reproducible Research](http://kbroman.org/Tools4RR/assets/lectures/07_clearcode.pdf)
 - [Initial Steps Toward Reproducible Research](http://kbroman.org/steps2rr/) 
 - Making your research reproducible with TIER + R + GitHub [Slides]. Cetinkaya-Rundel, M. (2016). Open Science Framework. Retrieved from https://osf.io/phyau
