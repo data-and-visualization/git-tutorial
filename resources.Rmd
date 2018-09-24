@@ -16,6 +16,14 @@ output:
 
     - [Managing SSH keys](https://gitlab.oit.duke.edu/help/ssh/README)
     
+## GUI Git Clients
+
+- [RStudio](https://rstudio.com) -- Free. Great for useRs
+- [Sublime's Merge](https://www.sublimemerge.com/) --   Downloaded and evaluated for free. $100 / 3-years of upgrades.  
+- GitKracken -- Free if you have the [GitHub Student](https://education.github.com/pack) Pack.  Otherwise \$\$/Month
+- [SourceTree](https://www.sourcetreeapp.com/) --  Free. (defaults to use with [BitBucket](https://bitbucket.org/))
+    
+## Learning
 
 ### Interactive tools to learn Git at the Command Line
 
@@ -24,12 +32,16 @@ output:
 - [Learn Git.  A free Codeacademy course ](https://www.codecademy.com/learn/learn-git) -- Free  
 - [Tips & Tricks (web)](http://codingdomain.com/git/tricks/)
 
+
+
 ### YouTube Intro Playlist
 - https://www.youtube.com/playlist?list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j 
 
 ### Free Book
 
 - [Happy Git and GitHub for the useR](http://happygitwithr.com/)
+
+### Handy Article
 - [10 Common Problems / Solutions](https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd)
 
 ### Carpentry

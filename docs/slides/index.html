@@ -6,18 +6,11 @@
     <meta name="author" content="John Little" />
     <meta name="date" content="2018-09-25" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
-    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
-    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="libs/datatables-binding-0.4/datatables.js"></script>
-    <link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
-    <link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
-    <script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
-    <link rel="stylesheet" href="duke_color_pallettes_slides.css" type="text/css" />
-    <link rel="stylesheet" href="cc-fonts.css" type="text/css" />
-    <link rel="stylesheet" href="figures.css" type="text/css" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/duke-blue.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/hygge-duke.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs\cc-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="libs\figures.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -69,11 +62,16 @@ Add &amp;#8226; Commit &amp;#8226; Branch &amp;#8226; Merge &amp;#8226; Revert
 ---
 class: middle, center
 
-## Reproducible Research&lt;br&gt;(Literate Code)
+## Reproducible Research
 
-## Collaborative
+### Open / Transparent
 
-## Transparent Process
+### Version Control
+
+### Literate Code
+
+### Collaborative
+
 
 ---
 class: middle
@@ -82,7 +80,8 @@ class: middle
 
 - **Reproducibility** is a Top Priority
 
-- Seamless operation with [Markdown](https://rmarkdown.rstudio.com/)
+    - Seamless IDE integration between R &amp; Git 
+    - [Markdown](https://rmarkdown.rstudio.com/) 
 
 - **Git for Version Control**
 
@@ -91,8 +90,11 @@ class: middle
 
 - **RStudio orchestrates Git**
 
-    - Alternative:  GitKracken (if you have the [GitHub Student](https://education.github.com/pack) Pack)
-    - Alternative:  [SourceTree](https://www.sourcetreeapp.com/) (defaults with [BitBucket](https://bitbucket.org/))
+    - Alternative GUI Git Clients
+    
+        - [Sublime's Merge](https://www.sublimemerge.com/)
+        - GitKracken (if you have the [GitHub Student](https://education.github.com/pack) Pack)
+        - [SourceTree](https://www.sourcetreeapp.com/).  (defaults with [BitBucket](https://bitbucket.org/))
 
 ---
 class: middle
@@ -100,11 +102,11 @@ class: middle
 # Part 2:  Social Coding
 
 - GitHub (especially with Student Pack)
-- GitLab (OIT instance) 
+- GitLab or Duke's instance of GitLab  
 - Bitbucket.org or GitLab.com 
 
 ---
-class: middle, center, softblue
+class: middle, center, duke-softblue
 
 # Reproducibility
 
@@ -162,7 +164,7 @@ For Example...
 
 
 ---
-class: middle, center, softblue
+class: middle, center, duke-softblue
 
 # Version Control
 
@@ -176,16 +178,6 @@ class:  middle, center
 ???
 
 RStudio will manage the most commonly used Git commands
----
-exclude: true
-class:  middle, center
-
-## Version Control
-
-![](images/git_workflow_adv.png)
-???
-Collaboration adds complexity the but the basic git commands are the same.
-
 
 ---
 class:  middle, center
@@ -200,25 +192,7 @@ background-size: contain
 ![](images/git_add_commit.png)
 
 ---
-exclude: true
-## Outline
-
-.pull-left[1. Git
-
-1. GitHub and GitLab and Bitbucket
-
-1. Markdown  
-
-1. Orchestrating with RStudio
-]
-
-.pull-right[
-
-&lt;figure&gt;&lt;img src="https://imgs.xkcd.com/comics/git.png"&gt;&lt;figcaption&gt; Image Credit: XKCD.  &lt;a href="https://xkcd.com/1597/"&gt;Git&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
-
-]
----
-class: center, middle, softblue
+class: center, middle, duke-softblue
 
 ## **Git** is a *Version Control System*
 
@@ -276,183 +250,7 @@ By this I simply mean **version control on a personal level**.  Once can "branch
 **Git** can be used to **track any files**. 
 
 ---
-exclude: true
-class: center, middle, softblue
-
-## Social **git Repositories**
-
-???
-
-- **Social Coding** = collaboration
-
-- Introduce the idea of **LOCKSS**: "Lots of Copies Keeps Stuff Safe."  Now you have copies in the cloud and on local workstations.  You can work in various locations on various computers (e.g. at home and at work) without worrying about version or file location.  (This assumes you've installed **multiple keys**)
-
-- Share **trackable progress** of your reproducible activity
-
-    - even if you are only **sharing with yourself** 
-
----
-exclude: true
-.pull-left[
-&lt;figure&gt;&lt;img src="images/The_Bookworm_-_Grohmann_Museum.jpg"&gt;&lt;figcaption&gt; Image Credit: Der Bücherwurm (The Bookworm) by Carl Spitzweg &lt;br&gt;&lt;a href="https://commons.wikimedia.org/wiki/File:The_Bookworm_-_Grohmann_Museum.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;
-]
-.pull-right[
-## Private Repository
-
-- Research Output?
-
-- Statement of Authorship?
-
-- Research History / Workflow?
-
-- Collaborators?
-
-- Audience?
-
-]
-
-???
-
-How does this process **affect Reproducibility?**
-
-Library ~= Repository
-
----
-exclude: true
-class: bottom
-background-image: url(images/Edit-a-thon_lrg.jpg)
-
-.small-beige[ Image Credit: Picture by [Christin &amp; Monica Ho](https://commons.wikimedia.org/wiki/File:Edit-a-thon_at_the_MoMu_library_%289915619823%29.jpg) ]
-
-???
-
-## Public Git Repository
-
-- Social Coding
-
-- Digital and Multi-Media
-
-- Sharing
-
-- Collaboration
-
-- Track Issues
-
-
-Effective collaboration **extends** the diversity of **input and feedback available** to you.
-
-- Stop emailing code/research/documents
-
-- Never loose work / track progress
-
-- Build a Portfolio
-
----
-exclude: TRUE
-## Git Repositories
-
-.pull-left[
-
-&lt;figure&gt;&lt;img src="images/repository.jpg"&gt;&lt;figcaption&gt; Image Credit: 
-&lt;a href="https://commons.wikimedia.org/wiki/File:LDEO_DSS_Repository.jpg"&gt;Wikimedia Commons&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;br&gt;
-
-]
-
-.pull-right[
-
-- Social Coding
-
-- Sharing
-
-- Collaboration
-
-- Track Issues
-
-]
-
----
-exclude: TRUE
-class: center
-
-![](images/social-collaboration.jpg)
-.pull-right[
-  .small-txt[
-Image Credit: [PixaBay](https://pixabay.com/en/social-media-personal-1635581/)
-  ]
-]
-
-???
-
-Effective collaboration extends the diversity of input and feedback available to you.  
-
----
-exclude: true
-class: center
-.pull-left[ ![](images/gitlab.png)  ]
-.pull-right[ ![](images/github.png)  ]
-
-![](images/bitbucket.png) 
-
-???
-
-- Git is not GitHub
-
-- GitLab, GitHub, Bitbucket are all "Public Hubs" which work with Git versioning.
-
-
-
-
----
-exclude: true
-class: green, middle, center
-
-
-## Duke's GitLab
-
-[gitlab.oit.duke.edu](http://gitlab.oit.duke.edu)
-
-???
-
-- Duke has it's own instance of GitLab
-
-Duke's GitLab instance means 
-
-- FREE. ...  you don't have to pay for private repos
-
-- Can synchronize to larger networks (e.g. GitHub) at any point.
-
-
-
-I mostly use Duke's GitLab for private work and development.  But I like my public presence at GitHub.  Both can be accessed via RStudio.
-
-
----
-exclude: true
-## Duke's GitLab v Public Hubs
-
-
-
-    
-<div id="htmlwidget-6c50978c75a410f37bf0" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6c50978c75a410f37bf0">{"x":{"filter":"none","data":[["Private Repo","Public Repo","Duke NetId","User Community"],["by Default","Yes","Yes","Duke University -- &lt;br&gt;can syncronize &lt;br&gt;to public hubs"],["$$ @ GitHub","by Default","No","Largest Available"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Category<\/th>\n      <th>Duke's GitLab<\/th>\n      <th>Public Hubs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'background-color':'lightblue'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-weight':'bold','color':'silver','background-color':'navy'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
-
-Public Hubs are defined as GitHub, BitBucket, and the public GitLab.
-
----
-exclude: true
-class: softblue, middle, center
-
-## Markdown
-
-Literate Code = R Notebooks + R Markdown
-
-???
-
-Turn scripts into reproducible reports
-
-
----
-class: softblue, middle, center
+class: duke-softblue, middle, center
 
 ## Markdown
 
@@ -525,62 +323,6 @@ Numbered list:
 
 ]
 
----
-exclude: true
-class: orange, middle, center
-
-## **Literate Code** 
-
-Integrate your reproducible workflow using *Literate Coding* practices in *R* then generate reports directly from analysis 
-
-Analysis + 
-### (Literate Code = R Markdown + R Notebooks) +
-Version Control
-
-
-
-???
-
-This is where **Open** becomes **Awesome** 
-
-slides:  4, 11, 25
-
-
----
-exclude: true
-class: softblue, middle, center
-
-## RStudio &amp; Git
-
-
-???
-
-Why R 
-
-- Version Control, via Git, orchestrated by RStudio
-
----
-exclude: true
-## Orchestrating with RStudio
-
-- Masks the CLI
-
-- Easier to get started
-
-- Power Users can still use commands
-
-&amp;nbsp;
-
-
-![](images/RStudio-Logo-Blue-Gradient.png)
-
-Next:  [Hands-on](../handson.html)
-
-???
-
-Now move to the [hands-on](/handson.html) guided exercises.
-
-slide:  8, (9), 27
 
 ---
 class: middle, center
@@ -588,72 +330,6 @@ class: middle, center
 ## Hands-on
 
 [Excercise](../handson.html)
-
----
-exclude: true
-class: orange
-## R/RStudio 
-		
-- Git orchestrator (integrates with a documented repository)
-
-- Literate Code editor (readable by humans)
-
-- Data Science coding language
-
-    - Analysis Engine
-    - Manage Code
-    - Word processor 
-    - Desktop Publisher
-    - Visualization Generator
-    - Projects
-    
-???
-
-## Why R
-    
----
-exclude: true
-class: orange
-## Reproducibility
-
-Open Reproducible Projects = 
-
-- Analysis + 
-- Literate Code (R Markdown + R Notebooks) + 
-- Version Control (Git + Social Repositories)
-
-Future Self is your most trusted and most often consulted collaborator 
-
-- Six months into the future
-- Six years into the future
-
-???
-
-## Why Reproducibility
-
-
----
-exclude: false
-class: top, center
-background-image:  url(http://library.duke.edu/data/sites/default/files/datagis/images/data_gis_logo.png)
-
-## Data &amp; Visualization Services
-### [library.duke.edu/data](http://library.duke.edu/data)
-
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
-
-&amp;nbsp;  
 
 ---
 ## Thank You For Attending
