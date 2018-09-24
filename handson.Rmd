@@ -29,7 +29,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     1. Make a top level heading with the word "#README"
    
         - See [Markdown](markdown.html) for more information on Markdown tagging
-    1. After a blank line type: `This is my first GitLab repository.`
+    1. After a blank line type: `This is my first GitHub repository.`
     1. Click the green **Commit new file** button  
     
 1. Congratulations.  You've just created your first GitHub repository.  Now you can see your repository -- including the three files you just created.
@@ -50,7 +50,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
 	    
 1. Launch RStudio and create a *New Project...*
 
-    1. From the RStudio menubar:  *File > New Project...* > Version Control > Git <br><figure>![](images/project_version_git.png)<figcaption>Paste the GitLab repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption></figure><br>
+    1. From the RStudio menubar:  *File > New Project...* > Version Control > Git <br><figure>![](images/project_version_git.png)<figcaption>Paste the GitHub repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption></figure><br>
     1. Create Project
     1. You may be prompted with a message which asks if you about the "authenticity of host".  I like to verify the IP number is correct; then the answer is `yes`.<br><figure>![](images/yes.png)</figure><br>
 
@@ -71,7 +71,7 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     
         - i.e. `## Purpose`
         
-    - After a blank line type: `This is my first Git repository.  I'm going to push this file to GitLab via RStudio.  Hello World.`
+    - After a blank line type: `This is my first Git repository.  I'm going to push this file to GitHub via RStudio.  Hello World.`
 1. Save the changes to this file
 
 
@@ -85,13 +85,13 @@ This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in
     1. Click the *Push* arrow, then close, then close the commit dialogue box  
 <br><figure>![](images/commit_push.png)</figure><br>
 
-1. View your changes back at GitLab:  `https://gitlab.oit.duke.edu/<<your-NetID>>/test-one`
+1. View your changes back at GitHub:  `https://github.com/<<your-ID>>/test-one`
 
 &nbsp; 
 
 ## Pull
 
-The next time you open your project in RStudio the first step you should take is to *Pull* from the GitLab repo.  Then make your changes, then **commit** and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
+The next time you open your project in RStudio the first step you should take is to *Pull* from the GitHub repo.  Then make your changes, then **commit** and push.  If you forget to *Pull* you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.
 
 <br><figure>![](images/git_push_pull.png)</figure><br>
 

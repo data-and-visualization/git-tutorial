@@ -13,9 +13,6 @@ output:
     - [Prerequisites](outline.html#prerequisites)  
     
 1. [Hands-On](handson.html)
-
-    - We use Duke's GitLab  
-    
 1. [Markdown](markdown.html)  
 1. [Resources](resources.html)
 
