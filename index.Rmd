@@ -1,5 +1,4 @@
 ---
-title: "Git & R/RStudio Hands-on"
 output: 
   html_document:
     self_contained: false
@@ -19,13 +18,8 @@ output:
 
 ## Supporting Materials
 
-[Hands-on Slides](slides)
+- [Slides](slides)
 
-[Introduction to R: Data Transformations, Analysis, and Data Structures](/intro2r)
-
-OSF Project Page [*Reproducibility: Data Management, Git, & RStudio Workshop*](https://osf.io/r6wfk/)
-
-&nbsp;
 
 <figure>![](https://imgs.xkcd.com/comics/git.png)<figcaption>KXCD.  Git:  https://xkcd.com/1597/</figcaption></figure><br>
 
