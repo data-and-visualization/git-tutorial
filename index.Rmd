@@ -5,7 +5,7 @@ output:
     toc: FALSE
 ---
 
-## Workshop Resource Page
+## Workshop Resources
 
 1. [Overview](outline.html)
 
