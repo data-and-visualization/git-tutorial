@@ -1,13 +1,9 @@
 ---
-title: "Git Workshop - Repo README"
+title: "README"
 author: "John Little"
-output: html_document
 ---
 
-# README
+## Git Workshop
 
-This Repository contains markdown documents useful for the hands-on portion of our [DVS Workshop](http://library.duke.edu/data/news) on [Reproducibility with Git and RStudio](http://duke.libcal.com/event/3442538)
+This Repository contains markdown documents useful for the hands-on portion of our [DVS Workshop](http://library.duke.edu/data/news) on [Reproducibility and Version Control with Git](https://rfun.library.duke.edu/git/)
 
-- [Git + GitHub or GitLab or RStudio Outline](https://libjohn.github.io/git/)
-- [Installation:  Software Pre-requisites](install_requirements.md)
-- [Hands-on Exercises](https://libjohn.github.io/git/handson.html)  
