@@ -53,9 +53,9 @@ class: middle, center
 
 Use Git to manage version control
 
-Add &#8226; Commit &#8226; Branch &#8226; Merge &#8226; Revert
+Clone &#8226; Pull &#8226; Add &#8226; Commit &#8226; Push 
 
-(Pull &#8226; Push &#8226; Clone &#8226; Fork &#8226; Collaborate)
+(Branch &#8226; Merge &#8226; Revert &#8226; Fork &#8226; Collaborate)
 
 ---
 class: middle, center
