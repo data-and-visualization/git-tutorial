@@ -93,32 +93,44 @@ git revert HEAD
 ```
 
 - This pushes you into a unix text editor.  The full explanation is tedious.  Just type `Esc`, then `:wq` then `Enter`
-- **NOTE:** A full explanation of [git revert](https://git-scm.com/docs/git-revert) and [git reset](https://git-scm.com/docs/git-reset) will take considerably more time.  If you find you do this a lot, investigate these commands fully.  
-
-    - **HINT:**  For small changes, many people find a far simpler method is as follows...
-    
-        1. At GitHub, click the "Commits" link
-        1. Isolate the verion you need by clicking the `< >` link.  This enables you to browse the repository at that point in history
-        1. Navigate to the fine you need.  Copy the file.
-        1. Back in your editor, paste over the source version.  
-        Commit & Push
 
 17. Commit and Push.
 1. Observe the visual representations of the version history
 
+
+#### NOTE 
+
+A full explanation of [git revert](https://git-scm.com/docs/git-revert) and [git reset](https://git-scm.com/docs/git-reset) will take considerably more time.  If you find you do this a lot, investigate these commands fully.  
+
+#### HINT  
+
+For small changes, many people find a far simpler method is as follows...
     
-<!-- Notes for Next Section -->
-<!-- Should cover collaboration 
-- Simplicity of the Roll-back on Social Coding sites (look at a previous version, copy/paste)
-- XKCD: sync-up ; If errors: save work elseswhere, delete and download a fresh copy.
-- pull requests 
-- revert
-- reset
-- remotes
-- triggers / Webhooks
-- add collaborators
-- Organizational Accounts
-- wiki
-- issues
-and collaboration --> 
+1. At GitHub, click the "Commits" link
+1. Isolate the verion you need by clicking the `< >` link.  This enables you to browse the repository at that point in history
+1. Navigate to the fine you need.  Copy the file.
+1. Back in your editor, paste over the source version.  
+Commit & Push
+
+
+## Roll back
+
+The above example is a trivial example of how to employ rolling back to a previous version.  Rolling back is complicated.  Depending on the complexity of your project, it may be more crtical to leverage git commands during a roll-back.  Software applications may be an example of this complexity.  However, for simpler roll-backs, the simple explanations below may save you a lot of time for an operation which you would otherwise rarely perform.
+
+### File
+
+Sometimes the easiest thing to do is grab the file (or subtext from a file) in a previous commit that is already displayed on GitHub.  To do so.
+
+1. Find your repository on GitHub
+1. Click the "commits" tab
+1. Click the SHA link for the commit which has the most recent working version
+1. Click the filename representing the working file you want
+1. Click View; Raw
+1. Copy what you want and over-write your local repository with the previously working version
+
+###  Repository
+
+<figure>![](https://imgs.xkcd.com/comics/git.png)<figcaption>KXCD.  Git:  https://xkcd.com/1597/</figcaption></figure><br>
+
+    
     

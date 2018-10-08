@@ -9,23 +9,6 @@ This document follows set-up from the [first hands-on](handson.html)
 
 This section introduces a variety of topics:  fork, pull requests, collaborators, wikis on GitHub, Issues on GitHub, and git remotes.
 
-## Roll back 
-
-## File
-
-Sometimes the easiest thing to do is grab the file (or subtext from a file) in a previous commit that is already displayed on GitHub.  To do so.
-
-1. Find your repository on GitHub
-1. Click the "commits" tab
-1. Click the SHA link for the commit which has the most recent working version
-1. Click the filename representing the working file you want
-1. Click View; Raw
-1. Copy what you want and over-write your local repository with the previously working version
-
-##  Repository
-
-<figure>![](https://imgs.xkcd.com/comics/git.png)<figcaption>KXCD.  Git:  https://xkcd.com/1597/</figcaption></figure><br>
-
 
 ## Collaborating
 
@@ -39,8 +22,8 @@ If you intend to submit modifications to some other repository by issuing a Pull
 
 https://github.com/data-and-visualization/pr_hello-world
 
-1. [Source] Fork this repository
-1. [Partner] Clone your forked copy of the repository
+1. [Source] Make a test repository and have your parter `fork` your repository
+1. [Partner] After you forked above, `clone` your forked repository
 1. [Partner] Make some changse to your cloned [forked] repository.  (e.g. add a file, edit the readme, etc.)
 1. [Partner] Using the git commands you've already learned:  add, commit, and push the changes
 
