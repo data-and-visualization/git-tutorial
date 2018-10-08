@@ -13,22 +13,27 @@ This document follows set-up from the [previous document](handson.html)
 - Commit your changes
 
 ## Branch
-1. Create a branch *version2*
+1. Create a branch "*version2*"
 
-    - The funny icon is used to **create** and **checkout** a branch
-    - By clicking **Create**, `git checkout <<branch-name>>` is invoked
-    - Create a new text that lists 3 favorite movies save it as `movies.md`
+    - The funny icon (see image, below) is used to **create** and **checkout** a branch
+    - Clicking the icon invokes a *new branch* function.  (Don't type the next command.  Just know invoking the brach via RStudio makes git spawn the following command: `git checkout <<branch-name>>` )
+    - For a branch name, in the branch text box, type:  `version2`
+    - Moving back to the text editor in RStudio, create a new markdown document listing 3 favorite movies.  Save the file as `movies.md`
     - Commit your changes
     
-```{r echo=FALSE, fig.align='center'}
+```{r echo=FALSE, fig.align='center', fig.cap="Create Branch"}
 knitr::include_graphics('images/branch_create.png')
 ```
     
 2. Checkout the *master* branch
 
     - Watch the **Files** tab as you switch back to the *master* branch.  Where is the `movies.md` file?
+    - See the image below...
+    
+        1. First, click the existing branch name:  `version2`
+        1. Then, select `master` within the "LOCAL BRANCH" context menu
 
-```{r echo=FALSE, fig.align='center'}
+```{r echo=FALSE, fig.align='center', fig.cap="Checkout Branch"}
 knitr::include_graphics('images/branch_checkout.png')
 ```
 
@@ -38,7 +43,13 @@ knitr::include_graphics('images/branch_checkout.png')
     - Commit your changes
     - Push your changes
     
-4. Observe the visual representations of the branching and updating.  <<Git - Clock>> -OR- GitHub > Settings > Insights > Network
+4. Observe the visual representations of the branching and updating  
+
+    - In the RStudio git tab, click the clock (for history)  
+    
+        - Observe the timestamped versions you commited as part of the *version2* branch.  
+        
+    - Alternatively, within your repo at GitHub.com: `Insights > Network`
 
 ## Merge
     
@@ -66,10 +77,11 @@ Fast-forward
 8. Edit README.md in *version2* by changing the name to something different from the step above. Commit then Push.
 9. Checkout *master*, then `git merge version2`
 10. Fix Conflicts, then Save. ; Commit and Push.
+1. Observe the visual representations of the version history
 
 ## Revert
 
-11. Checkout *master*
+12. Checkout *master*
 12. Create New text file, `colors.md` and list three of your favorite colors
 13. Commit and Push
 14. Add a fourth color to `colors.md` ; Commit and Push
@@ -80,7 +92,16 @@ Fast-forward
 git revert HEAD
 ```
 
-- `:wq`
+- This pushes you into a unix text editor.  The full explanation is tedious.  Just type `Esc`, then `:wq` then `Enter`
+- **NOTE:** A full explanation of [git revert](https://git-scm.com/docs/git-revert) and [git reset](https://git-scm.com/docs/git-reset) will take considerably more time.  If you find you do this a lot, investigate these commands fully.  
+
+    - **HINT:**  For small changes, many people find a far simpler method is as follows...
+    
+        1. At GitHub, click the "Commits" link
+        1. Isolate the verion you need by clicking the `< >` link.  This enables you to browse the repository at that point in history
+        1. Navigate to the fine you need.  Copy the file.
+        1. Back in your editor, paste over the source version.  
+        Commit & Push
 
 17. Commit and Push.
 1. Observe the visual representations of the version history
