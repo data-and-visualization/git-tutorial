@@ -20,11 +20,14 @@ When you fork a repository you make a copy of that repository on GitHub.  The di
 
 If you intend to submit modifications to some other repository by issuing a Pull Request, fork the  repository first.  Then clone the forked repository.
 
-https://github.com/data-and-visualization/pr_hello-world
 
-1. [Source] Make a test repository and have your parter `fork` your repository
+#### Exercise
+
+1. [Source] Clone [this test repository](https://github.com/data-and-visualization/pr_hello-world
+)
+1. [Source] Have your partner `fork` your repository
 1. [Partner] After you forked above, `clone` your forked repository
-1. [Partner] Make some changse to your cloned [forked] repository.  (e.g. add a file, edit the readme, etc.)
+1. [Partner] Make some changes to your cloned [forked] repository.  (e.g. add a file, edit the readme, etc.)
 1. [Partner] Using the git commands you've already learned:  add, commit, and push the changes
 
 
@@ -53,7 +56,7 @@ The GitHub Wiki is unique to your repository.  Use it to lay out a roadmap of yo
 
 ## Issues on GitHub
 
-The issues section is a good place to track bugs with your repository.  You might even use this as a public todo list.
+The issues section is a good place to track bugs with your repository.  You might even use this as a public to-do list.
 
 ## Remotes
 

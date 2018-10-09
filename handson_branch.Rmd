@@ -92,7 +92,7 @@ Fast-forward
 git revert HEAD
 ```
 
-- This pushes you into a unix text editor.  The full explanation is tedious.  Just type `Esc`, then `:wq` then `Enter`
+- This pushes you into a UNIX text editor.  The full explanation is tedious.  Just type `Esc`, then `:wq` then `Enter`
 
 17. Commit and Push.
 1. Observe the visual representations of the version history
@@ -107,7 +107,7 @@ A full explanation of [git revert](https://git-scm.com/docs/git-revert) and [git
 For small changes, many people find a far simpler method is as follows...
     
 1. At GitHub, click the "Commits" link
-1. Isolate the verion you need by clicking the `< >` link.  This enables you to browse the repository at that point in history
+1. Isolate the version you need by clicking the `< >` link.  This enables you to browse the repository at that point in history
 1. Navigate to the fine you need.  Copy the file.
 1. Back in your editor, paste over the source version.  
 Commit & Push
@@ -115,7 +115,7 @@ Commit & Push
 
 ## Roll back
 
-The above example is a trivial example of how to employ rolling back to a previous version.  Rolling back is complicated.  Depending on the complexity of your project, it may be more crtical to leverage git commands during a roll-back.  Software applications may be an example of this complexity.  However, for simpler roll-backs, the simple explanations below may save you a lot of time for an operation which you would otherwise rarely perform.
+The above example is a trivial example of how to employ rolling back to a previous version.  Rolling back is complicated.  Depending on the complexity of your project, it may be more critical to leverage git commands during a roll-back.  Software applications may be an example of this complexity.  However, for simpler roll-backs, the simple explanations below may save you a lot of time for an operation which you would otherwise rarely perform.
 
 ### File
 
