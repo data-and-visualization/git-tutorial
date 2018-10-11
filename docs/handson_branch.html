@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Git: Branch / Merge / Revert</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs-local\duke.css" type="text/css" />
+<link rel="stylesheet" href="libs-local\cc-fonts.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Reproducibility: Git & RStudio</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="outline.html">Overview</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Hands-On
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="handson.html">Init / Clone / Pull &amp; Push</a>
+    </li>
+    <li>
+      <a href="handson_branch.html">Branch / Merge / Revert</a>
+    </li>
+    <li>
+      <a href="handson_pr.html">Pull Requests / Remotes</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="markdown.html">Markdown</a>
+</li>
+<li>
+  <a href="resources.html">Resources</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/data-and-visualization/git-tutorial/">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://rfun.library.duke.edu/">Rfun Home</a>
+</li>
+<li>
+  <a href="https://library.duke.edu/data/">DVS</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Git: Branch / Merge / Revert</h1>
+
+</div>
+
+
+<p>This document follows set-up from the <a href="handson.html">previous document</a></p>
+<div id="standard-edit" class="section level2">
+<h2>Standard Edit</h2>
+<ul>
+<li>Add your name and a bulleted list with three of your favorite foods</li>
+<li>Commit your changes</li>
+</ul>
+</div>
+<div id="branch" class="section level2">
+<h2>Branch</h2>
+<ol style="list-style-type: decimal">
+<li><p>Create a branch “<em>version2</em>”</p>
+<ul>
+<li>The funny icon (see image, below) is used to <strong>create</strong> and <strong>checkout</strong> a branch</li>
+<li>Clicking the icon invokes a <em>new branch</em> function. (Don’t type the next command. Just know invoking the brach via RStudio makes git spawn the following command: <code>git checkout &lt;&lt;branch-name&gt;&gt;</code> )</li>
+<li>For a branch name, in the branch text box, type: <code>version2</code></li>
+<li>Moving back to the text editor in RStudio, create a new markdown document listing 3 favorite movies. Save the file as <code>movies.md</code></li>
+<li>Commit your changes</li>
+</ul></li>
+</ol>
+<div class="figure" style="text-align: center">
+<img src="images/branch_create.png" alt="Create Branch" width="197" />
+<p class="caption">
+Create Branch
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Checkout the <em>master</em> branch</p>
+<ul>
+<li>Watch the <strong>Files</strong> tab as you switch back to the <em>master</em> branch. Where is the <code>movies.md</code> file?</li>
+<li><p>See the image below…</p>
+<ol style="list-style-type: decimal">
+<li>First, click the existing branch name: <code>version2</code></li>
+<li>Then, select <code>master</code> within the “LOCAL BRANCH” context menu</li>
+</ol></li>
+</ul></li>
+</ol>
+<div class="figure" style="text-align: center">
+<img src="images/branch_checkout.png" alt="Checkout Branch" width="158" />
+<p class="caption">
+Checkout Branch
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Checkout the <em>version2</em> branch again</p>
+<ul>
+<li>Edit the README.md file by adding 3 of your favorite books</li>
+<li>Commit your changes</li>
+<li>Push your changes</li>
+</ul></li>
+<li><p>Observe the visual representations of the branching and updating</p>
+<ul>
+<li><p>In the RStudio git tab, click the clock (for history)</p>
+<ul>
+<li>Observe the timestamped versions you commited as part of the <em>version2</em> branch.</li>
+</ul></li>
+<li><p>Alternatively, within your repo at GitHub.com: <code>Insights &gt; Network</code></p></li>
+</ul></li>
+</ol>
+</div>
+<div id="merge" class="section level2">
+<h2>Merge</h2>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Checkout the <em>master</em> branch</p>
+<ul>
+<li>In the Terminal window type: <code>git merge version2</code></li>
+<li>You should see a terminal response similar to below…</li>
+<li>Then, Push your changes</li>
+</ul></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">Updating</span> 83fb5bb..08c9267
+<span class="ex">Fast-forward</span>
+ <span class="ex">README.md</span> <span class="kw">|</span> <span class="ex">8</span> +++++++-
+ <span class="ex">movies.md</span> <span class="kw">|</span> <span class="ex">5</span> +++++
+ <span class="ex">2</span> files changed, 12 insertions(+), <span class="ex">1</span> deletion(-)
+ <span class="ex">create</span> mode 100644 movies.md</code></pre></div>
+<ol start="6" style="list-style-type: decimal">
+<li>Observe the visual representations of the version history</li>
+</ol>
+</div>
+<div id="conflict" class="section level2">
+<h2>Conflict</h2>
+<ol start="7" style="list-style-type: decimal">
+<li>Edit README.md in <em>master</em> by changing your name. Commit then Push.</li>
+<li>Edit README.md in <em>version2</em> by changing the name to something different from the step above. Commit then Push.</li>
+<li>Checkout <em>master</em>, then <code>git merge version2</code></li>
+<li>Fix Conflicts, then Save. ; Commit and Push.</li>
+<li>Observe the visual representations of the version history</li>
+</ol>
+</div>
+<div id="revert" class="section level2">
+<h2>Revert</h2>
+<ol start="12" style="list-style-type: decimal">
+<li>Checkout <em>master</em></li>
+<li>Create New text file, <code>colors.md</code> and list three of your favorite colors</li>
+<li>Commit and Push</li>
+<li>Add a fourth color to <code>colors.md</code> ; Commit and Push</li>
+<li>Observe the visual representations of the version history</li>
+<li>Now <em>revert</em> the last change because you changed your mind and you don’t have four favorite colors. In the terminal window type…</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> revert HEAD</code></pre></div>
+<ul>
+<li>This pushes you into a UNIX text editor. The full explanation is tedious. Just type <code>Esc</code>, then <code>:wq</code> then <code>Enter</code></li>
+</ul>
+<ol start="17" style="list-style-type: decimal">
+<li>Commit and Push.</li>
+<li>Observe the visual representations of the version history</li>
+</ol>
+<div id="note" class="section level4">
+<h4>NOTE</h4>
+<p>A full explanation of <a href="https://git-scm.com/docs/git-revert">git revert</a> and <a href="https://git-scm.com/docs/git-reset">git reset</a> will take considerably more time. If you find you do this a lot, investigate these commands fully.</p>
+</div>
+<div id="hint" class="section level4">
+<h4>HINT</h4>
+<p>For small changes, many people find a far simpler method is as follows…</p>
+<ol style="list-style-type: decimal">
+<li>At GitHub, click the “Commits” link</li>
+<li>Isolate the version you need by clicking the <code>&lt; &gt;</code> link. This enables you to browse the repository at that point in history</li>
+<li>Navigate to the fine you need. Copy the file.</li>
+<li>Back in your editor, paste over the source version.<br />
+Commit &amp; Push</li>
+</ol>
+</div>
+</div>
+<div id="roll-back" class="section level2">
+<h2>Roll back</h2>
+<p>The above example is a trivial example of how to employ rolling back to a previous version. Rolling back is complicated. Depending on the complexity of your project, it may be more critical to leverage git commands during a roll-back. Software applications may be an example of this complexity. However, for simpler roll-backs, the simple explanations below may save you a lot of time for an operation which you would otherwise rarely perform.</p>
+<div id="file" class="section level3">
+<h3>File</h3>
+<p>Sometimes the easiest thing to do is grab the file (or subtext from a file) in a previous commit that is already displayed on GitHub. To do so.</p>
+<ol style="list-style-type: decimal">
+<li>Find your repository on GitHub</li>
+<li>Click the “commits” tab</li>
+<li>Click the SHA link for the commit which has the most recent working version</li>
+<li>Click the filename representing the working file you want</li>
+<li>Click View; Raw</li>
+<li>Copy what you want and over-write your local repository with the previously working version</li>
+</ol>
+</div>
+<div id="repository" class="section level3">
+<h3>Repository</h3>
+<figure>
+<img src="https://imgs.xkcd.com/comics/git.png" />
+<figcaption>
+KXCD. Git: <a href="https://xkcd.com/1597/" class="uri">https://xkcd.com/1597/</a>
+</figcaption>
+</figure>
+<p><br></p>
+</div>
+</div>
+
+&nbsp;
+
+<hr>
+<span class="footer">
+  
+  <span class="left-foot">
+    
+    <a href="https://rfun.library.duke.edu/">R We Having Fun Yet‽</a> -- Learning Series<br>
+    <a href="http://library.duke.edu/data/">Data & Visualization Services</a><br>
+    <a href="http://library.duke.edu/">Duke University Libraries</a>
+    
+  </span>
+
+  <span class="right-foot">
+  
+    <span class="cc">
+      <!-- Key: a: SA, b: BY, c: CC Circle, d: ND, n: NC, m: Sampling, s: Share, r: Remix, C: CC Full Logo -->
+    C bn</span><br>
+    Shareable via Creative Commons:  CC <a href="https://creativecommons.org/licenses/by-nc/4.0/">By-NC</a>
+
+  </span>
+
+</span>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

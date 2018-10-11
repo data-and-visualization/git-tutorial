@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Git: Remotes, Collaborate, Pull Requests</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="libs-local\duke.css" type="text/css" />
+<link rel="stylesheet" href="libs-local\cc-fonts.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Reproducibility: Git & RStudio</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="outline.html">Overview</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Hands-On
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="handson.html">Init / Clone / Pull &amp; Push</a>
+    </li>
+    <li>
+      <a href="handson_branch.html">Branch / Merge / Revert</a>
+    </li>
+    <li>
+      <a href="handson_pr.html">Pull Requests / Remotes</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="markdown.html">Markdown</a>
+</li>
+<li>
+  <a href="resources.html">Resources</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/data-and-visualization/git-tutorial/">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://rfun.library.duke.edu/">Rfun Home</a>
+</li>
+<li>
+  <a href="https://library.duke.edu/data/">DVS</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Git: Remotes, Collaborate, Pull Requests</h1>
+
+</div>
+
+
+<p>This document follows set-up from the <a href="handson.html">first hands-on</a></p>
+<p>This section introduces a variety of topics: fork, pull requests, collaborators, wikis on GitHub, Issues on GitHub, and git remotes.</p>
+<div id="collaborating" class="section level2">
+<h2>Collaborating</h2>
+<p>Repositories can have collaborators which have full access to change code. Alternatively, anyone can fork a repository and make their own changes their forked copy of your public repository. The author of the changes (in the forked repository) can then initiate a “Pull Request” which enables the root repository owner to consider whether those changes will be integrated into the main repository.</p>
+<div id="fork" class="section level3">
+<h3>Fork</h3>
+<p>When you fork a repository you make a copy of that repository on GitHub. The difference between fork and clone is that clone does not make a GitHub copy and will not be eligible to submit modifications as a pull request. If you simply want to run code from another repository, clone the repository locally.</p>
+<p>If you intend to submit modifications to some other repository by issuing a Pull Request, fork the repository first. Then clone the forked repository.</p>
+<div id="exercise" class="section level4">
+<h4>Exercise</h4>
+<ol style="list-style-type: decimal">
+<li>[Source] Clone <a href="https://github.com/data-and-visualization/pr_hello-world">this test repository</a></li>
+<li>[Source] Have your partner <code>fork</code> your repository</li>
+<li>[Partner] After you forked above, <code>clone</code> your forked repository</li>
+<li>[Partner] Make some changes to your cloned [forked] repository. (e.g. add a file, edit the readme, etc.)</li>
+<li>[Partner] Using the git commands you’ve already learned: add, commit, and push the changes</li>
+</ol>
+</div>
+</div>
+<div id="pull-requests" class="section level3">
+<h3>Pull Requests</h3>
+<ol style="list-style-type: decimal">
+<li>[Partner] From GitHub, find the <strong>Pull Request</strong> tab <code>&gt;</code> New Pull Request</li>
+</ol>
+<p>The act of initiating a new Pull Request will spawn a message to the original owners of the source repository.</p>
+<ol style="list-style-type: decimal">
+<li>[Source] Go to your repository</li>
+<li>Merge Pull request</li>
+</ol>
+</div>
+<div id="collaborators" class="section level3">
+<h3>Collaborators</h3>
+<p>To enable a collaborator (GitHub) or member (GitLab), simply edit the settings for your repository on GitHub. You collaborator can then clone the repository and use git functions just as you do.</p>
+<p>For Example, in GitHub.</p>
+<ol style="list-style-type: decimal">
+<li>Login to the repository</li>
+<li>Go to the Settings</li>
+<li>Choose Collaborators</li>
+</ol>
+</div>
+</div>
+<div id="wikis-on-github" class="section level2">
+<h2>Wikis on GitHub</h2>
+<p>The GitHub Wiki is unique to your repository. Use it to lay out a roadmap of your project.</p>
+</div>
+<div id="issues-on-github" class="section level2">
+<h2>Issues on GitHub</h2>
+<p>The issues section is a good place to track bugs with your repository. You might even use this as a public to-do list.</p>
+</div>
+<div id="remotes" class="section level2">
+<h2>Remotes</h2>
+<p>In the <strong>terminal</strong>, try these <code>git</code> commands. What do they mean…</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">git</span> branch
+<span class="fu">git</span> remote
+<span class="fu">git</span> remote -v</code></pre></div>
+<div id="add-a-remote" class="section level3">
+<h3>Add a Remote</h3>
+<p>You can push your local repository to more than one remote social coding location…</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">git</span> remote add <span class="op">&lt;&lt;branch</span> <span class="ex">name</span><span class="op">&gt;&gt;</span> <span class="op">&lt;&lt;repo</span> <span class="ex">location</span><span class="op">&gt;&gt;</span>
+
+# e.g.  <span class="kw">`</span><span class="fu">git</span> remote add <span class="op">&lt;&lt;branch</span> <span class="ex">name</span><span class="op">&gt;&gt;</span> <span class="op">&lt;&lt;GitHub</span> <span class="ex">Repo</span> Address<span class="op">&gt;&gt;</span>
+# e.g. a GitHub Remote Address might look like this:  https://github.com/data-and-visualization/mozadrella-test.git
+
+git remote -v
+git push -u mirror-dvs master  # u stands for *upstream*
+git push mirror-dvs master</code></pre></div>
+<!-- Notes for Next Section -->
+<!-- Should cover collaboration 
+- Simplicity of the Roll-back on Social Coding sites (look at a previous version, copy/paste)
+- XKCD: sync-up ; If errors: save work elseswhere, delete and download a fresh copy.
+- pull requests 
+- revert
+- reset
+- remotes
+- triggers / Webhooks
+- add collaborators
+- Organizational Accounts
+- wiki
+- issues
+and collaboration -->
+</div>
+</div>
+
+&nbsp;
+
+<hr>
+<span class="footer">
+  
+  <span class="left-foot">
+    
+    <a href="https://rfun.library.duke.edu/">R We Having Fun Yet‽</a> -- Learning Series<br>
+    <a href="http://library.duke.edu/data/">Data & Visualization Services</a><br>
+    <a href="http://library.duke.edu/">Duke University Libraries</a>
+    
+  </span>
+
+  <span class="right-foot">
+  
+    <span class="cc">
+      <!-- Key: a: SA, b: BY, c: CC Circle, d: ND, n: NC, m: Sampling, s: Share, r: Remix, C: CC Full Logo -->
+    C bn</span><br>
+    Shareable via Creative Commons:  CC <a href="https://creativecommons.org/licenses/by-nc/4.0/">By-NC</a>
+
+  </span>
+
+</span>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
