@@ -15,7 +15,10 @@
 /*.Rcheck/
 
 # Output from site build
-/docs/*
+# /docs/*  # This is the RMarkdown website.  It is set up to 
+# continuous build at netlify.com.  This docs folder is
+# continously built when the docs folder is pushed (uploaded)
+# to GitHub
 
 
 # RStudio files
