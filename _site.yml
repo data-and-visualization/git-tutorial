@@ -26,10 +26,12 @@ navbar:
     - icon: fa-github
 #    - text: "GitHub"
       href: https://github.com/data-and-visualization/git-tutorial/         
-    - text: "Rfun Home"
-      href: "https://rfun.library.duke.edu/"
-    - text: "DVS"
-      href: https://library.duke.edu/data/      
+    - icon: fa-home
+      menu:
+        - text: "Rfun Home"
+          href: "https://rfun.library.duke.edu/"
+        - text: "Data & Visualization Srvc"
+          href: https://library.duke.edu/data/     
 output:
   html_document:
     theme: flatly
