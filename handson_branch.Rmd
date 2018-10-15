@@ -9,7 +9,7 @@ This document follows set-up from the [previous document](handson.html)
 
 ## Standard Edit
 
-- Add your name and a bulleted list with three of your favorite foods
+- Add your name and a bullet list with three of your favorite foods
 - Commit your changes
 
 ## Branch
@@ -18,7 +18,10 @@ This document follows set-up from the [previous document](handson.html)
     - The funny icon (see image, below) is used to **create** and **checkout** a branch
     - Clicking the icon invokes a *new branch* function.  (Don't type the next command.  Just know invoking the brach via RStudio makes git spawn the following command: `git checkout <<branch-name>>` )
     - For a branch name, in the branch text box, type:  `version2`
-    - Moving back to the text editor in RStudio, create a new markdown document listing 3 favorite movies.  Save the file as `movies.md`
+    - Click `Create`
+
+Moving back to the text editor in RStudio, create a new markdown document listing 3 favorite movies.  Save the file as `movies.md`
+
     - Commit your changes
     
 ```{r echo=FALSE, fig.align='center', fig.cap="Create Branch"}
