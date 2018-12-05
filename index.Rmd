@@ -16,6 +16,15 @@ output:
 1. [Resources](resources.html)
 
 
+<div class = "picture1">
+  <iframe width="450" height="315"
+  src="https://www.youtube.com/embed/Ao4uwcbMp-0"
+  frameborder="0" allow="accelerometer; autoplay;
+  encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+</div>
+
+
 ## Supporting Materials
 
 - [Slides](slides)
