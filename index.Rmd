@@ -32,6 +32,3 @@ output:
 - [Slides](slides)
 
 
-<figure>![](https://imgs.xkcd.com/comics/git.png)<figcaption>KXCD.  Git:  https://xkcd.com/1597/</figcaption></figure><br>
-
-
