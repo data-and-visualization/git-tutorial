@@ -25,9 +25,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
 
@@ -89,6 +88,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -103,7 +105,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -123,6 +124,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -144,18 +182,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -342,38 +439,38 @@ div.tocify {
 </div>
 
 
-<div id="hands-on-outline" class="section level2">
-<h2>Hands-on Outline</h2>
-<ol style="list-style-type: decimal">
-<li>Git</li>
-<li>GitHub and GitLab and Bitbucket</li>
-<li>Markdown<br />
-</li>
-<li><p>Orchestrating with RStudio</p>
-<ul>
-<li>Masks the CLI</li>
-<li>Easier to get started</li>
-<li>Power Users can still use commands</li>
-</ul></li>
-</ol>
-</div>
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
-<div id="load-install-software-before-the-workshop" class="section level3">
-<h3>Load &amp; Install Software <strong>Before the Workshop</strong></h3>
-<p>To complete the hands-on portion of the workshop you’ll need software pre-installed. Due to the nature of the workshop we will not have time to troubleshoot installations during the workshop. Please be sure to perform the following steps <strong>on the laptop you bring to the workshop</strong>.</p>
-</div>
-<div id="required-software" class="section level3">
-<h3>Required Software</h3>
-<div id="download-and-install" class="section level4">
-<h4>Download and install</h4>
-<p>I recommend accepting the install defaults for the following:</p>
+<p>Below are the details. You must accomplish three steps <strong>before attending the workshop</strong>.</p>
+<ol style="list-style-type: decimal">
+<li>Install required software</li>
+<li>Create your GitHub Account</li>
+<li>Cache your GitHub Credentials</li>
+</ol>
+<p>Details below.</p>
+<div id="install-required-software-before-the-workshop" class="section level3">
+<h3>Install Required Software <strong>Before the Workshop</strong></h3>
+<p>To complete the hands-on portion of the workshop you’ll need software pre-installed <strong>on your laptop</strong>. Due to the nature of the workshop we will <em>not have time to troubleshoot installations during the workshop</em>. Please be sure to perform the following steps <strong>on the laptop you bring to the workshop</strong>.</p>
+<p><strong>Download and install: Git, R, and RStudio</strong> (in that order). I recommend accepting the install defaults for the following applications:</p>
+<div id="software-applications" class="section level4">
+<h4>Software Applications</h4>
 <ul>
 <li><p><strong>Git</strong>: <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a></p>
+<ul>
+<li><p>Windows:</p>
 <ol style="list-style-type: decimal">
-<li>Download and install Git</li>
-<li>Run the install and accept all the defaults</li>
+<li><a href="https://git-scm.com/downloads" target="_blank">Download</a> and install Git</li>
+<li>Run the install and accept all the defaults (See Also: More <a href="https://happygitwithr.com/install-git.html#install-git-windows">details on Windows Git install</a>)</li>
 </ol></li>
+<li><p>Mac:</p>
+<ol style="list-style-type: decimal">
+<li>Open the <a href="https://macpaw.com/how-to/use-terminal-on-mac">Terminal</a></li>
+<li><p>Run the following Comand – AND if it prompts you to install Git, do so</p>
+<ul>
+<li><code>git --version</code> (See Also: More <a href="https://happygitwithr.com/install-git.html#macos">details on Mac Install</a>)</li>
+</ul></li>
+</ol></li>
+</ul></li>
 </ul>
 <br>
 <figure>
@@ -384,10 +481,11 @@ Click on the link to your OS
 </figure>
 <p><br></p>
 <ul>
-<li><p><strong>R</strong>: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a></p>
+<li><p><strong>R</strong>: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a> (<strong>latest version!!</strong>)</p>
 <ul>
-<li>If you have not installed R before choose <em>install R for the first time</em></li>
-<li>If you already have R installed on your workstation I recommend running the latest version, but any reasonably current version should be fine.</li>
+<li>If you have not installed R before, these <a href="https://tutorials.shinyapps.io/00-setup/">brief tutorial videos</a> are helpful.</li>
+<li>Windows: choose <em>install R for the first time</em> (Windows)</li>
+<li>MacOS: choose the <em>Latest release</em> package</li>
 </ul></li>
 <li><p><strong>RStudio</strong>: <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#download</a></p></li>
 </ul>
@@ -396,28 +494,58 @@ Click on the link to your OS
 <img src="images/rstudio_download.png" />
 </figure>
 <p><br></p>
-<p>If you haven’t yet, install each of the above applications.</p>
+<p>If you haven’t yet, install each of the above applications. These <a href="https://tutorials.shinyapps.io/00-setup/">brief tutorial videos</a> are helpful if you’re unsure of how to install R, RStudio or install R packages.</p>
 </div>
 </div>
 <div id="create-github-account-and-verify-access" class="section level3">
 <h3>Create GitHub Account and Verify Access</h3>
-<p>We will use <a href="https://github.com" target="_blank">GitHub</a> to create an initial public host for the repository you create during the workshop. (GitHub is free. If you choose not to continue using GitHub, you can easily <a href="https://help.github.com/articles/deleting-your-user-account/">delete the account</a>. ) If you already have a GitHub account, you do not need to create another for this workshop.</p>
+<p>We will use <a href="https://github.com" target="_blank">GitHub</a> to create an initial public host for the repository you create during the workshop. GitHub is free. If you choose not to continue using GitHub, you can easily <a href="https://help.github.com/articles/deleting-your-user-account/">delete the account</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Sign up for GitHub using the form on their front page: <a href="https://github.com" class="uri">https://github.com</a>. Use your Duke email address</li>
 <li><img src="images/github_account2.png" />, Then Create the Account</li>
 </ol>
-<div id="additional-private-repository-options" class="section level4">
-<h4>Additional Private Repository Options</h4>
-<ul>
-<li>Students can use the <a href="https://education.github.com/pack">GitHub Student Pack</a> that affords free unlimited private repositories</li>
-<li>Other unlimited private repository options include the <a href="https://gitlab.oit.duke.edu">Duke University instance of GitLab</a>, <a href="http://gitlab.com">GitLab.com</a>, or <a href="https://bitbucket.org/">BitBucket</a>. Using the <code>git remote</code> features it is easy to create private repositories at one social coding site while also publishing public repositories to another social coding site. I’ve been very happy using Duke’s GitLab for my private repositories and GitHub for my public profile.</li>
-</ul>
 </div>
+<div id="cache-credentials" class="section level3">
+<h3>Cache Credentials</h3>
+<p>The following are one-time configuration steps. For simplest configuration, follow the HTTPS Configuration.</p>
+<div id="https-configure-rrstudio-to-work-with-your-gitgithub" class="section level4">
+<h4>HTTPS: Configure R/RStudio to work with your Git/GitHub</h4>
+<p>For most new Git users, the following steps are the most convenient and efficient for configuring your new applications for Git version control. <strong>If</strong> you use <strong>two-factor</strong> authentication with <strong>GitHub</strong>, skip the the SSH section below.</p>
+<ol style="list-style-type: decimal">
+<li><p>In your RStudio Console, install the <code>usethis</code> package. If you have not installed a package before, this <a href="https://tutorials.shinyapps.io/00-setup/#section-install-packages">brief install package videos</a> is helpful.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Install the <code>usethis</code> package</li>
+<li><p>Load the <code>usethis</code> package:</p>
+<ol style="list-style-type: decimal">
+<li><code>library(usethis)</code></li>
+<li>(Video: <a href="https://youtu.be/3RWb5U3X-T8?t=159">Example of loading a libraryin the RStudio console</a>)</li>
+</ol></li>
+<li><p>In the RStudio <strong>console</strong>, configure <code>usethis</code> You will <strong>need to follow the instructions from within the console</strong>, after invoking the <code>use_usethis</code> function:</p>
+<ol style="list-style-type: decimal">
+<li><code>use_usethis()</code></li>
+<li>Restart R</li>
+</ol></li>
+<li><p>Configure your Git client with <a href="https://github.com/settings/emails">your GitHub email address</a></p>
+<ol style="list-style-type: decimal">
+<li><code>library(usethis)</code></li>
+<li><code>use_git_config(user.name = &quot;&lt;&lt;github ID&gt;&gt;&quot;, user.email = &quot;&lt;&lt;my github associated email address&gt;&gt;&quot;)</code></li>
+<li>For example: <code>use_git_config(user.name = &quot;libjohn&quot;, user.email = &quot;libjohn@duke.edu&quot;)</code></li>
+</ol></li>
+<li><p>Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (<code>.Renviron</code>). Do this by running the following command <strong>in the RStudio console</strong> and following all the prompts. When you run the command, below, this will spawn a GitHub Page that generates a PAT. Copy the PAT into your clipboard buffer. Paste the PAT into RStudio’s editor window for the <code>.Renviron</code> file. the PAT is your personal token; do not share it. You can do all this by invoking the <code>browse_github_pat</code> fuction in the RStudio Console and following the resulting console prompts. If you need more detail, see the <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html">usethis Setup</a> instructions.</p>
+<ol style="list-style-type: decimal">
+<li>usethis::browse_github_pat()</li>
+<li>The RStudio Console will direct you how to <code>edit_r_environ()</code> in the RStudio Editor window</li>
+<li>Restart R</li>
+</ol></li>
+</ol></li>
+</ol>
+<p>Let’s assume you did everything correctly. Now you’re ready go to the <a href="handson.html">Hands-On</a> section which we will cover in the workshop.</p>
+<hr />
 </div>
-<div id="generate-ssh-keys-in-advance-of-the-workshop" class="section level3">
-<h3>Generate SSH keys in Advance of the Workshop</h3>
-<p>I recommend generating your SSH keys in advance of the workshop. Then add your public key to GitHub. To do so, you should have already installed Git to your laptop.</p>
-<p>We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance. The instructions below are based on those found at Duke’s GitLab. If the instructions below are not clear you should consult the more complete GitHub instructions to <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">generate and add an SSH key</a></p>
+<div id="ssh-generate-ssh-keys" class="section level4">
+<h4>SSH: Generate SSH keys</h4>
+<p>If you followed the HTTPS section, above, <strong>you do not need to also follow the steps below</strong>. For those who use two-factor authentication at GitHub, I recommend SSH keys. However, I no longer recommend SSH to Git newbies, because it’s more complicated. At the same time, the workshop procedures rely heavily on the <a href="https://usethis.r-lib.org/">usethis package</a> and may not work via SSH without more extensive configuration of the SSH keys. Therefore, while it is possible to combine the <code>usethis</code> package with SSH keys, configuring this suite of applications and functions is beyond the scope of our workshop. Nonetheless, I am leaving these <em>SSH Keys</em> instructions here as legacy information. Feel free to <strong>skip and ignore the following</strong> section.</p>
+<p>The instructions below are based on those found at Duke’s GitLab. If the instructions below are not clear you should consult the more complete GitHub instructions to <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">generate and add an SSH key</a></p>
 <ol style="list-style-type: decimal">
 <li><p>To begin, open the <strong>Terminal</strong> <em>in RStudio</em>. If you’re using the latest version of RStudio, the <em>Terminal</em> is a tab in the console quadrant (typically the bottom-left)</p>
 <ul>
@@ -461,6 +589,11 @@ Click on the link to your OS
 <li><p>If you manually copied your public SSH key make sure you copied the entire key starting with <code>ssh-rsa</code> and ending with your email.</p></li>
 </ul></li>
 </ol>
+<div id="additional-legacy-instructions" class="section level5">
+<h5>Additional legacy instructions</h5>
+<p>I spent a couple of years promoting the SSH credentials method. That was before the existence of the <a href="https://usethis.r-lib.org/">usethis package</a>. As a result of <code>usethis</code> I’ve change the workshop procedures when teaching Git version control. Nonetheless, I wanted to keep the <a href="ssh_handson.html">old SSH init/clone/pull/push procdures</a> around for people who may have come to rely on the SSH credentials method I taught previously. In reality, there’s not much difference but I don’t want to shock anyone so I’ll keep the previous procedures around for a few semesters.</p>
+</div>
+</div>
 </div>
 </div>
 

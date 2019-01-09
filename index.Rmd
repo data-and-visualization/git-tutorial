@@ -9,10 +9,7 @@ output:
 
 ## Workshop Resources
 
-1. [Overview](outline.html)
-
-    - [Prerequisites](outline.html#prerequisites)  
-    
+1. [Prerequisites](outline.html)
 1. [Hands-On](handson.html)
 1. [Markdown](markdown.html)  
 1. [Resources](resources.html)

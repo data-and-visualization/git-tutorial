@@ -5,64 +5,104 @@ output:
     self_contained: false
 ---
 
-## Hands-on Outline
-
-1. Git
-1. GitHub and GitLab and Bitbucket
-1. Markdown  
-1. Orchestrating with RStudio
-
-	- Masks the CLI
-	- Easier to get started
-	- Power Users can still use commands
-	
 ## Prerequisites
 
-### Load & Install Software **Before the Workshop**
+Below are the details.  You must accomplish three steps **before attending the workshop**.
 
-To complete the hands-on portion of the workshop you'll need software pre-installed.  Due to the nature of the workshop we will not have time to troubleshoot installations during the workshop.  Please be sure to perform the following steps **on the laptop you bring to the workshop**.  
+1. Install required software
+1. Create your GitHub Account
+1. Cache your GitHub Credentials
 
-### Required Software
+Details below.  
 
-#### Download and install  
+### Install Required Software **Before the Workshop**
 
-I recommend accepting the install defaults for the following:
+To complete the hands-on portion of the workshop you'll need software pre-installed **on your laptop**.  Due to the nature of the workshop we will *not have time to troubleshoot installations during the workshop*.  Please be sure to perform the following steps **on the laptop you bring to the workshop**.  
+
+**Download and install: Git, R, and RStudio** (in that order).  I recommend accepting the install defaults for the following applications:
+
+#### Software Applications
 
 - **Git**: <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
 
-    1. Download and install Git
-    1. Run the install and accept all the defaults
+    - Windows:  
+
+        1. <a href="https://git-scm.com/downloads" target="_blank">Download</a> and install Git
+        1. Run the install and accept all the defaults  (See Also:  More [details on Windows Git install](https://happygitwithr.com/install-git.html#install-git-windows))
+        
+    - Mac:
+    
+        1. Open the [Terminal](https://macpaw.com/how-to/use-terminal-on-mac)
+        1. Run the following Comand -- AND if it prompts you to install Git, do so  
+        
+            - `git --version`  (See Also: More [details on Mac Install](https://happygitwithr.com/install-git.html#macos))
     
 <br><figure>![](images/git_os.png)<figcaption>Click on the link to your OS</figcaption></figure><br>
     
-- **R**: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a>
+- **R**: <a href="http://archive.linux.duke.edu/cran/"" target="_blank">http://archive.linux.duke.edu/cran/</a> (**latest version!!**)
 
-    - If you have not installed R before choose *install R for the first time*
-    - If you already have R installed on your workstation I recommend running the latest version, but any reasonably current version should be fine.
-    
+    - If you have not installed R before, these [brief tutorial videos](https://tutorials.shinyapps.io/00-setup/) are helpful.
+    - Windows: choose *install R for the first time* (Windows) 
+    - MacOS:  choose the *Latest release* package 
+
 - **RStudio**: <a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">https://www.rstudio.com/products/rstudio/download/#download</a> 
 
 <br><figure>![](images/rstudio_download.png)</figure><br>
-    
 
-If you haven't yet, install each of the above applications.  
-
+If you haven't yet, install each of the above applications.  These [brief tutorial videos](https://tutorials.shinyapps.io/00-setup/) are helpful if you're unsure of how to install R, RStudio or install R packages.
 
 ### Create GitHub Account and Verify Access
-We will use  <a href="https://github.com" target="_blank">GitHub</a> to create an initial public host for the repository you create during the workshop.  (GitHub is free.  If you choose not to continue using GitHub, you can easily [delete the account](https://help.github.com/articles/deleting-your-user-account/). )   If you already have a GitHub account, you do not need to create another for this workshop.  
+We will use  <a href="https://github.com" target="_blank">GitHub</a> to create an initial public host for the repository you create during the workshop.  GitHub is free.  If you choose not to continue using GitHub, you can easily [delete the account](https://help.github.com/articles/deleting-your-user-account/).     
 
 1. Sign up for GitHub using the form on their front page:  https://github.com.  Use your Duke email address
 1. ![](images/github_account2.png), Then Create the Account  
 
-#### Additional Private Repository Options
-- Students can use the [GitHub Student Pack](https://education.github.com/pack) that affords free unlimited private repositories
-- Other unlimited private repository options include the [Duke University instance of GitLab](https://gitlab.oit.duke.edu), [GitLab.com](http://gitlab.com), or [BitBucket](https://bitbucket.org/).  Using the `git remote` features it is easy to create private repositories at one social coding site while also publishing public repositories to another social coding site.  I've been very happy using Duke's GitLab for my private repositories and GitHub for my public profile.
 
-### Generate SSH keys in Advance of the Workshop
+### Cache Credentials
 
-I recommend generating your SSH keys in advance of the workshop.  Then add your public key to GitHub.  To do so, you should have already installed Git to your laptop.  
+The following are one-time configuration steps.  For simplest configuration, follow the HTTPS Configuration.  
 
-We will cover key configuration in the workshop although you will find the explanation easier to follow if you generate and add your keys in advance.  The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete GitHub instructions to [generate and add an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)  
+#### HTTPS:  Configure R/RStudio to work with your Git/GitHub 
+
+For most new Git users, the following steps are the most convenient and efficient for configuring your new applications for Git version control.  **If** you use **two-factor** authentication with **GitHub**, skip the the SSH section below.
+
+1. In your RStudio Console, install the `usethis` package.  If you have not installed a package before, this [brief install package videos](https://tutorials.shinyapps.io/00-setup/#section-install-packages) is helpful.
+
+    a. Install the `usethis` package
+    a. Load the `usethis` package:  
+    
+        1. `library(usethis)` 
+        1. (Video: [Example of loading a libraryin the RStudio console](https://youtu.be/3RWb5U3X-T8?t=159)) 
+        
+    a. In the RStudio **console**, configure `usethis`  You will **need to follow the instructions from within the console**, after invoking the `use_usethis` function:
+    
+        1. `use_usethis()`
+        1. Restart R
+        
+    a. Configure your Git client with [your GitHub email address](https://github.com/settings/emails)
+    
+        1. `library(usethis)`
+        1. `use_git_config(user.name = "<<github ID>>", user.email = "<<my github associated email address>>")`
+        1. For example:  `use_git_config(user.name = "libjohn", user.email = "libjohn@duke.edu")`
+        
+
+    a. Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (`.Renviron`).  Do this by running the following command **in the RStudio console** and following all the prompts.  When you run the command, below, this will spawn a GitHub Page that generates a PAT.  Copy the PAT into your clipboard buffer.  Paste the PAT into RStudio's editor window for the `.Renviron` file.  the PAT is your personal token; do not share it.  You can do all this by invoking the `browse_github_pat` fuction in the RStudio Console and following the resulting console prompts.  If you need more detail, see the [usethis Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html) instructions.
+    
+        1. usethis::browse_github_pat()
+        1. The RStudio Console will direct you how to `edit_r_environ()` in the RStudio Editor window
+        1. Restart R
+
+
+Let's assume you did everything correctly.  Now you're ready go to the [Hands-On](handson.html) section which we will cover in the workshop.
+
+---
+
+
+#### SSH:  Generate SSH keys
+
+If you followed the HTTPS section, above, **you do not need to also follow the steps below**.  For those who use two-factor authentication at GitHub, I recommend SSH keys.  However, I no longer recommend SSH to Git newbies, because it's more complicated.  At the same time, the workshop procedures rely heavily on the [usethis package](https://usethis.r-lib.org/) and may not work via SSH without more extensive configuration of the SSH keys.  Therefore, while it is possible to combine the `usethis` package with SSH keys, configuring this suite of applications and functions is beyond the scope of our workshop.  Nonetheless, I am leaving these *SSH Keys* instructions here as legacy information.  Feel free to **skip and ignore the following** section.
+
+The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete GitHub instructions to [generate and add an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)  
 
 1. To begin, open the **Terminal** *in RStudio*.  If you're using the latest version of RStudio, the *Terminal* is a tab in the console quadrant (typically the bottom-left)
 
@@ -100,3 +140,8 @@ We will cover key configuration in the workshop although you will find the expla
     - Navigate to the *SSH and GPG keys* section of your GitHub *Settings*.  Click the green **New SSH key** button and paste your key in the *Key* section.  Give the key a relevant *Title*  Use an identifiable title like *Work Laptop - Windows 7* or *Home MacBook Pro 15.*
     
     - If you manually copied your public SSH key make sure you copied the entire key starting with `ssh-rsa` and ending with your email.
+    
+##### Additional legacy instructions
+
+I spent a couple of years promoting the SSH credentials method.  That was before the existence of the [usethis package](https://usethis.r-lib.org/).  As a result of `usethis` I've change the workshop procedures when teaching Git version control.  Nonetheless, I wanted to keep the [old SSH init/clone/pull/push procdures](ssh_handson.html) around for people who may have come to rely on the SSH credentials method I taught previously.  In reality, there's not much difference but I don't want to shock anyone so I'll keep the previous procedures around for a few semesters.  
+
