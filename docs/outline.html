@@ -511,32 +511,30 @@ Click on the link to your OS
 <div id="https-configure-rrstudio-to-work-with-your-gitgithub" class="section level4">
 <h4>HTTPS: Configure R/RStudio to work with your Git/GitHub</h4>
 <p>For most new Git users, the following steps are the most convenient and efficient for configuring your new applications for Git version control. <strong>If</strong> you use <strong>two-factor</strong> authentication with <strong>GitHub</strong>, skip the the SSH section below.</p>
+<p>In your RStudio Console…. (<a href="http://keziamanlove.com/wp-content/uploads/2013/10/RStudioScreenshot1_Inkscape.png">image</a>)</p>
 <ol style="list-style-type: decimal">
-<li><p>In your RStudio Console, install the <code>usethis</code> package. If you have not installed a package before, this <a href="https://tutorials.shinyapps.io/00-setup/#section-install-packages">brief install package videos</a> is helpful.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Install the <code>usethis</code> package</li>
+<li>Install the <code>usethis</code> package. (If you have not installed a <strong>package</strong> before, this <a href="https://tutorials.shinyapps.io/00-setup/#section-install-packages">brief install package videos</a> is helpful)</li>
 <li><p>Load the <code>usethis</code> package:</p>
-<ol style="list-style-type: decimal">
+<ol style="list-style-type: lower-alpha">
 <li><code>library(usethis)</code></li>
 <li>(Video: <a href="https://youtu.be/3RWb5U3X-T8?t=159">Example of loading a libraryin the RStudio console</a>)</li>
 </ol></li>
 <li><p>In the RStudio <strong>console</strong>, configure <code>usethis</code> You will <strong>need to follow the instructions from within the console</strong>, after invoking the <code>use_usethis</code> function:</p>
-<ol style="list-style-type: decimal">
+<ol style="list-style-type: lower-alpha">
 <li><code>use_usethis()</code></li>
 <li>Restart R</li>
 </ol></li>
 <li><p>Configure your Git client with <a href="https://github.com/settings/emails">your GitHub email address</a></p>
-<ol style="list-style-type: decimal">
+<ol style="list-style-type: lower-alpha">
 <li><code>library(usethis)</code></li>
 <li><code>use_git_config(user.name = &quot;&lt;&lt;github ID&gt;&gt;&quot;, user.email = &quot;&lt;&lt;my github associated email address&gt;&gt;&quot;)</code></li>
 <li>For example: <code>use_git_config(user.name = &quot;libjohn&quot;, user.email = &quot;libjohn@duke.edu&quot;)</code></li>
 </ol></li>
 <li><p>Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (<code>.Renviron</code>). Do this by running the following command <strong>in the RStudio console</strong> and following all the prompts. When you run the command, below, this will spawn a GitHub Page that generates a PAT. Copy the PAT into your clipboard buffer. Paste the PAT into RStudio’s editor window for the <code>.Renviron</code> file. the PAT is your personal token; do not share it. You can do all this by invoking the <code>browse_github_pat</code> fuction in the RStudio Console and following the resulting console prompts. If you need more detail, see the <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html">usethis Setup</a> instructions.</p>
-<ol style="list-style-type: decimal">
-<li>usethis::browse_github_pat()</li>
+<ol style="list-style-type: lower-alpha">
+<li><code>browse_github_pat()</code></li>
 <li>The RStudio Console will direct you how to <code>edit_r_environ()</code> in the RStudio Editor window</li>
 <li>Restart R</li>
-</ol></li>
 </ol></li>
 </ol>
 <p>Let’s assume you did everything correctly. Now you’re ready go to the <a href="handson.html">Hands-On</a> section which we will cover in the workshop.</p>

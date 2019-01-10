@@ -66,31 +66,31 @@ The following are one-time configuration steps.  For simplest configuration, fol
 
 For most new Git users, the following steps are the most convenient and efficient for configuring your new applications for Git version control.  **If** you use **two-factor** authentication with **GitHub**, skip the the SSH section below.
 
-1. In your RStudio Console, install the `usethis` package.  If you have not installed a package before, this [brief install package videos](https://tutorials.shinyapps.io/00-setup/#section-install-packages) is helpful.
+In your RStudio Console.... ([image](http://keziamanlove.com/wp-content/uploads/2013/10/RStudioScreenshot1_Inkscape.png))
 
-    a. Install the `usethis` package
-    a. Load the `usethis` package:  
-    
-        1. `library(usethis)` 
-        1. (Video: [Example of loading a libraryin the RStudio console](https://youtu.be/3RWb5U3X-T8?t=159)) 
-        
-    a. In the RStudio **console**, configure `usethis`  You will **need to follow the instructions from within the console**, after invoking the `use_usethis` function:
-    
-        1. `use_usethis()`
-        1. Restart R
-        
-    a. Configure your Git client with [your GitHub email address](https://github.com/settings/emails)
-    
-        1. `library(usethis)`
-        1. `use_git_config(user.name = "<<github ID>>", user.email = "<<my github associated email address>>")`
-        1. For example:  `use_git_config(user.name = "libjohn", user.email = "libjohn@duke.edu")`
-        
+1. Install the `usethis` package.  (If you have not installed a **package** before, this [brief install package videos](https://tutorials.shinyapps.io/00-setup/#section-install-packages) is helpful)
+1. Load the `usethis` package:  
 
-    a. Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (`.Renviron`).  Do this by running the following command **in the RStudio console** and following all the prompts.  When you run the command, below, this will spawn a GitHub Page that generates a PAT.  Copy the PAT into your clipboard buffer.  Paste the PAT into RStudio's editor window for the `.Renviron` file.  the PAT is your personal token; do not share it.  You can do all this by invoking the `browse_github_pat` fuction in the RStudio Console and following the resulting console prompts.  If you need more detail, see the [usethis Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html) instructions.
+    a. `library(usethis)` 
+    a. (Video: [Example of loading a libraryin the RStudio console](https://youtu.be/3RWb5U3X-T8?t=159)) 
+        
+1. In the RStudio **console**, configure `usethis`  You will **need to follow the instructions from within the console**, after invoking the `use_usethis` function:
     
-        1. usethis::browse_github_pat()
-        1. The RStudio Console will direct you how to `edit_r_environ()` in the RStudio Editor window
-        1. Restart R
+    a. `use_usethis()`
+    a. Restart R
+    
+1. Configure your Git client with [your GitHub email address](https://github.com/settings/emails)
+
+    a. `library(usethis)`
+    a. `use_git_config(user.name = "<<github ID>>", user.email = "<<my github associated email address>>")`
+    a. For example:  `use_git_config(user.name = "libjohn", user.email = "libjohn@duke.edu")`
+    
+
+1. Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (`.Renviron`).  Do this by running the following command **in the RStudio console** and following all the prompts.  When you run the command, below, this will spawn a GitHub Page that generates a PAT.  Copy the PAT into your clipboard buffer.  Paste the PAT into RStudio's editor window for the `.Renviron` file.  the PAT is your personal token; do not share it.  You can do all this by invoking the `browse_github_pat` fuction in the RStudio Console and following the resulting console prompts.  If you need more detail, see the [usethis Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html) instructions.
+
+    a. `browse_github_pat()`
+    a. The RStudio Console will direct you how to `edit_r_environ()` in the RStudio Editor window
+    a. Restart R
 
 
 Let's assume you did everything correctly.  Now you're ready go to the [Hands-On](handson.html) section which we will cover in the workshop.
