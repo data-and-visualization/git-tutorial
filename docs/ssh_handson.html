@@ -11,7 +11,7 @@
 
 
 
-<title>Git: Pull &amp; Push</title>
+<title>Git: Init / Clone / Pull &amp; Push</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -437,28 +437,89 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Git: Pull &amp; Push</h1>
+<h1 class="title toc-ignore">Git: Init / Clone / Pull &amp; Push</h1>
 
 </div>
 
 
-<div id="configure" class="section level3">
-<h3>Configure</h3>
-<p>This step was covered in the <a href="outline.html">Outline Section</a>. In that section you have associated your GitHub Personal Access Token with your local git config file. This must be done on each workstation you use to <em>push</em> to a GitHub repository.</p>
+<div id="generate-ssh-keys" class="section level3">
+<h3>Generate SSH Keys</h3>
+<p>This step was covered in the <a href="outline.html#generate_ssh_keys_in_advance_of_the_workshop">Outline Section</a>. This must be done on each workstation you use to <em>push</em>.</p>
 </div>
-<div id="make-a-new-repository" class="section level2">
-<h2>Make a New Repository</h2>
+<div id="make-a-repository" class="section level2">
+<h2>Make a Repository</h2>
+<p>1.Login to GitHub – <a href="https://github.com" target="_blank">https://github.com</a></p>
 <ol style="list-style-type: decimal">
-<li>Create a new RStudio Project (<a href="https://youtu.be/etkSsF6r2iU">video - 40 seconds</a>)</li>
-<li>In the Rstudio Console: <code>library(usethis)</code></li>
-<li>In the Console: <code>use_git(message = &quot;first commit for my helo world&quot;)</code></li>
-<li>Create a Readme File: <code>use_readme_md()</code> (Edit your README. <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">Example README template</a>)</li>
-<li>Push your repository to GitHub: <code>use_github(protocol = &quot;https&quot;)</code></li>
-<li>Add a license: <a href="https://help.github.com/articles/adding-a-license-to-a-repository/">GitHub instructions</a></li>
-<li>Pull the GitHub changes to your local workstations via Rstudio’s git client</li>
-<li>Congratulations. You’ve just created your first GitHub repository. Now you can see your repository – including the three files you just created.</li>
+<li>New repository <br>
+<figure>
+<img src="images/new_github_repo.png" />
+</figure>
+<p><br></p></li>
+<li>Add a repository name. Use the name <em>test-one</em> <br>
+<figure>
+<img src="images/project_name_github.png" />
+<figcaption>
+Type ‘test-one’ and add a short description
+</figcaption>
+</figure>
+<p><br></p></li>
+<li>Change “Add .gitignore” from <strong>None</strong> to <strong>R</strong></li>
+<li>Change “Add a license” from <strong>None</strong> to ** MIT License**</li>
+<li><p>Click <strong>Create repository</strong></p>
+<ul>
+<li>GitHub will present a new page.</li>
+</ul></li>
+<li><p>Click the green “Add a README” button</p>
+<ol style="list-style-type: decimal">
+<li><p>Make a top level heading with the word “#README”</p>
+<ul>
+<li>See <a href="markdown.html">Markdown</a> for more information on Markdown tagging</li>
+</ul></li>
+<li>After a blank line type: <code>This is my first GitHub repository.</code></li>
+<li><p>Click the green <strong>Commit new file</strong> button</p></li>
+</ol></li>
+<li><p>Congratulations. You’ve just created your first GitHub repository. Now you can see your repository – including the three files you just created.</p></li>
 </ol>
 <p> </p>
+</div>
+<div id="clone" class="section level2">
+<h2>Clone</h2>
+<p><strong>Using RStudio</strong>, clone your repository. Cloning will pull down the whole repo to your local system – including the three files you just created.</p>
+<div id="bring-the-repo-down-locally-via-rstudio" class="section level3">
+<h3>Bring the repo down locally via RStudio</h3>
+<ol style="list-style-type: decimal">
+<li><p>Copy GitHub repo URL to clipboard by clicking on the green <strong>Clone or Download</strong> button</p>
+<ul>
+<li>The repo should be at a location like this. <code>https://github.com/&lt;&lt;your-NetID&gt;&gt;/test-one</code></li>
+<li>Click the <strong>Use SSH</strong> link, then the clipboard icon to copy the repository address. This will copy the <em>git</em> URL to the clipboard <br>
+<figure>
+<img src="images/copy_repo_github.png" />
+<figcaption>
+Copy the repo URL
+</figcaption>
+</figure>
+<br></li>
+</ul></li>
+<li><p>Launch RStudio and create a <em>New Project…</em></p>
+<ol style="list-style-type: decimal">
+<li>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git <br>
+<figure>
+<img src="images/project_version_git.png" />
+<figcaption>
+Paste the GitHub repo URL (from the step above) into the <em>Repository URL:</em> field in RStudio
+</figcaption>
+</figure>
+<br></li>
+<li>Create Project</li>
+<li>You may be prompted with a message which asks if you about the “authenticity of host”. I like to verify the IP number is correct; then the answer is <code>yes</code>.<br>
+<figure>
+<img src="images/yes.png" />
+</figure>
+<br></li>
+</ol></li>
+</ol>
+<p> </p>
+</div>
 </div>
 <div id="push-edit-and-commit" class="section level2">
 <h2>Push: Edit and Commit</h2>

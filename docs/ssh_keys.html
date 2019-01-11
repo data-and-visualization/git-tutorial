@@ -11,7 +11,7 @@
 
 
 
-<title>Git: Pull &amp; Push</title>
+<title>Configuring SSH Keys &amp; Credentials</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -437,82 +437,65 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Git: Pull &amp; Push</h1>
+<h1 class="title toc-ignore">Configuring SSH Keys &amp; Credentials</h1>
 
 </div>
 
 
-<div id="configure" class="section level3">
-<h3>Configure</h3>
-<p>This step was covered in the <a href="outline.html">Outline Section</a>. In that section you have associated your GitHub Personal Access Token with your local git config file. This must be done on each workstation you use to <em>push</em> to a GitHub repository.</p>
-</div>
-<div id="make-a-new-repository" class="section level2">
-<h2>Make a New Repository</h2>
+<p>The instructions below are based on those found at Duke’s GitLab. If the instructions below are not clear you should consult the more complete GitHub instructions to <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">generate and add an SSH key</a></p>
 <ol style="list-style-type: decimal">
-<li>Create a new RStudio Project (<a href="https://youtu.be/etkSsF6r2iU">video - 40 seconds</a>)</li>
-<li>In the Rstudio Console: <code>library(usethis)</code></li>
-<li>In the Console: <code>use_git(message = &quot;first commit for my helo world&quot;)</code></li>
-<li>Create a Readme File: <code>use_readme_md()</code> (Edit your README. <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">Example README template</a>)</li>
-<li>Push your repository to GitHub: <code>use_github(protocol = &quot;https&quot;)</code></li>
-<li>Add a license: <a href="https://help.github.com/articles/adding-a-license-to-a-repository/">GitHub instructions</a></li>
-<li>Pull the GitHub changes to your local workstations via Rstudio’s git client</li>
-<li>Congratulations. You’ve just created your first GitHub repository. Now you can see your repository – including the three files you just created.</li>
-</ol>
-<p> </p>
-</div>
-<div id="push-edit-and-commit" class="section level2">
-<h2>Push: Edit and Commit</h2>
-<p><strong>Continue in RStudio</strong>. This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repository.</p>
-<br>
-<figure>
-<img src="images/push.png" />
-</figure>
-<div id="edit" class="section level3">
-<h3>Edit</h3>
-<ol style="list-style-type: decimal">
-<li>In the Files Pane, Open the README.md file</li>
-<li><p>In the Editor Pane, modify your README with <a href="markdown.html">Markdown</a></p>
+<li><p>To begin, open the <strong>Terminal</strong> <em>in RStudio</em>. If you’re using the latest version of RStudio, the <em>Terminal</em> is a tab in the console quadrant (typically the bottom-left)</p>
 <ul>
-<li><p>Make a Sub-heading with the word “Purpose”</p>
-<ul>
-<li>i.e. <code>## Purpose</code></li>
+<li>In RStudio: Menubar <code>Tools &gt; Terminal &gt; New Terminal</code></li>
 </ul></li>
-<li>After a blank line type: <code>This is my first Git repository.  I'm going to push this file to GitHub via RStudio.  Hello World.</code></li>
-</ul></li>
-<li><p>Save the changes to this file</p></li>
 </ol>
-</div>
-<div id="commit-push" class="section level3">
-<h3>Commit &amp; Push</h3>
-<ol style="list-style-type: decimal">
-<li><p>In the Git pane:</p>
-<ol style="list-style-type: decimal">
-<li>Check each of the staged files</li>
-<li>Click <em>commit</em> and provide a message: <code>this is my first edit of a README and supporting files</code></li>
-<li>Click the <em>commit</em> button to engage your commit process with the message, then close</li>
-<li>Click the <em>Push</em> arrow, then close, then close the commit dialogue box<br />
 <br>
 <figure>
-<img src="images/commit_push.png" />
-</figure>
-<br></li>
-</ol></li>
-<li><p>View your changes back at GitHub: <code>https://github.com/&lt;&lt;your-ID&gt;&gt;/test-one</code></p></li>
-</ol>
-<p> </p>
-</div>
-</div>
-<div id="pull" class="section level2">
-<h2>Pull</h2>
-<p>The next time you open your project in RStudio the first step you should take is to <em>Pull</em> from the GitHub repo. Then make your changes, then <strong>commit</strong> and push. If you forget to <em>Pull</em> you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.</p>
-<br>
-<figure>
-<img src="images/git_push_pull.png" />
+<img src="images/shell.png" />
 </figure>
 <p><br></p>
-<p>Advance to Hands-On, Part 2: <a href="handson_branch.html">Branch / Merge / Revert</a></p>
-<p> </p>
-<p> </p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Determine if you already have an SSH key pair. In the <em>Termnal</em> tab, type: <code>cat ~/.ssh/id_rsa.pub</code></p>
+<ul>
+<li><p>If you see a string starting with <code>ssh-rsa</code> you already have an SSH key pair and can simply copy that key (Step 5)</p></li>
+<li><p>If you get some kind of error, you’ll have to generate a key in the next step</p></li>
+</ul></li>
+<li><p>In the <em>Terminal</em> tab, type: <code>ssh-keygen -t rsa -C &quot;your.email@example.com&quot; -b 4096</code></p>
+<ul>
+<li>I recommend using your Duke Email address but it must be the address you used to create your GitHub account</li>
+</ul></li>
+<li><p>You will be prompted to input a file path. i.e. the location where you’ll save your SSH key pair.</p>
+<ul>
+<li><p>If you don’t already have an SSH key pair use the suggested path by pressing enter</p></li>
+<li><p>After setting the file path you will be prompted to input a password. This will secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required. You can skip creating a password by pressing enter</p>
+<ul>
+<li><strong>Note</strong>: If you want to change the password of your SSH key pair, you can use <code>ssh-keygen -p &lt;keyname&gt;</code></li>
+</ul></li>
+</ul></li>
+<li><p>Copy the public SSH key to the clipboard buffer</p>
+<ul>
+<li>In the <em>Termnal</em> tab, type the appropriate code below:
+<ul>
+<li><strong>macOS</strong>: <code>cat ~/.ssh/id_rsa.pub | pbcopy</code></li>
+<li><strong>Windows</strong>: <code>cat ~/.ssh/id_rsa.pub | clip</code></li>
+</ul></li>
+</ul></li>
+<li><p>The final step is to add your public SSH key to GitHub.</p>
+<ul>
+<li><p>Navigate to the <em>SSH and GPG keys</em> section of your GitHub <em>Settings</em>. Click the green <strong>New SSH key</strong> button and paste your key in the <em>Key</em> section. Give the key a relevant <em>Title</em> Use an identifiable title like <em>Work Laptop - Windows 7</em> or <em>Home MacBook Pro 15.</em></p></li>
+<li><p>If you manually copied your public SSH key make sure you copied the entire key starting with <code>ssh-rsa</code> and ending with your email.</p></li>
+</ul></li>
+</ol>
+<div id="additional-legacy-instructions" class="section level2">
+<h2>Additional legacy instructions</h2>
+<p>I spent a couple of years promoting the SSH credentials method. That was before the existence of the <a href="https://usethis.r-lib.org/">usethis package</a>. As a result of <code>usethis</code> I’ve change the workshop procedures when teaching Git version control. Nonetheless, I wanted to keep the <a href="ssh_handson.html">old SSH init/clone/pull/push procdures</a> around for people who may have come to rely on the SSH credentials method I taught previously. In reality, there’s not much difference but I don’t want to shock anyone so I’ll keep the previous procedures around for a few semesters.</p>
+</div>
+<div id="old-ssh-instructions" class="section level2">
+<h2>Old SSH Instructions</h2>
+<p>The following link shows you how to create your repository at GitHub and then pull the initial repository down to your local workstation.</p>
+<ul>
+<li><a href="ssh_handson.html">Create repository at GitHub and them Pull locaally</a></li>
+</ul>
 </div>
 
 &nbsp;

@@ -1,58 +1,24 @@
 ---
-title: "Git: Init / Clone / Pull & Push"
+title: "Git: Pull & Push"
 output: 
   html_document:
     self_contained: false
 ---
 
-### Generate SSH Keys 
+### Configure 
 
-This step was covered in the [Outline Section](outline.html#generate_ssh_keys_in_advance_of_the_workshop).  This must be done on each workstation you use to *push*.  
+This step was covered in the [Outline Section](outline.html). In that section you have associated your GitHub Personal Access Token with your local git config file. This must be done on each workstation you use to *push* to a GitHub repository.  
 
+## Make a New Repository
 
-## Make a Repository
-1.Login to GitHub -- <a href="https://github.com" target="_blank">https://github.com</a>
-
-1. New repository <br><figure>![](images/new_github_repo.png)</figure><br>
-
-1. Add a repository name.  Use the name *test-one*  <br> <figure>![](images/project_name_github.png)<figcaption>Type  'test-one' and add a short description</figcaption></figure><br>
-
-
-1. Change "Add .gitignore" from **None** to **R**
-1. Change "Add a license" from **None** to ** MIT License**
-1. Click **Create repository** 
-
-    - GitHub will present a new page.
-
-1. Click the green "Add a README" button 
-
-    1. Make a top level heading with the word "#README"
-   
-        - See [Markdown](markdown.html) for more information on Markdown tagging
-    1. After a blank line type: `This is my first GitHub repository.`
-    1. Click the green **Commit new file** button  
-    
+1. Create a new RStudio Project ([video - 40 seconds](https://youtu.be/etkSsF6r2iU))
+1. In the Rstudio Console: `library(usethis)`
+1. In the Console:  `use_git(message = "first commit for my helo world")`
+1. Create a Readme File:  `use_readme_md()`   (Edit your README.  [Example README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2))
+1. Push your repository to GitHub:  `use_github(protocol = "https")`
+1. Add a license:  [GitHub instructions](https://help.github.com/articles/adding-a-license-to-a-repository/)
+1. Pull the GitHub changes to your local workstations via Rstudio's git client
 1. Congratulations.  You've just created your first GitHub repository.  Now you can see your repository -- including the three files you just created.
-
-&nbsp; 
-
-## Clone
-
-**Using RStudio**, clone your repository.  Cloning will pull down the whole repo to your local system -- including the three files you just created.
-    
-### Bring the repo down locally via RStudio
-
-1. Copy GitHub repo URL to clipboard by clicking on the green **Clone or Download** button
-
-	  - The repo should be at a location like this. `https://github.com/<<your-NetID>>/test-one`
-	  - Click the **Use SSH** link, then the clipboard icon to copy the repository address.  This will copy the *git* URL to the clipboard <br><figure>![](images/copy_repo_github.png)
-<figcaption>Copy the repo URL</figcaption></figure><br>
-	    
-1. Launch RStudio and create a *New Project...*
-
-    1. From the RStudio menubar:  *File > New Project...* > Version Control > Git <br><figure>![](images/project_version_git.png)<figcaption>Paste the GitHub repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption></figure><br>
-    1. Create Project
-    1. You may be prompted with a message which asks if you about the "authenticity of host".  I like to verify the IP number is correct; then the answer is `yes`.<br><figure>![](images/yes.png)</figure><br>
 
 &nbsp; 
 
