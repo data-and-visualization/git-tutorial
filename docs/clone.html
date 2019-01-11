@@ -11,7 +11,7 @@
 
 
 
-<title>Git: Pull &amp; Push</title>
+<title>Clone a GitHub Repository</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -437,82 +437,40 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Git: Pull &amp; Push</h1>
+<h1 class="title toc-ignore">Clone a GitHub Repository</h1>
 
 </div>
 
 
-<div id="configure" class="section level3">
-<h3>Configure</h3>
-<p>This step was covered in the <a href="outline.html">Outline Section</a>. In that section you have associated your GitHub Personal Access Token with your local git config file. This must be done on each workstation you use to <em>push</em> to a GitHub repository.</p>
-</div>
-<div id="make-a-new-repository" class="section level2">
-<h2>Make a New Repository</h2>
+<p><strong>Using RStudio</strong>, clone some repository. Cloning will pull down the whole repo to your local system. Start with some test repository, maybe this <a href="https://github.com/libjohn/intro2r-2018fall">introduction to R</a></p>
+<div id="bring-the-repo-down-locally-via-rstudio" class="section level3">
+<h3>Bring the repo down locally via RStudio</h3>
 <ol style="list-style-type: decimal">
-<li>Create a new RStudio Project (<a href="https://youtu.be/etkSsF6r2iU">video - 40 seconds</a>)</li>
-<li>In the Rstudio Console: <code>library(usethis)</code></li>
-<li>In the Console: <code>use_git(message = &quot;first commit for my helo world&quot;)</code></li>
-<li>Create a Readme File: <code>use_readme_md()</code> (Edit your README. <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">Example README template</a>)</li>
-<li>Push your repository to GitHub: <code>use_github(protocol = &quot;https&quot;)</code></li>
-<li>Add a license: <a href="https://help.github.com/articles/adding-a-license-to-a-repository/">GitHub instructions</a></li>
-<li>Pull the GitHub changes to your local workstations via Rstudio’s git client</li>
-<li>Congratulations. You’ve just created your first GitHub repository. Now you can see your repository – including the three files you just created.</li>
-</ol>
-<p> </p>
-</div>
-<div id="push-edit-and-commit" class="section level2">
-<h2>Push: Edit and Commit</h2>
-<p><strong>Continue in RStudio</strong>. This time you’ll make local changes by editing your local repository. After saving the changes you’ll <em>add</em> and <em>commit</em> the changes. Lastly, you will <em>push</em> your changes up to the remote repository.</p>
-<br>
-<figure>
-<img src="images/push.png" />
-</figure>
-<div id="edit" class="section level3">
-<h3>Edit</h3>
-<ol style="list-style-type: decimal">
-<li>In the Files Pane, Open the README.md file</li>
-<li><p>In the Editor Pane, modify your README with <a href="markdown.html">Markdown</a></p>
+<li><p>Copy GitHub repo URL to clipboard by clicking on the green <strong>Clone or Download</strong> button</p>
 <ul>
-<li><p>Make a Sub-heading with the word “Purpose”</p>
-<ul>
-<li>i.e. <code>## Purpose</code></li>
-</ul></li>
-<li>After a blank line type: <code>This is my first Git repository.  I'm going to push this file to GitHub via RStudio.  Hello World.</code></li>
-</ul></li>
-<li><p>Save the changes to this file</p></li>
-</ol>
-</div>
-<div id="commit-push" class="section level3">
-<h3>Commit &amp; Push</h3>
-<ol style="list-style-type: decimal">
-<li><p>In the Git pane:</p>
-<ol style="list-style-type: decimal">
-<li>Check each of the staged files</li>
-<li>Click <em>commit</em> and provide a message: <code>this is my first edit of a README and supporting files</code></li>
-<li>Click the <em>commit</em> button to engage your commit process with the message, then close</li>
-<li>Click the <em>Push</em> arrow, then close, then close the commit dialogue box<br />
-<br>
+<li>The repo should be at a location like this. <code>https://github.com/libjohn/intro2r-2018fall</code></li>
+<li>This will copy the <em>git</em> URL to the clipboard <br>
 <figure>
-<img src="images/commit_push.png" />
+<img src="images/copy_repo_github.png" />
+<figcaption>
+Copy the repo URL
+</figcaption>
 </figure>
 <br></li>
-</ol></li>
-<li><p>View your changes back at GitHub: <code>https://github.com/&lt;&lt;your-ID&gt;&gt;/test-one</code></p></li>
-</ol>
-<p> </p>
-</div>
-</div>
-<div id="pull" class="section level2">
-<h2>Pull</h2>
-<p>The next time you open your project in RStudio the first step you should take is to <em>Pull</em> from the GitHub repo. Then make your changes, then <strong>commit</strong> and push. If you forget to <em>Pull</em> you may have to resolve some conflicts. For best results, get into the habit of pulling before you make edits.</p>
-<br>
+</ul></li>
+<li><p>Launch RStudio and create a <em>New Project…</em></p>
+<ol style="list-style-type: lower-alpha">
+<li>From the RStudio menubar: <em>File &gt; New Project…</em> &gt; Version Control &gt; Git <br>
 <figure>
-<img src="images/git_push_pull.png" />
+<img src="images/project_version_git.png" />
+<figcaption>
+Paste the GitHub repo URL (from the step above) into the <em>Repository URL:</em> field in RStudio
+</figcaption>
 </figure>
-<p><br></p>
-<p>Advance to Hands-On, Part 2: <a href="handson_branch.html">Branch / Merge / Revert</a></p>
-<p> </p>
-<p> </p>
+<br></li>
+<li>Create Project</li>
+</ol></li>
+</ol>
 </div>
 
 &nbsp;

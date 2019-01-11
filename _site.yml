@@ -12,8 +12,10 @@ navbar:
       href: outline.html
     - text: "Hands-On"
       menu:
-        - text: "Init / Clone / Pull & Push"
+        - text: "Init Pull & Push"
           href: handson.html
+        - text: "Clone"
+          href: clone.html
         - text: "Branch / Merge / Revert"
           href: "handson_branch.html"
         - text: "Pull Requests / Remotes"

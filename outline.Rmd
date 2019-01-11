@@ -60,88 +60,51 @@ We will use  <a href="https://github.com" target="_blank">GitHub</a> to create a
 
 ### Cache Credentials
 
-The following are one-time configuration steps.  For simplest configuration, follow the HTTPS Configuration.  
+The following are one-time configuration steps.  
 
 #### HTTPS:  Configure R/RStudio to work with your Git/GitHub 
 
-For most new Git users, the following steps are the most convenient and efficient for configuring your new applications for Git version control.  **If** you use **two-factor** authentication with **GitHub**, skip the the SSH section below.
+For most new Git users, the following steps are the most convenient and efficient for configuring your new applications for Git version control.  **If** you use **two-factor** authentication with **GitHub**, skip the the SSH section below.  The video clip can be used to clarify the written instructions below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-qmUrl24QSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In your RStudio Console.... ([image](http://keziamanlove.com/wp-content/uploads/2013/10/RStudioScreenshot1_Inkscape.png))
 
-1. Install the `usethis` package.  (If you have not installed a **package** before, this [brief install package videos](https://tutorials.shinyapps.io/00-setup/#section-install-packages) is helpful)
-1. Load the `usethis` package:  
-
-    a. `library(usethis)` 
-    a. (Video: [Example of loading a libraryin the RStudio console](https://youtu.be/3RWb5U3X-T8?t=159)) 
-        
+1. Install the `usethis` package:  `install.packages("usethis")`  
+1. Load the `usethis` package:  `library(usethis)` 
 1. In the RStudio **console**, configure `usethis`  You will **need to follow the instructions from within the console**, after invoking the `use_usethis` function:
     
     a. `use_usethis()`
-    a. Restart R
+    a. Restart R<p>
     
 1. Configure your Git client with [your GitHub email address](https://github.com/settings/emails)
 
     a. `library(usethis)`
     a. `use_git_config(user.name = "<<github ID>>", user.email = "<<my github associated email address>>")`
-    a. For example:  `use_git_config(user.name = "libjohn", user.email = "libjohn@duke.edu")`
+    a. For example:  `use_git_config(user.name = "libjohn", user.email = "libjohn@duke.edu")`<p>
     
 
-1. Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (`.Renviron`).  Do this by running the following command **in the RStudio console** and following all the prompts.  When you run the command, below, this will spawn a GitHub Page that generates a PAT.  Copy the PAT into your clipboard buffer.  Paste the PAT into RStudio's editor window for the `.Renviron` file.  the PAT is your personal token; do not share it.  You can do all this by invoking the `browse_github_pat` fuction in the RStudio Console and following the resulting console prompts.  If you need more detail, see the [usethis Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html) instructions.
+1. Generate a GitHub Personal Access Token (PAT) and associate that token within your RStudio Environment (`.Renviron`).  Do this by running the following command **in the RStudio console** and following all the prompts.  When you run the command, below, this will spawn a GitHub Page that generates a PAT.  Copy the PAT into your clipboard buffer.  Paste the PAT into RStudio's editor window for the `.Renviron` file.  the PAT is your personal token; do not share it.  You can do all this by invoking the `browse_github_pat` function in the RStudio Console and following the resulting console prompts.  If you need more detail, see the [usethis Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html) instructions.
 
     a. `browse_github_pat()`
     a. The RStudio Console will direct you how to `edit_r_environ()` in the RStudio Editor window
     a. Restart R
 
 
-Let's assume you did everything correctly.  Now you're ready go to the [Hands-On](handson.html) section which we will cover in the workshop.
+Let's assume you did everything correctly.  If you want to test it, try to **clone** a repository with the [following instructions](clone.html).  Now you're ready go to the [Hands-On](handson.html) section which we will cover in the workshop.
+
+
+The workshop will begin with the [Hands-On Instructions](handson.html)
 
 ---
 
-
 #### SSH:  Generate SSH keys
 
-If you followed the HTTPS section, above, **you do not need to also follow the steps below**.  For those who use two-factor authentication at GitHub, I recommend SSH keys.  However, I no longer recommend SSH to Git newbies, because it's more complicated.  At the same time, the workshop procedures rely heavily on the [usethis package](https://usethis.r-lib.org/) and may not work via SSH without more extensive configuration of the SSH keys.  Therefore, while it is possible to combine the `usethis` package with SSH keys, configuring this suite of applications and functions is beyond the scope of our workshop.  Nonetheless, I am leaving these *SSH Keys* instructions here as legacy information.  Feel free to **skip and ignore the following** section.
+**Legacy Documentation Links**
 
-The instructions below are based on those found at Duke's GitLab.  If the instructions below are not clear you should consult the more complete GitHub instructions to [generate and add an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)  
+If you followed the HTTPS section, above, **you do not need to also follow the links below**.  For those who use two-factor authentication at GitHub, I recommend SSH keys.  However, I no longer recommend SSH to Git newbies, because it's more complicated.  At the same time, the workshop procedures rely heavily on the [usethis package](https://usethis.r-lib.org/) and may not work via SSH without more extensive configuration of the SSH keys.  Therefore, while it is possible to combine the `usethis` package with SSH keys, configuring this suite of applications and functions is beyond the scope of our workshop.  Nonetheless, I am leaving these *SSH Keys* instructions here as legacy information.  Feel free to **skip and ignore the following** links.
 
-1. To begin, open the **Terminal** *in RStudio*.  If you're using the latest version of RStudio, the *Terminal* is a tab in the console quadrant (typically the bottom-left)
+- [Generate SSH Keys](ssh_keys.html)
+- [Create repository at GitHub and them Pull locaally](ssh_handson.html)
 
-    - In RStudio: Menubar `Tools > Terminal > New Terminal` 
-
-<br><figure>![](images/shell.png)</figure><br>
-
-    
-2. Determine if you already have an SSH key pair.  In the *Termnal* tab, type:  `cat ~/.ssh/id_rsa.pub`
-    
-    - If you see a string starting with `ssh-rsa` you already have an SSH key pair and can simply copy that key (Step 5)
-        
-    - If you get some kind of error, you'll have to generate a key in the next step
-        
-1. In the *Terminal* tab, type:  `ssh-keygen -t rsa -C "your.email@example.com" -b 4096`
-
-    - I recommend using your Duke Email address but it must be the address you used to create your GitHub account
-    
-1. You will be prompted to input a file path.  i.e. the location where you'll save your SSH key pair.
-
-    - If you don't already have an SSH key pair use the suggested path by pressing enter
-    
-     - After setting the file path you will be prompted to input a password.  This will secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required.  You can skip creating a password by pressing enter
-
-        - **Note**:  If you want to change the password of your SSH key pair, you can use `ssh-keygen -p <keyname>`  
-    
-1. Copy the public SSH key to the clipboard buffer
-
-    - In the *Termnal* tab, type the appropriate code below:
-        - **macOS**:  `cat ~/.ssh/id_rsa.pub | pbcopy`
-        - **Windows**:  `cat ~/.ssh/id_rsa.pub | clip`
-    
-1. The final step is to add your public SSH key to GitHub.
-
-    - Navigate to the *SSH and GPG keys* section of your GitHub *Settings*.  Click the green **New SSH key** button and paste your key in the *Key* section.  Give the key a relevant *Title*  Use an identifiable title like *Work Laptop - Windows 7* or *Home MacBook Pro 15.*
-    
-    - If you manually copied your public SSH key make sure you copied the entire key starting with `ssh-rsa` and ending with your email.
-    
-##### Additional legacy instructions
-
-I spent a couple of years promoting the SSH credentials method.  That was before the existence of the [usethis package](https://usethis.r-lib.org/).  As a result of `usethis` I've change the workshop procedures when teaching Git version control.  Nonetheless, I wanted to keep the [old SSH init/clone/pull/push procdures](ssh_handson.html) around for people who may have come to rely on the SSH credentials method I taught previously.  In reality, there's not much difference but I don't want to shock anyone so I'll keep the previous procedures around for a few semesters.  
 

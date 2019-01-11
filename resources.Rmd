@@ -25,6 +25,15 @@ output:
     
 ## Learning
 
+
+### Usethis Package
+
+- https://usethis.r-lib.org/
+
+### Free Book
+
+- [Happy Git and GitHub for the useR](http://happygitwithr.com/)
+
 ### Interactive tools to learn Git at the Command Line
 
 - Duke’s Co-Lab [Introduction to Git](https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about)
@@ -37,9 +46,6 @@ output:
 ### YouTube Intro Playlist
 - https://www.youtube.com/playlist?list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j 
 
-### Free Book
-
-- [Happy Git and GitHub for the useR](http://happygitwithr.com/)
 
 ### Handy Article
 - [10 Common Problems / Solutions](https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd)

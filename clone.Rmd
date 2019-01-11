@@ -1,0 +1,23 @@
+---
+title: "Clone a GitHub Repository"
+output: 
+  html_document:
+    self_contained: false
+---
+
+**Using RStudio**, clone some repository.  Cloning will pull down the whole repo to your local system.  Start with some test repository, maybe this [introduction to R](https://github.com/libjohn/intro2r-2018fall) 
+    
+### Bring the repo down locally via RStudio
+
+1. Copy GitHub repo URL to clipboard by clicking on the green **Clone or Download** button
+
+	  - The repo should be at a location like this. `https://github.com/libjohn/intro2r-2018fall`
+	  - This will copy the *git* URL to the clipboard <br><figure>![](images/copy_repo_github.png)
+<figcaption>Copy the repo URL</figcaption></figure><br>
+	    
+1. Launch RStudio and create a *New Project...*
+
+    a. From the RStudio menubar:  *File > New Project...* > Version Control > Git <br><figure>![](images/project_version_git.png)<figcaption>Paste the GitHub repo URL (from the step above) into the  *Repository URL:* field in RStudio</figcaption></figure><br>
+    a. Create Project
+
+
