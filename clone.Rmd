@@ -12,7 +12,7 @@ output:
 1. Copy GitHub repo URL to clipboard by clicking on the green **Clone or Download** button
 
 	  - The repo should be at a location like this. `https://github.com/libjohn/intro2r-2018fall`
-	  - This will copy the *git* URL to the clipboard <br><figure>![](images/copy_repo_github.png)
+	  - This will copy the *git* URL to the clipboard <br><figure>![](images/copy_repo_github_https.png)
 <figcaption>Copy the repo URL</figcaption></figure><br>
 	    
 1. Launch RStudio and create a *New Project...*
