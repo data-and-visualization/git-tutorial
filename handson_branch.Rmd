@@ -7,9 +7,9 @@ output:
 
 This document follows set-up from the [previous document](handson.html)
 
-## Standard Edit
+## First, Edit the README document
 
-- Add your name and a bullet list with three of your favorite foods
+- Add your **name** and a bullet list with **three** of your **favorite foods** to the `README.md` document.
 - Commit your changes
 
 ## Branch
@@ -111,7 +111,10 @@ For small changes, many people find a far simpler method is as follows...
     
 1. At GitHub, click the "Commits" link
 1. Isolate the version you need by clicking the `< >` link.  This enables you to browse the repository at that point in history
-1. Navigate to the fine you need.  Copy the file.
+1. Navigate to the file you need.  Copy the file.
+
+    - Or, alternatively, you can download a copy of the whole repository (look for the green "clone" button, then "download zip") at that commit point
+    
 1. Back in your editor, paste over the source version.  
 Commit & Push
 

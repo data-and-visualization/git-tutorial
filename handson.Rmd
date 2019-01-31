@@ -11,7 +11,7 @@ This step was covered in the [Outline Section](outline.html). In that section yo
 
 ## Make a New Repository
 
-1. Create a new RStudio Project ([video - 40 seconds](https://youtu.be/etkSsF6r2iU))
+1. Create a new RStudio Project.  The Directory/Project name sould be **test-one** (How to [video - 40 seconds](https://youtu.be/etkSsF6r2iU))
 1. In the Rstudio Console: `library(usethis)`
 1. In the Console:  `use_git(message = "first commit for my helo world")`
 1. Create a Readme File:  `use_readme_md()`   (Edit your README.  [Example README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2))
