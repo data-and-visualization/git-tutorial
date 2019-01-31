@@ -23,10 +23,10 @@ If you intend to submit modifications to some other repository by issuing a Pull
 
 #### Exercise
 
-1. [Source] Clone [this test repository](https://github.com/data-and-visualization/pr_hello-world
+1. [Source] **Clone** [this test repository](https://github.com/data-and-visualization/pr_hello-world
 )
-1. [Source] Have your partner `fork` your repository
-1. [Partner] After you forked above, `clone` your forked repository
+1. [Source] Have your partner **fork** _your_ repository
+1. [Partner] After you forked above, **clone** your forked repository
 1. [Partner] Make some changes to your cloned [forked] repository.  (e.g. add a file, edit the readme, etc.)
 1. [Partner] Using the git commands you've already learned:  add, commit, and push the changes
 

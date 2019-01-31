@@ -15,10 +15,10 @@ This step was covered in the [Outline Section](outline.html). In that section yo
 1. In the Rstudio Console: `library(usethis)`
 1. In the Console:  `use_git(message = "first commit for my helo world")`
 1. Create a Readme File:  `use_readme_md()`   (Edit your README.  [Example README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2))
-1. Push your repository to GitHub:  `use_github(protocol = "https")`
+1. Push your repository to GitHub:  `use_github(protocol = "https")`  and **restart R**
 1. Add a license:  [GitHub instructions](https://help.github.com/articles/adding-a-license-to-a-repository/)
 1. Pull the GitHub changes to your local workstations via Rstudio's git client
-1. Congratulations.  You've just created your first GitHub repository.  Now you can see your repository -- including the three files you just created.
+1. Congratulations.  You've just created your first GitHub repository.  Now you can see your repository.  congratulations.  you've created a repo.  On your local file-system you should still see the unstaged `README.md`.  Both the local and the remote (GitHub) have the `LICENSE.md` file created at GitHub.  you've created a repo.  
 
 &nbsp; 
 

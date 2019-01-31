@@ -20,14 +20,11 @@ This document follows set-up from the [previous document](handson.html)
     - For a branch name, in the branch text box, type:  `version2`
     - Click `Create`
 
-Moving back to the text editor in RStudio, create a new markdown document listing 3 favorite movies.  Save the file as `movies.md`
-
-    - Commit your changes
-    
 ```{r echo=FALSE, fig.align='center', fig.cap="Create Branch"}
 knitr::include_graphics('images/branch_create.png')
 ```
     
+2. Back to the RStudio text editor, create a new text file listing three favorite movies.  Save the file as `movies.md`.  **Commit** and **push** your changes
 2. Checkout the *master* branch
 
     - Watch the **Files** tab as you switch back to the *master* branch.  Where is the `movies.md` file?
