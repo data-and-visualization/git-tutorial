@@ -14,7 +14,9 @@ font-size: 200%;
 
 .footer {
   display: table;
-  width: 100%;
+  /* border: 1px solid #666; */
+  padding: 20px; /* Apply cell padding */
+  width: 95%;
   opacity: 0.65;
 }
 

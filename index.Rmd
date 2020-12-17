@@ -1,31 +1,70 @@
 ---
-output: 
-  html_document:
-    self_contained: false
-    toc: FALSE
+title: "Git, GitHub & RStudio"
+description: Makin' it work!!
+site: distill::distill_website
 ---
 
-&nbsp; 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 
-## Workshop Resources
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
 
-1. [Prerequisites](outline.html)
-1. [Hands-On](handson.html)
-1. [Markdown](markdown.html)  
-1. [Resources](resources.html)
+```
 
+Using RStudio to manage version control got a lot easier with the version 2.x release of the [`usethis`](https://usethis.r-lib.org/) package.  Therefore, this site now consists of links and tips.
 
-<div class = "picture1">
-  <iframe width="450" height="315"
-  src="https://www.youtube.com/embed/Ao4uwcbMp-0"
-  frameborder="0" allow="accelerometer; autoplay;
-  encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen></iframe>
-</div>
+After `usethis` setup, take your reproducibility to the next level.  [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCHID](https://orcid.org/register) (unique author ID) to the [Zenodo](https://zenodo.org/) archival repository.  This way, every time you commit a milestone release, you can mint a new DOI.  Then, put your repository into a binder.org container with the `holepunch` package.
 
+### Setup
 
-## Supporting Materials
+To get started, get a free GitHub.com account.  Make sure you have the latest versions of R, RStudio, (Rtools if you're Windows), and usethis.  Then, you need to setup your RStudio configuration.  Two key documents will help:  [Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html), and [Managing Git(Hub) Credentials](https://usethis.r-lib.org/articles/articles/git-credentials.html)
 
-- [Slides](slides)
+### Tips
 
+#### Clone or fork from GitHub
 
+```
+usethis::create_from_github("https://github.com/data-and-visualization/git-tutorial")
+```
+
+#### Create the GitHub repo from local
+
+```
+library(usethis)
+use_git()          # initialize a git repo
+use_git_ignore()
+use_readme.Rmd()
+use_ccby_license()
+use_github()       # Connect local repo to GitHub
+```
+
+#### set-up git and manage GitHub credentials
+
+```
+# Sign-in to your GitHub account
+# Read: https://usethis.r-lib.org/articles/articles/git-credentials.html
+# Read: https://usethis.r-lib.org/articles/articles/usethis-setup.html
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+gh::gh_whoami()
+usethis::git_sitrep()
+usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+gh::git_sitrep()
+```
+
+#### Publish your code in a binder.org container
+
+Use the [`holepunch` package](https://karthik.github.io/holepunch/)
+
+```
+library(holepunch)
+
+write_compendium_description()
+write_dockerfile()
+generate_badge()
+build_binder()
+
+```
+
+The old documentation from this site can be found in the [v.0.2019 release](https://github.com/data-and-visualization/git-tutorial/releases/tag/v0.9.2019) on GitHub. 

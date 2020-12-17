@@ -1,9 +1,6 @@
 ---
 title: Resources
-output: 
-  html_document:
-    self_contained: false
-    toc: FALSE
+site: distill::distill_website
 ---
 
 ## Social Coding Sites
@@ -20,11 +17,9 @@ output:
 
 - [RStudio](https://rstudio.com) -- Free. Great for useRs
 - [Sublime's Merge](https://www.sublimemerge.com/) --   Downloaded and evaluated for free. $100 / 3-years of upgrades.  
-- GitKracken -- Free if you have the [GitHub Student](https://education.github.com/pack) Pack.  Otherwise \$\$/Month
+- GitKracken -- **Free** if you have the [GitHub Student](https://education.github.com/pack) Pack or the [GitHub Teacher toolbox](https://www.gitkraken.com/github-teacher-toolbox)
 - [SourceTree](https://www.sourcetreeapp.com/) --  Free. (defaults to use with [BitBucket](https://bitbucket.org/))
     
-## Learning
-
 
 ### Usethis Package
 
@@ -34,31 +29,8 @@ output:
 
 - [Happy Git and GitHub for the useR](http://happygitwithr.com/)
 
-### Interactive tools to learn Git at the Command Line
-
-- Duke’s Co-Lab [Introduction to Git](https://extend.duke.edu/courses/course-v1:InnovationCoLab+998042043+2017/about)
-- [Got 15 minutes](https://try.github.io/levels/1/challenges/1) 
-- [Learn Git.  A free Codeacademy course ](https://www.codecademy.com/learn/learn-git) -- Free  
-- [Tips & Tricks (web)](http://codingdomain.com/git/tricks/)
-
-
-
-### YouTube Intro Playlist
-- https://www.youtube.com/playlist?list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j 
-
-
 ### Handy Article
 - [10 Common Problems / Solutions](https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd)
-
-### Carpentry
-
-- Data Carpentry [Reproducible Research Version Control](http://www.datacarpentry.org/rr-version-control/)
-
-
-
-## Markdown
-
-- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 
 ## Reproducibility
 

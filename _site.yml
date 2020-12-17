@@ -1,50 +1,31 @@
 name: "Git & RStudio"
-output_dir: docs
-exclude:
-  - README.md
-  - license.md
+title: "RStudio & Version Control"
+description: |
+  How to use RStudio with Git & GitHub 
+# exclude:
+#   - README.md
+#   - license.md
 navbar:
-  title: "Reproducibility: Git & RStudio"
+#  title: "RStudio & Version Control"
   left:
-    - text: "Home"
-      href: index.html
-    - text: "Overview"
-      href: outline.html
-    - text: "Hands-On"
-      menu:
-        - text: "Init Pull & Push"
-          href: handson.html
-        - text: "Clone"
-          href: clone.html
-        - text: "Branch / Merge / Revert"
-          href: "handson_branch.html"
-        - text: "Pull Requests / Remotes"
-          href: "handson_pr.html"
-    - text: "Markdown"
-      href: markdown.html
     - text: "Resources"
       href: "resources.html"
   right:
     - icon: fa-github
 #    - text: "GitHub"
       href: https://github.com/data-and-visualization/git-tutorial/         
-    - icon: fa-home
+#     - icon: fa-home
+    - text: "Home"
       menu:
         - text: "Rfun Home"
           href: "https://rfun.library.duke.edu/"
-        - text: "Data & Visualization Srvc"
+        - text: "CDVS Home"
           href: https://library.duke.edu/data/     
+output_dir: docs
 output:
-  html_document:
-    theme: flatly
-    highlight: tango
+  distill::distill_article:
     include:
       after_body: libs-local/footer.html
-    toc: true
-    toc_depth: 3
-    toc_float:
-      collapsed: false
     css: 
-      - libs-local/duke.css
+      # - libs-local/duke.css
       - libs-local/cc-fonts.css
-    df_print: paged

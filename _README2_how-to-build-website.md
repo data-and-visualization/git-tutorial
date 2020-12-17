@@ -1,17 +1,12 @@
 # How to Build this site:
 
-This site is built with R Markdown's website feature.  [Read more about websites](http://rmarkdown.rstudio.com/lesson-13.html).
+This site is built with the [Distill website](https://blog.rstudio.com/2020/12/07/distill/) feature of RStudio.  
 
-1. Clone from Github to RStudio.  Manipulate .Rmd files as needed.
+1. Use the "Build Website" button.  Fromn the Build Tab (in the upper-right quadrant of the RStudio IDE) > Build Website
 
-2. Use the "Build Website" button.  Fromn the Build Tab (in the upper-right quadrant of the RStudio IDE) > Build Website
-
-    - Some of these options, below, might also work.
+    - Some of these options, below, might also work
     - knit Rmd docs one at a time from within the script editor
-    - In console:  `rmarkdown::render_site(encoding = 'UTF-8')`
     
-3. Copy /docs web to the serving location
+3. Serve web pages via Netlify.com
 
-    - e.g. github repo served by Netlify
-    - in this case:  rfun (blogdown-rfun2 on github)
-    - I'm manually copying the /docs directory into the *static/git* directory in rfun - https://github.com/data-and-visualization/blogdown2-rfun
+    - See Also the netlify.toml config file
