@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Using RStudio to manage version control got a lot easier with the version 2.x release of the [`usethis`](https://usethis.r-lib.org/) package.  Therefore, this site now consists of links and tips.
 
-After `usethis` setup, take your reproducibility to the next level.  [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCHID](https://orcid.org/register) (unique author ID) to the [Zenodo](https://zenodo.org/) archival repository.  This way, every time you commit a milestone release, you can mint a new DOI.  Then, put your repository into a binder.org container with the `holepunch` package.
+After `usethis` setup, take your reproducibility to the next level.  [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCID](https://orcid.org/register) (unique author ID) to the [Zenodo](https://zenodo.org/) archival repository.  This way, every time you commit a milestone release, you can mint a new DOI.  Then, put your repository into a binder.org container with the `holepunch` package.
 
 ### Setup
 

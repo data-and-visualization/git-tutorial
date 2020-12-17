@@ -5,22 +5,29 @@ description: |
 # exclude:
 #   - README.md
 #   - license.md
+# favicon: logo.png
 navbar:
 #  title: "RStudio & Version Control"
+  logo:
+    image: libs-local/rfun_logo.png
+    href: https://rfun.library.duke.edu
   left:
     - text: "Resources"
       href: "resources.html"
+  # logo:
+  #   image: libs-local/rfun_logo.png
+  #   href: https://rfun.library.duke.edu    
   right:
     - icon: fa-github
 #    - text: "GitHub"
       href: https://github.com/data-and-visualization/git-tutorial/         
 #     - icon: fa-home
-    - text: "Home"
-      menu:
-        - text: "Rfun Home"
-          href: "https://rfun.library.duke.edu/"
-        - text: "CDVS Home"
-          href: https://library.duke.edu/data/     
+# #    - text: "Home"
+#       menu:
+#         - text: "Rfun Home"
+#           href: "https://rfun.library.duke.edu/"
+#         - text: "CDVS Home"
+#           href: https://library.duke.edu/data/   
 output_dir: docs
 output:
   distill::distill_article:
