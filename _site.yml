@@ -1,26 +1,24 @@
 name: "Git & RStudio"
 title: "RStudio & Version Control"
+favicon: libs-local/rfun_logo.png
+base_url: https://rfun.library.duke.edu
+repository_url: https://github.com/data-and-visualization/git-tutorial
+twitter:
+  site: "@duke_data"
 description: |
   How to use RStudio with Git & GitHub 
-# exclude:
-#   - README.md
-#   - license.md
 # favicon: logo.png
+creative_commons: CC BY-NC
 navbar:
-#  title: "RStudio & Version Control"
   logo:
     image: libs-local/rfun_logo.png
     href: https://rfun.library.duke.edu
-  left:
+  right:
     - text: "Resources"
       href: "resources.html"
-  # logo:
-  #   image: libs-local/rfun_logo.png
-  #   href: https://rfun.library.duke.edu    
-  right:
     - icon: fa-github
 #    - text: "GitHub"
-      href: https://github.com/data-and-visualization/git-tutorial/         
+      href: https://github.com/data-and-visualization/git-tutorial/
 #     - icon: fa-home
 # #    - text: "Home"
 #       menu:
@@ -31,8 +29,8 @@ navbar:
 output_dir: docs
 output:
   distill::distill_article:
-    include:
-      after_body: libs-local/footer.html
-    css: 
+    # include:
+    #   after_body: libs-local/footer.html
+    # css: 
       # - libs-local/duke.css
-      - libs-local/cc-fonts.css
+      # libs-local/cc-fonts.css
