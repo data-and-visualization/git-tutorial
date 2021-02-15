@@ -12,11 +12,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-Use RStudio to manage version control.  It's easy with the [`usethis`](https://usethis.r-lib.org/) package (version 2.x or ^.)
+The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.  
 
-Take your reproducibility to the next level.  [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCID](https://orcid.org/register) (unique author ID) through to the [Zenodo](https://zenodo.org/) archival repository.  Now, every time you commit a milestone release, you also mint a DOI.  
-
-Containerize your repository with binder.org using the [`holepunch` package](https://karthik.github.io/holepunch/).
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p8q4WGg6how" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Setup
 
@@ -54,6 +52,12 @@ usethis::git_sitrep()
 usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
 gh::git_sitrep()
 ```
+
+### Next Level...
+
+Take your reproducibility to the next level.  [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCID](https://orcid.org/register) (unique author ID) through to the [Zenodo](https://zenodo.org/) archival repository.  Now, every time you commit a milestone release, you also mint a DOI.  
+
+Containerize your repository with binder.org using the [`holepunch` package](https://karthik.github.io/holepunch/).
 
 #### Publish your code in a binder.org container
 
