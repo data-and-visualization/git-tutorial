@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p8q4WGg6how" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Setup
 
