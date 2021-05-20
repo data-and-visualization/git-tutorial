@@ -1,6 +1,6 @@
 ---
 title: "Git, GitHub & RStudio"
-description: Makin' it work!!
+description: RStudio users can leverage git Version control to enhance reproducibility.
 site: distill::distill_website
 ---
 
@@ -15,6 +15,8 @@ knitr::opts_chunk$set(echo = FALSE)
 The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe height="560" width="315" src="https://warpwire.duke.edu/w/t0oFAA/" frameborder="0" scrolling="0" allow="autoplay; encrypted-media; fullscreen;  picture-in-picture;" allowfullscreen></iframe>
 
 ### Setup
 
