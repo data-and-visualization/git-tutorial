@@ -7,7 +7,6 @@ twitter:
   site: "@duke_data"
 description: |
   How to use RStudio with Git & GitHub 
-# favicon: logo.png
 creative_commons: CC BY-NC
 navbar:
   logo:
@@ -17,15 +16,13 @@ navbar:
     - text: "Resources"
       href: "resources.html"
     - icon: fa-github
-#    - text: "GitHub"
       href: https://github.com/data-and-visualization/git-tutorial/
-#     - icon: fa-home
-# #    - text: "Home"
-#       menu:
-#         - text: "Rfun Home"
-#           href: "https://rfun.library.duke.edu/"
-#         - text: "CDVS Home"
-#           href: https://library.duke.edu/data/   
+    - text: "CDVS"
+      menu:
+        - text: "Rfun Home"
+          href: "https://rfun.library.duke.edu/"
+        - text: "Data & Visualization Srvc"
+          href: https://library.duke.edu/data/  
 output_dir: docs
 output:
   distill::distill_article:

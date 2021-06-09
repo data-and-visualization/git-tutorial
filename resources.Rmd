@@ -3,6 +3,10 @@ title: Resources
 site: distill::distill_website
 ---
 
+## Slides
+
+- [Research Reproducibility, 2021](https://docs.google.com/presentation/d/1FJlC01xATiOfPmUxURHtMI6IUY1Sr7aMIQ0J4F2YJHU/edit?usp=sharing)
+
 ## Social Coding Sites
 
 - https://github.com
