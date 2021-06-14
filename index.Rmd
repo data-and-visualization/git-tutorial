@@ -77,7 +77,7 @@ build_binder()
 
 #### Bespoke_Publish your code in a binder 
 
-I recently found my QuickPublish approach _didn't quite work_.  So I RTFMed the binder.org docs and it seemed to imply a preference for NOT using a `.binder/Dockerfile`.  Therefore, here is an approach that is more advanced and probably more bulletproof.
+I recently found my QuickPublish approach _didn't quite work_.  So I RTFMed the binder.org docs and it seemed to imply a preference for NOT using a `.binder/Dockerfile`.  Therefore, here is an approach that is slightly less automated but more bulletproof.
 
 **Step 1**
 
