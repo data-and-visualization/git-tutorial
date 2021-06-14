@@ -61,7 +61,7 @@ Take your reproducibility to the next level.  [Make your code citable](https://g
 
 Containerize your repository with binder.org using the [`holepunch` package](https://karthik.github.io/holepunch/).
 
-#### Publish your code in a binder.org container
+#### QuickPublish your code in a binder.org container
 
 Use the [`holepunch` package](https://karthik.github.io/holepunch/)
 
@@ -74,6 +74,26 @@ generate_badge()
 build_binder()
 
 ```
+
+#### BespokePublish your code in a binder 
+
+I recently found my QuickPublish approach _didn't quite work_.  So I RTFMed the binder.org docs and it seemed to imply a preference for NOT using a `.binder/Dockerfile`.  Therefore, here is an approach that is more advanced and probably more bulletproof.
+
+**Step 1**
+
+```{r echo=TRUE, eval=FALSE}
+holepunch::write_compendium_description()  # output is a DESCRIPTION file in the project root
+holepunch::write_runtime()    # output is .binder/runtime.txt
+holepunch::write_install()    # output is .binder/install.R
+holepunch::generate_badge()   # output is a badge to be found in the README file(s)
+```
+
+**Step 2**
+
+
+a. Edit the `.binder/install.R` file using the following [model](https://github.com/binder-examples/r/blob/master/install.R).
+b. Edit the `binder/install.R` file based on this [model](https://github.com/binder-examples/r/blob/master/runtime.txt) or the [documentation](https://github.com/jupyterhub/repo2docker/pull/772#issue-313426641)
+b. Edit the `DESCRIPTION` file using this basic [model](https://github.com/libjohn/workshop_twitter_analysis/blob/main/DESCRIPTION). **Modify all the fields**.  You may want to base the `Depends` and `Remotes` sections on your `.binder/install.R` file
 
 ---
 
