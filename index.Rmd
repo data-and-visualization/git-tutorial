@@ -61,7 +61,7 @@ Take your reproducibility to the next level.  [Make your code citable](https://g
 
 Containerize your repository with binder.org using the [`holepunch` package](https://karthik.github.io/holepunch/).
 
-#### QuickPublish your code in a binder.org container
+#### Quick_Publish your code in a binder.org container
 
 Use the [`holepunch` package](https://karthik.github.io/holepunch/)
 
@@ -75,7 +75,7 @@ build_binder()
 
 ```
 
-#### BespokePublish your code in a binder 
+#### Bespoke_Publish your code in a binder 
 
 I recently found my QuickPublish approach _didn't quite work_.  So I RTFMed the binder.org docs and it seemed to imply a preference for NOT using a `.binder/Dockerfile`.  Therefore, here is an approach that is more advanced and probably more bulletproof.
 
