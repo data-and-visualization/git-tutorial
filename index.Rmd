@@ -99,9 +99,6 @@ a. Edit the `.binder/install.R` file using the following [model](https://github.
 b. Edit the `binder/install.R` file based on this [model](https://github.com/binder-examples/r/blob/master/runtime.txt) or the [documentation](https://github.com/jupyterhub/repo2docker/pull/772#issue-313426641)
 b. Edit the `DESCRIPTION` file using this basic [model](https://github.com/libjohn/workshop_twitter_analysis/blob/main/DESCRIPTION). **Modify all the fields**.  You may want to base the `Depends` and `Remotes` sections on your `.binder/install.R` file
 
-***
-test test
-
 ---
 
 _The old documentation from this site can be found in the [v.0.2019 release](https://github.com/data-and-visualization/git-tutorial/releases/tag/v0.9.2019) on GitHub_. 
