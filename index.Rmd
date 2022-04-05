@@ -42,7 +42,17 @@ use_git()          # initialize a git repo
 use_git_ignore()
 use_readme.Rmd()
 use_ccby_license()
+# Before next step  → stage & commit changes
 use_github()       # Connect local repo to GitHub
+```
+
+#### Rename default branch
+
+```{r echo=TRUE, eval=FALSE}
+library(usethis)
+git_default_branch()
+git_default_branch_rename()
+git_default_branch_rediscover()
 ```
 
 #### set-up git and manage GitHub credentials
