@@ -21,7 +21,6 @@ The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will hel
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Cn-72tbRNFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
 ### Setup
 
 To get started, make a free GitHub.com account.  Make sure you have the latest versions of R, RStudio, and usethis.  Then, setup your RStudio configuration using two key documents:  [Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html), and [Managing Git(Hub) Credentials](https://usethis.r-lib.org/articles/articles/git-credentials.html).
@@ -73,13 +72,15 @@ usethis::git_sitrep()
 
 Take your reproducibility to the next level.  [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCID](https://orcid.org/register) (unique author ID) through to the [Zenodo](https://zenodo.org/) archival repository.  Now, every time you commit a milestone release, you also mint a DOI.  
 
-Containerize your repository with binder.org using the [`holepunch` package](https://karthik.github.io/holepunch/).
+#### Share a zero-install compute environment
 
-#### Quick_Publish your code in a binder.org container
+<!-- Containerize your repository with binder.org using the [`holepunch` package](https://karthik.github.io/holepunch/) -->
 
-Use the [`holepunch` package](https://karthik.github.io/holepunch/)
+Publish your code in a binder.org container
 
-```{r echo=TRUE, eval=FALSE}
+<!-- Use the [`holepunch` package](https://karthik.github.io/holepunch/) -->
+
+```{r echo=FALSE, eval=FALSE}
 library(holepunch)
 
 write_compendium_description()
@@ -89,25 +90,41 @@ build_binder()
 
 ```
 
-#### Bespoke_Publish your code in a binder 
+<!-- #### Bespoke_Publish your code in a binder  -->
 
-I recently found my QuickPublish approach _didn't quite work_.  So I RTFMed the binder.org docs and it seemed to imply a preference for NOT using a `.binder/Dockerfile`.  Therefore, here is an approach that is slightly less automated but more bulletproof.
+<!-- I recently found my QuickPublish approach _didn't quite work_.  So I RTFMed the binder.org docs and it seemed to imply a preference for NOT using a `.binder/Dockerfile`.  Therefore, here is an approach that is slightly less automated but more bulletproof. -->
+
+Everything you need is exemplified in binder-example for R that you can [find on github](https://github.com/binder-examples/r)
+
+The key elements are an `install.R` and `runtime.txt` files.  The content and format of each file is demonstrated properly at the GitHub repo.  Browse and you will see.
 
 **Step 1**
 
-```{r echo=TRUE, eval=FALSE}
-holepunch::write_compendium_description()  # output is a DESCRIPTION file in the project root
+```{r echo=FALSE, eval=FALSE}
+# holepunch::write_compendium_description()  # output is a DESCRIPTION file in the project root
 holepunch::write_runtime()    # output is .binder/runtime.txt
 holepunch::write_install()    # output is .binder/install.R
 holepunch::generate_badge()   # output is a badge to be found in the README file(s)
 ```
 
+a. Create an `install.R` file and store it in the RStudio Project's root directory.<br> 
+Follow the example at https://github.com/binder-examples/r <br>
+
+> This file should consist of install functions for each package used in your R code.  If you're not sure what packages you're using, try running `holepunch::write_compendium_description()` and you will find the details listed in the DESCRIPTION file under the 'Depends' and 'Remotes' sections. **IMPORTANT**:  Delete the `DESCRIPTION` file Before launching the binder build.  In my experience the DESCRIPTION file will conflict with the binder's build process. <br>
+For non-CRAN packages -- specifically packages installed from GitHub -- I recommend using the format: `remotes::install_github("gadenbuie/countdown")` for each package that is not on CRAN.  CRAN packages can follow the format: `install.packages("dplyr")`
+
+b. Create a `runtime.txt` file and store it in the RStudio Project's root directory<br>
+Follow the example at https://github.com/binder-examples/r <br>
+
+> Note:  If you try using `holepunch`, it will store these files in a `.binder` subdirectory.  In my experience this will cause the binder build to fail.  For this reason, I don't recommend using holepunch and I do recommend storing the two files in the Project root directory.
+
 **Step 2**
 
+Generate a binder badge with `holepunch::generate_badge()`.  This should store the badge in your GitHub's project `README.md` file.  Then `commit` and `push` your changes to GitHub; go to the README on GitHub, launch the build and wait for the long launch/build time.
 
-a. Edit the `.binder/install.R` file using the following [model](https://github.com/binder-examples/r/blob/master/install.R).
-b. Edit the `binder/install.R` file based on this [model](https://github.com/binder-examples/r/blob/master/runtime.txt) or the [documentation](https://github.com/jupyterhub/repo2docker/pull/772#issue-313426641)
-b. Edit the `DESCRIPTION` file using this basic [model](https://github.com/libjohn/workshop_twitter_analysis/blob/main/DESCRIPTION). **Modify all the fields**.  You may want to base the `Depends` and `Remotes` sections on your `.binder/install.R` file
+<!-- a. Edit the `.binder/install.R` file using the following [model](https://github.com/binder-examples/r/blob/master/install.R). -->
+<!-- b. Edit the `binder/install.R` file based on this [model](https://github.com/binder-examples/r/blob/master/runtime.txt) or the [documentation](https://github.com/jupyterhub/repo2docker/pull/772#issue-313426641) -->
+<!-- b. Edit the `DESCRIPTION` file using this basic [model](https://github.com/libjohn/workshop_twitter_analysis/blob/main/DESCRIPTION). **Modify all the fields**.  You may want to base the `Depends` and `Remotes` sections on your `.binder/install.R` file -->
 
 ---
 
