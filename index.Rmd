@@ -116,11 +116,13 @@ For non-CRAN packages -- specifically packages installed from GitHub -- I recomm
 b. Create a `runtime.txt` file and store it in the RStudio Project's root directory<br>
 Follow the example at https://github.com/binder-examples/r <br>
 
-> Note:  If you try using `holepunch`, it will store these files in a `.binder` subdirectory.  In my experience this will cause the binder build to fail.  For this reason, I don't recommend using holepunch and I do recommend storing the two files in the Project root directory.
+> Note:  If you try using `holepunch`, it will store these files in a `.binder` subdirectory.  In my experience this will cause the binder build to fail.  For this reason, I don't recommend using holepunch and I do recommend storing the two files in the project's root directory.
 
 **Step 2**
 
-Generate a binder badge with `holepunch::generate_badge()`.  This should store the badge in your GitHub's project `README.md` file.  Then `commit` and `push` your changes to GitHub; go to the README on GitHub, launch the build and wait for the long launch/build time.
+Generate a binder badge with `usethis::use_binder_badge(urlpath = "rstudio")`.  This should store the badge in your GitHub's project `README` file.  Then `commit` and `push` your changes to GitHub; go to the README on GitHub, launch the build and wait for the long launch/build time.
+
+Hint:  be prepared to wait.  The first build can take some time.  Sometimes you must launch an initial or dormant build more than once.  In my experienced these hiccups are rare, but try the launch twice before getting involved in extensive troubleshooting.
 
 <!-- a. Edit the `.binder/install.R` file using the following [model](https://github.com/binder-examples/r/blob/master/install.R). -->
 <!-- b. Edit the `binder/install.R` file based on this [model](https://github.com/binder-examples/r/blob/master/runtime.txt) or the [documentation](https://github.com/jupyterhub/repo2docker/pull/772#issue-313426641) -->
