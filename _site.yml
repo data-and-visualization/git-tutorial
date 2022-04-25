@@ -12,6 +12,10 @@ navbar:
   logo:
     image: libs-local/rfun_logo.png
     href: https://rfun.library.duke.edu
+  search: true
+  left:
+    - text: "Configure to GitLab@Duke"
+      href: "ssh_keys.html"
   right:
     - text: "Resources"
       href: "resources.html"

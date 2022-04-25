@@ -87,29 +87,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>RStudio &amp; Version Control: Resources</title>
+  <title>RStudio &amp; Version Control: Configuring SSH Keys &amp; Credentials</title>
 
+  <meta property="description" itemprop="description" content="Use SSH keys to configure RStudio projects with https://GitLab.OIT.Duke.edu"/>
 
   <link rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"/>
   <link rel="icon" type="image/png" href="libs-local/rfun_logo.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="RStudio &amp; Version Control: Resources"/>
+  <meta property="og:title" content="RStudio &amp; Version Control: Configuring SSH Keys &amp; Credentials"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Use SSH keys to configure RStudio projects with https://GitLab.OIT.Duke.edu"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="RStudio &amp; Version Control"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="RStudio &amp; Version Control: Resources"/>
+  <meta property="twitter:title" content="RStudio &amp; Version Control: Configuring SSH Keys &amp; Credentials"/>
+  <meta property="twitter:description" content="Use SSH keys to configure RStudio projects with https://GitLab.OIT.Duke.edu"/>
   <meta property="twitter:site" content="@duke_data"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Resources"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Configuring SSH Keys & Credentials"]},{"type":"character","attributes":{},"value":["Use SSH keys to configure RStudio projects with https://GitLab.OIT.Duke.edu"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2057,7 +2060,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Resources","authors":[]}
+{"title":"Configuring SSH Keys & Credentials","description":"Use SSH keys to configure RStudio projects with https://GitLab.OIT.Duke.edu","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2097,81 +2100,101 @@ CDVS
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Resources</h1>
+<h1>Configuring SSH Keys &amp; Credentials</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p>Use SSH keys to configure RStudio projects with <a
+href="https://GitLab.OIT.Duke.edu"
+class="uri">https://GitLab.OIT.Duke.edu</a></p>
 </div>
 
 
 <div class="d-article">
-<h2 id="slides">Slides</h2>
+<p>The instructions below are based on those found at Duke’s GitLab. If
+the instructions below are not clear you should consult the more
+complete GitHub instructions to <a
+href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">generate
+and add an SSH key</a></p>
+<ol type="1">
+<li><p>You will need Git installed locally. To verify, Open a Terminal
+and type: <code>git --version</code>. If you do not get a response with
+a version number, seek help for installing Git</p></li>
+<li><p>To begin, open the <strong>Terminal</strong> <em>in RStudio</em>.
+If you’re using the latest version of RStudio, the <em>Terminal</em> is
+a tab in the console quadrant (typically the bottom-left)</p>
 <ul>
-<li><a
-href="https://docs.google.com/presentation/d/1FJlC01xATiOfPmUxURHtMI6IUY1Sr7aMIQ0J4F2YJHU/edit?usp=sharing">Research
-Reproducibility, 2021</a></li>
-</ul>
-<h2 id="social-coding-sites">Social Coding Sites</h2>
-<ul>
-<li><p><a href="https://github.com"
-class="uri">https://github.com</a></p></li>
-<li><p><a href="https://gitlab.com"
-class="uri">https://gitlab.com</a></p></li>
-<li><p><a href="https://bitbucket.org"
-class="uri">https://bitbucket.org</a></p></li>
-<li><p>Duke’s <a href="https://gitlab.oit.duke.edu/">GitLab</a>
-Instance</p>
-<ul>
-<li><a href="https://gitlab.oit.duke.edu/help/ssh/README">Managing SSH
-keys</a></li>
+<li>In RStudio: Menubar
+<code>Tools &gt; Terminal &gt; New Terminal</code></li>
 </ul></li>
-</ul>
-<h2 id="gui-git-clients">GUI Git Clients</h2>
+</ol>
+<br>
+<figure>
+<img src="images/shell.png" />
+</figure>
+<p><br></p>
+<ol start="3" type="1">
+<li><p>Determine if you already have an SSH key pair. In the
+<em>Termnal</em> tab, type: <code>cat ~/.ssh/id_rsa.pub</code></p>
 <ul>
-<li><a href="https://rstudio.com">RStudio</a> – Free. Great for
-useRs</li>
-<li><a href="https://www.sublimemerge.com/">Sublime’s Merge</a> –
-Downloaded and evaluated for free. $100 / 3-years of upgrades.<br />
-</li>
-<li>GitKracken – <strong>Free</strong> if you have the <a
-href="https://education.github.com/pack">GitHub Student</a> Pack or the
-<a href="https://www.gitkraken.com/github-teacher-toolbox">GitHub
-Teacher toolbox</a></li>
-<li><a href="https://www.sourcetreeapp.com/">SourceTree</a> – Free.
-(defaults to use with <a
-href="https://bitbucket.org/">BitBucket</a>)</li>
-</ul>
-<h3 id="packages">Packages</h3>
+<li><p>If you see a string starting with <code>ssh-rsa</code> you
+already have an SSH key pair and can simply copy that key (Step
+5)</p></li>
+<li><p>If you get some kind of error, you’ll have to generate a key in
+the next step</p></li>
+</ul></li>
+<li><p>In the <em>Terminal</em> tab, type:
+<code>ssh-keygen -t rsa -C "your.email@example.com" -b 4096</code></p>
 <ul>
-<li><a href="https://usethis.r-lib.org/"
-class="uri">https://usethis.r-lib.org/</a></li>
-<li><a
-href="https://karthik.github.io/holepunch/"><code>holepunch</code></a>
-to make your reproducible code a container on binder.org</li>
-</ul>
-<h3 id="free-book">Free Book</h3>
+<li>I recommend using your Duke Email address but it must be the address
+you used to create your GitHub account</li>
+</ul></li>
+<li><p>You will be prompted to input a file path. i.e. the location
+where you’ll save your SSH key pair.</p>
 <ul>
-<li><a href="http://happygitwithr.com/">Happy Git and GitHub for the
-useR</a></li>
-</ul>
-<h3 id="handy-article">Handy Article</h3>
+<li><p>If you don’t already have an SSH key pair use the suggested path
+by pressing enter</p></li>
+<li><p>After setting the file path you will be prompted to input a
+password. This will secure your SSH key pair. It is a best practice to
+use a password for an SSH key pair, but it is not required. You can skip
+creating a password by pressing enter</p>
 <ul>
-<li><a
-href="https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd">10
-Common Problems / Solutions</a></li>
-</ul>
-<h2 id="reproducibility">Reproducibility</h2>
+<li><strong>Note</strong>: If you want to change the password of your
+SSH key pair, you can use
+<code>ssh-keygen -p &lt;keyname&gt;</code></li>
+</ul></li>
+</ul></li>
+<li><p>Copy the public SSH key to the clipboard buffer</p>
 <ul>
-<li><a
-href="http://kbroman.org/Tools4RR/assets/lectures/07_clearcode.pdf">Writing
-clear code: Tools for Reproducible Research</a></li>
-<li><a href="http://kbroman.org/steps2rr/">Initial Steps Toward
-Reproducible Research</a></li>
-<li>Making your research reproducible with TIER + R + GitHub <a
-href="#slides">Slides</a>. Cetinkaya-Rundel, M. (2016). Open Science
-Framework. Retrieved from <a href="https://osf.io/phyau"
-class="uri">https://osf.io/phyau</a></li>
-</ul>
+<li>In the <em>Termnal</em> tab, type the appropriate code below:
+<ul>
+<li><strong>macOS</strong>:
+<code>cat ~/.ssh/id_rsa.pub | pbcopy</code></li>
+<li><strong>Windows</strong>:
+<code>cat ~/.ssh/id_rsa.pub | clip</code></li>
+</ul></li>
+</ul></li>
+<li><p>The final step is to add your public SSH key to GitHub.</p>
+<ul>
+<li><p>Navigate to the <em>SSH and GPG keys</em> section of your GitHub
+<em>Settings</em>. Click the green <strong>New SSH key</strong> button
+and paste your key in the <em>Key</em> section. Give the key a relevant
+<em>Title</em> Use an identifiable title like <em>Work Laptop - Windows
+7</em> or <em>Home MacBook Pro 15.</em></p></li>
+<li><p>If you manually copied your public SSH key make sure you copied
+the entire key starting with <code>ssh-rsa</code> and ending with your
+email.</p></li>
+</ul></li>
+</ol>
+<h2 id="workflow">Workflow</h2>
+<p>Once you have configured your SSH keys</p>
+<ol type="1">
+<li>Create a repository at <a href="https://GitLab.oit.duke.edu"
+class="uri">https://GitLab.oit.duke.edu</a></li>
+<li>Clone the repo via RStudio &gt; New Project … &gt; Version Control
+&gt; Git</li>
+<li>Restart RStudio ; look for a <em>Git</em> tab near the
+<em>Environment</em> tab</li>
+</ol>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
