@@ -18,7 +18,9 @@ The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will hel
 
 <!-- <iframe width="560" height="315" src="https://warpwire.duke.edu/w/t0oFAA/" frameborder="0" scrolling="0" allow="autoplay; encrypted-media; fullscreen;  picture-in-picture;" allowfullscreen></iframe> -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cn-72tbRNFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Cn-72tbRNFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Setup
