@@ -65,9 +65,9 @@ git_default_branch_rediscover()
 usethis::create_github_token()
 gitcreds::gitcreds_set()
 gh::gh_whoami()
-usethis::git_sitrep()
+usethis::gh_token_help()
 usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
-usethis::git_sitrep()
+usethis::gh_token_help()
 ```
 
 ### Next Level...
