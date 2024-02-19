@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="RStudio users can leverage git Version control to enhance reproducibility.">
+<meta name="description" content="RStudio users can leverage git Version-control which enhances reproducibility.">
 
 <title>Git-tutorial - Git, GitHub &amp; RStudio</title>
 <style>
@@ -200,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="toc-actions"><ul><li><a href="https://github.com/data-and-visualization/git-tutorial/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/data-and-visualization/git-tutorial/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -209,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    RStudio users can leverage git Version control to enhance reproducibility.
+    RStudio users can leverage git Version-control which enhances reproducibility.
   </div>
 </div>
 
@@ -227,25 +227,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>The <a href="https://usethis.r-lib.org/"><code>usethis</code></a> package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen -->
+<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
 <section id="setup" class="level3">
 <h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <p>To get started, make a free GitHub.com account. Make sure you have the latest versions of R, RStudio, and usethis. Then, setup your RStudio configuration using two key documents: <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html">Setup</a>, and <a href="https://usethis.r-lib.org/articles/articles/git-credentials.html">Managing Git(Hub) Credentials</a>.</p>
 </section>
-<section id="tips" class="level3">
+<section id="tips" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="tips">Tips</h3>
-<section id="clone-or-fork-from-github" class="level4">
+<section id="clone-or-fork-from-github" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="clone-or-fork-from-github">Clone or fork from GitHub</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_from_github</span>(<span class="st">"https://github.com/data-and-visualization/git-tutorial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="create-the-github-repo-from-local" class="level4">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<iframe width="300" height="200" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div></div></section>
+<section id="create-the-github-repo-from-local" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="create-the-github-repo-from-local">Create the GitHub repo from local</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
@@ -256,8 +257,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Before next step  → stage &amp; commit changes</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">use_github</span>()       <span class="co"># Connect local repo to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="rename-default-branch" class="level4">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</div></div></section>
+<section id="rename-default-branch" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="rename-default-branch">Rename default branch</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
@@ -265,7 +270,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git_default_branch_rename</span>()</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git_default_branch_rediscover</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<iframe width="300" height="200" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div></div></section>
 <section id="set-up-git-and-manage-github-credentials" class="level4">
 <h4 class="anchored" data-anchor-id="set-up-git-and-manage-github-credentials">set-up git and manage GitHub credentials</h4>
 <div class="cell">

@@ -1,21 +1,21 @@
 ---
 title: "Git, GitHub & RStudio"
-description: RStudio users can leverage git Version control to enhance reproducibility.
+description: RStudio users can leverage git Version-control which enhances reproducibility.
 ---
 
 The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
 
-</iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
-</iframe>
+<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
-</iframe>
+
+<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+
+
 
 ### Setup
 
@@ -31,6 +31,11 @@ To get started, make a free GitHub.com account. Make sure you have the latest ve
 usethis::create_from_github("https://github.com/data-and-visualization/git-tutorial")
 ```
 
+
+::: column-margin
+<iframe width="300" height="200" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
 #### Create the GitHub repo from local
 
 ```{r}
@@ -45,6 +50,11 @@ use_ccby_license()
 use_github()       # Connect local repo to GitHub
 ```
 
+
+::: column-margin
+<iframe width="300" height="200"  src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+:::
+
 #### Rename default branch
 
 ```{r}
@@ -55,6 +65,10 @@ git_default_branch()
 git_default_branch_rename()
 git_default_branch_rediscover()
 ```
+
+::: column-margin
+<iframe width="300" height="200"  src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 #### set-up git and manage GitHub credentials
 
