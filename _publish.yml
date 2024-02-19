@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 0ff45b1d-d1aa-49fb-8846-88f6a3498f32
+      url: 'https://git-rfun.library.duke.edu'

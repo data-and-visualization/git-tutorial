@@ -1,0 +1,56 @@
+---
+title: "Configuring SSH Keys & Credentials"
+description: "Use SSH keys to configure RStudio projects with https://GitLab.OIT.Duke.edu"
+---
+
+The instructions below are based on those found at Duke's GitLab. If the instructions below are not clear you should consult the more complete GitHub instructions to [generate and add an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+1.  You will need Git installed locally. To verify, Open a Terminal and type: `git --version`. If you do not get a response with a version number, seek help for installing Git
+
+2.  To begin, open the **Terminal** *in RStudio*. If you're using the latest version of RStudio, the *Terminal* is a tab in the console quadrant (typically the bottom-left)
+
+    -   In RStudio: Menubar `Tools > Terminal > New Terminal`
+
+<br>
+
+<figure>![](images/shell.png)</figure>
+
+<br>
+
+3.  Determine if you already have an SSH key pair. In the *Termnal* tab, type: `cat ~/.ssh/id_rsa.pub`
+
+    -   If you see a string starting with `ssh-rsa` you already have an SSH key pair and can simply copy that key (Step 5)
+
+    -   If you get some kind of error, you'll have to generate a key in the next step
+
+4.  In the *Terminal* tab, type: `ssh-keygen -t rsa -C "your.email@example.com" -b 4096`
+
+    -   I recommend using your Duke Email address but it must be the address you used to create your GitHub account
+
+5.  You will be prompted to input a file path. i.e. the location where you'll save your SSH key pair.
+
+    -   If you don't already have an SSH key pair use the suggested path by pressing enter
+
+    -   After setting the file path you will be prompted to input a password. This will secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required. You can skip creating a password by pressing enter
+
+        -   **Note**: If you want to change the password of your SSH key pair, you can use `ssh-keygen -p <keyname>`
+
+6.  Copy the public SSH key to the clipboard buffer
+
+    -   In the *Termnal* tab, type the appropriate code below:
+        -   **macOS**: `cat ~/.ssh/id_rsa.pub | pbcopy`
+        -   **Windows**: `cat ~/.ssh/id_rsa.pub | clip`
+
+7.  The final step is to add your public SSH key to GitHub.
+
+    -   Navigate to the *SSH and GPG keys* section of your GitHub *Settings*. Click the green **New SSH key** button and paste your key in the *Key* section. Give the key a relevant *Title* Use an identifiable title like *Work Laptop - Windows 7* or *Home MacBook Pro 15.*
+
+    -   If you manually copied your public SSH key make sure you copied the entire key starting with `ssh-rsa` and ending with your email.
+
+## Workflow
+
+Once you have configured your SSH keys
+
+1.  Create a repository at https://GitLab.oit.duke.edu
+2.  Clone the repo via RStudio \> New Project ... \> Version Control \> Git
+3.  Restart RStudio ; look for a *Git* tab near the *Environment* tab

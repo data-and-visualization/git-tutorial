@@ -15,7 +15,7 @@
 /*.Rcheck/
 
 # Output from site build
-# /docs/*  # This is the RMarkdown website.  It is set up to 
+# /docs/*  # This is the RMarkdown website.  It is set up to
 # continuous build at netlify.com.  This docs folder is
 # continously built when the docs folder is pushed (uploaded)
 # to GitHub
@@ -43,3 +43,5 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .Rproj.user
+
+/.quarto/
