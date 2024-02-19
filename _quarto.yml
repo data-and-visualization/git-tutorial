@@ -42,6 +42,7 @@ website:
 
 format:
   html:
+    license: "CC BY"
     df-print: paged
     theme: sandstone
     css: styles.css
