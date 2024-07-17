@@ -21,7 +21,7 @@ Note: Check to see if you already have git on your local workstation. You can do
 
 #### Configure git and manage GitHub credentials (PAT)
 
-The following are steps you can inovke **in your RStudio IDE** to securely connect your RStudio instance to GitHub. I **recommend** invoking these functions **in the RStudio console**. The steps in the code chunk below only need to be inovked once per RStudio instance, per active PAT. **First, Log in to GitHub**, then it is easy to create new GitHub PATs from the RStudio console: `usethis::create_github_token()`.
+The following are steps you can inovke **in your RStudio IDE** to securely connect your RStudio instance to GitHub. I **recommend** invoking these functions **in the RStudio console**. The steps in the code chunk below only need to be inovked once per RStudio instance, per active Personal Access Tokens (PAT.) **First, Log in to GitHub**, then it is easy to create new GitHub PATs from the RStudio console: `usethis::create_github_token()`.
 
 By default Personal Access Tokens (PATs) expire every 30 days. GitHub tokens (PATs) can be managed at the [GitHub developer page](https://github.com/settings/apps).
 
