@@ -193,9 +193,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
-  <li><a href="#next-level" id="toc-next-level" class="nav-link" data-scroll-target="#next-level">Next Level…</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  </ul></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a>
+  <ul class="collapse">
+  <li><a href="#configure-git-and-manage-github-credentials-pat" id="toc-configure-git-and-manage-github-credentials-pat" class="nav-link" data-scroll-target="#configure-git-and-manage-github-credentials-pat">Configure git and manage GitHub credentials (PAT)</a></li>
+  <li><a href="#create-a-new-rstudio-project" id="toc-create-a-new-rstudio-project" class="nav-link" data-scroll-target="#create-a-new-rstudio-project">Create a new RStudio Project</a></li>
+  <li><a href="#alternatively-transform-an-existing-folder" id="toc-alternatively-transform-an-existing-folder" class="nav-link" data-scroll-target="#alternatively-transform-an-existing-folder">Alternatively, transform an existing folder</a></li>
+  <li><a href="#rename-default-branch" id="toc-rename-default-branch" class="nav-link" data-scroll-target="#rename-default-branch">Rename default branch</a></li>
+  <li><a href="#clone-or-fork-from-github" id="toc-clone-or-fork-from-github" class="nav-link" data-scroll-target="#clone-or-fork-from-github">Clone or fork from GitHub</a></li>
+  </ul></li>
+  <li><a href="#next-level" id="toc-next-level" class="nav-link" data-scroll-target="#next-level">Next Level…</a>
+  <ul class="collapse">
+  <li><a href="#share-a-zero-install-compute-environment" id="toc-share-a-zero-install-compute-environment" class="nav-link" data-scroll-target="#share-a-zero-install-compute-environment">Share a zero-install compute environment</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/data-and-visualization/git-tutorial/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/data-and-visualization/git-tutorial/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -227,18 +240,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>The <a href="https://usethis.r-lib.org/"><code>usethis</code></a> package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.</p>
-<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
-<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen -->
-<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>This page gives tips on the procedures of configuring Git and GitHub from withing RStudio. The page favors the brevity of highlighting functions in a procedural order. There are also three videos in the side bar (ranging from 3 minutes to 120 minutes) . The last video explains in more detail why and how you use version control as part of your reproducible workflow.</p>
 <section id="setup" class="level3">
 <h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <p>To get started, make a free GitHub.com account. Make sure you have the latest versions of R, RStudio, and usethis. Then, setup your RStudio configuration using two key documents: <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html">Setup</a>, and <a href="https://usethis.r-lib.org/articles/articles/git-credentials.html">Managing Git(Hub) Credentials</a>.</p>
 <p>Note: Check to see if you already have git on your local workstation. You can do this by running <code>system("git --version")</code> in the RStudio console. Often, windows users must first manually install <a href="https://git-scm.com/downloads">Git</a>.</p>
 </section>
-<section id="tips" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="tips">Tips</h3>
-<section id="configure-git-and-manage-github-credentials-pat" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="configure-git-and-manage-github-credentials-pat">Configure git and manage GitHub credentials (PAT)</h4>
+</section>
+<section id="tips" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="tips">Tips</h2>
+<section id="configure-git-and-manage-github-credentials-pat" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="configure-git-and-manage-github-credentials-pat">Configure git and manage GitHub credentials (PAT)</h3>
 <p>The following are steps you can inovke <strong>in your RStudio IDE</strong> to securely connect your RStudio instance to GitHub. I <strong>recommend</strong> invoking these functions <strong>in the RStudio console</strong>. The steps in the code chunk below only need to be inovked once per RStudio instance, per active Personal Access Tokens (PAT.) <strong>First, Log in to GitHub</strong>, then it is easy to create new GitHub PATs from the RStudio console: <code>usethis::create_github_token()</code>.</p>
 <p>By default Personal Access Tokens (PATs) expire every 30 days. GitHub tokens (PATs) can be managed at the <a href="https://github.com/settings/apps">GitHub developer page</a>.</p>
 
@@ -274,8 +288,8 @@ Note
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">gh_token_help</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="create-a-new-rstudio-project" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="create-a-new-rstudio-project">Create a new RStudio Project</h4>
+<section id="create-a-new-rstudio-project" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="create-a-new-rstudio-project">Create a new RStudio Project</h3>
 <p>It’s recommended to use RStudio to create your local git repository. With this method, after selecting a “<a href="https://intro2r.library.duke.edu/proj.html#rstudio-projects1">New RStudio Project (Directions)</a>”, <strong>select the “Create a git repository” option</strong>. This will ensure your RStudio project is properly configured as a git repository. Then, add a README file and a license, before connecting your local repository to GitHub.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -289,8 +303,8 @@ Note
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">use_github</span>()       <span class="co"># Connect local repo to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="alternatively-transform-an-existing-folder" class="level4">
-<h4 class="anchored" data-anchor-id="alternatively-transform-an-existing-folder">Alternatively, transform an existing folder</h4>
+<section id="alternatively-transform-an-existing-folder" class="level3">
+<h3 class="anchored" data-anchor-id="alternatively-transform-an-existing-folder">Alternatively, transform an existing folder</h3>
 <p>On your local workstation, you can transform a local folder into an RStudio project and also make that project a git repository. Then connect the local repository to GitHub.</p>
 <p>This will transform the local folder into an RStudio project. Howver, with this approach you must then create local git repository and then connect that repo to GitHub from local.</p>
 <div class="cell">
@@ -305,8 +319,8 @@ Note
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">use_github</span>()       <span class="co"># Connect local repo to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="rename-default-branch" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="rename-default-branch">Rename default branch</h4>
+<section id="rename-default-branch" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="rename-default-branch">Rename default branch</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git_default_branch</span>()</span>
@@ -318,26 +332,26 @@ Note
 <iframe width="300" height="200" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </div></div></section>
-<section id="clone-or-fork-from-github" class="level4">
-<h4 class="anchored" data-anchor-id="clone-or-fork-from-github">Clone or fork from GitHub</h4>
+<section id="clone-or-fork-from-github" class="level3">
+<h3 class="anchored" data-anchor-id="clone-or-fork-from-github">Clone or fork from GitHub</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_from_github</span>(<span class="st">"https://github.com/data-and-visualization/git-tutorial"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
-<section id="next-level" class="level3">
-<h3 class="anchored" data-anchor-id="next-level">Next Level…</h3>
+<section id="next-level" class="level2">
+<h2 class="anchored" data-anchor-id="next-level">Next Level…</h2>
 <p>Take your reproducibility to the next level. <a href="https://guides.github.com/activities/citable-code/">Make your code citable</a> by connecting your GitHub repo and your <a href="https://orcid.org/register">ORCID</a> (unique author ID) through to the <a href="https://zenodo.org/">Zenodo</a> archival repository. Now, every time you commit a milestone release, you also mint a DOI.</p>
-<section id="share-a-zero-install-compute-environment" class="level4">
-<h4 class="anchored" data-anchor-id="share-a-zero-install-compute-environment">Share a zero-install compute environment</h4>
+<section id="share-a-zero-install-compute-environment" class="level3">
+<h3 class="anchored" data-anchor-id="share-a-zero-install-compute-environment">Share a zero-install compute environment</h3>
 <p>Publish your code in a binder.org container</p>
 <ul>
 <li><p>Full documentation to create a sharable RStudio compute environment is <a href="https://quarto.org/docs/projects/binder.html">documented on this Quarto page about projects</a>.</p></li>
 <li><p>The key elements are an <code>install.R</code> and <code>runtime.txt</code> files. The content and format of each file is demonstrated properly at the GitHub repo. Browse and you will see.</p></li>
 <li><p>In summary, at the Terminal, type: <code>quarto use binder</code></p></li>
 </ul>
-<section id="hints" class="level5">
-<h5 class="anchored" data-anchor-id="hints">Hints</h5>
+<section id="hints" class="level4">
+<h4 class="anchored" data-anchor-id="hints">Hints</h4>
 <p>Generate a binder badge with <code>usethis::use_binder_badge(urlpath = "rstudio")</code>. This should store the badge in your GitHub’s project <code>README</code> file. Then <code>commit</code> and <code>push</code> your changes to GitHub; go to the README on GitHub, launch the build and wait for the long launch/build time.</p>
 <p>Hint: be prepared to wait. The first build can take some time. Sometimes you must launch an initial or dormant build more than once. In my experienced these hiccups are rare, but try the launch twice before getting involved in extensive troubleshooting.</p>
 <hr>

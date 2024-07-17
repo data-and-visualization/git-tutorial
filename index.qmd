@@ -5,11 +5,9 @@ description: RStudio users can leverage git Version-control which enhances repro
 
 The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will help you orchestrate your version control repositories as RStudio projects.
 
-<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+## Background
 
-<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen -->
-
-<!-- iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+This page gives tips on the procedures of configuring Git and GitHub from withing RStudio. The page favors the brevity of highlighting functions in a procedural order. There are also three videos in the side bar (ranging from 3 minutes to 120 minutes) . The last video explains in more detail why and how you use version control as part of your reproducible workflow.
 
 ### Setup
 
@@ -17,9 +15,9 @@ To get started, make a free GitHub.com account. Make sure you have the latest ve
 
 Note: Check to see if you already have git on your local workstation. You can do this by running `system("git --version")` in the RStudio console. Often, windows users must first manually install [Git](https://git-scm.com/downloads).
 
-### Tips
+## Tips
 
-#### Configure git and manage GitHub credentials (PAT)
+### Configure git and manage GitHub credentials (PAT)
 
 The following are steps you can inovke **in your RStudio IDE** to securely connect your RStudio instance to GitHub. I **recommend** invoking these functions **in the RStudio console**. The steps in the code chunk below only need to be inovked once per RStudio instance, per active Personal Access Tokens (PAT.) **First, Log in to GitHub**, then it is easy to create new GitHub PATs from the RStudio console: `usethis::create_github_token()`.
 
@@ -54,7 +52,7 @@ usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
 usethis::gh_token_help()
 ```
 
-#### Create a new RStudio Project
+### Create a new RStudio Project
 
 It's recommended to use RStudio to create your local git repository. With this method, after selecting a "[New RStudio Project (Directions)](https://intro2r.library.duke.edu/proj.html#rstudio-projects1)", **select the "Create a git repository" option**. This will ensure your RStudio project is properly configured as a git repository. Then, add a README file and a license, before connecting your local repository to GitHub.
 
@@ -75,7 +73,7 @@ use_ccby_license() # Optionally, add a license
 use_github()       # Connect local repo to GitHub
 ```
 
-#### Alternatively, transform an existing folder
+### Alternatively, transform an existing folder
 
 On your local workstation, you can transform a local folder into an RStudio project and also make that project a git repository. Then connect the local repository to GitHub.
 
@@ -95,7 +93,7 @@ use_ccby_license() # Optionally, add a license
 use_github()       # Connect local repo to GitHub
 ```
 
-#### Rename default branch
+### Rename default branch
 
 ```{r}
 #| echo: TRUE
@@ -112,7 +110,7 @@ git_default_branch_rediscover()
 </iframe>
 :::
 
-#### Clone or fork from GitHub
+### Clone or fork from GitHub
 
 ```{r}
 #| echo: TRUE
@@ -120,11 +118,11 @@ git_default_branch_rediscover()
 usethis::create_from_github("https://github.com/data-and-visualization/git-tutorial")
 ```
 
-### Next Level...
+## Next Level...
 
 Take your reproducibility to the next level. [Make your code citable](https://guides.github.com/activities/citable-code/) by connecting your GitHub repo and your [ORCID](https://orcid.org/register) (unique author ID) through to the [Zenodo](https://zenodo.org/) archival repository. Now, every time you commit a milestone release, you also mint a DOI.
 
-#### Share a zero-install compute environment
+### Share a zero-install compute environment
 
 Publish your code in a binder.org container
 
@@ -134,7 +132,7 @@ Publish your code in a binder.org container
 
 -   In summary, at the Terminal, type: `quarto use binder`
 
-##### Hints
+#### Hints
 
 Generate a binder badge with `usethis::use_binder_badge(urlpath = "rstudio")`. This should store the badge in your GitHub's project `README` file. Then `commit` and `push` your changes to GitHub; go to the README on GitHub, launch the build and wait for the long launch/build time.
 
