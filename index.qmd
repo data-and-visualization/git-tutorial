@@ -45,7 +45,8 @@ usethis::create_github_token()  # generates a PAT token you can copy/paste in th
 gitcreds::gitcreds_set()  # paste the PAT from the previous step
 
 # Now check that your git credentials are set.  
-# Check whether you have confgigured your git user.name and user.email. If not, use usethis::use_git_config()
+# Check whether you have confgigured your git user.name and user.email. 
+# If not, use usethis::use_git_config()
 gh::gh_whoami()
 usethis::gh_token_help()
 usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
