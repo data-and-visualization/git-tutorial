@@ -43,8 +43,8 @@ By contrast, you will need to rerun `usethis::create_github_token()` each time a
 # Sign-in to your GitHub account
 # Read: https://usethis.r-lib.org/articles/articles/git-credentials.html
 # Read: https://usethis.r-lib.org/articles/articles/usethis-setup.html
-usethis::create_github_token()
-gitcreds::gitcreds_set()
+usethis::create_github_token()  # generates a PAT token you can copy/paste in the next step.
+gitcreds::gitcreds_set()  # paste the PAT from the previous step
 
 # Now check that your git credentials are set.  A main are to look for is whether you have confgigured your git user.name and user.email.
 gh::gh_whoami()
