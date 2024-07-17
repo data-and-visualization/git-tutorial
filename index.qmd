@@ -7,53 +7,97 @@ The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will hel
 
 <!-- iframe width="560" height="315" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
 
-
-
 <!-- iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen -->
 
-
-
 <!-- iframe width="560" height="315" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
-
-
 
 ### Setup
 
 To get started, make a free GitHub.com account. Make sure you have the latest versions of R, RStudio, and usethis. Then, setup your RStudio configuration using two key documents: [Setup](https://usethis.r-lib.org/articles/articles/usethis-setup.html), and [Managing Git(Hub) Credentials](https://usethis.r-lib.org/articles/articles/git-credentials.html).
 
+Note:  Check to see if you already have git on your local workstation.  You can do this by running `system("git --version")` in the RStudio console.  Often, windows users must first manually install [Git](https://git-scm.com/downloads).  Either way, y
+
+
 ### Tips
 
-#### Clone or fork from GitHub
+#### Configure git and manage GitHub credentials (PAT)
+
+The following are steps you can inovke **in your RStudio IDE** to securely connect your RStudio instance to GitHub.  I **recommend** invoking these functions **in the RStudio console**.  The steps in the code chunk below only need to be inovked once per RStudio instance, per active PAT.   **First, Log in to GitHub**, then it is easy to create new GitHub PATs from the RStudio console:  `usethis::create_github_token()`.  
+
+By default Personal Access Tokens (PATs) expire every 30 days. GitHub tokens (PATs) can be managed at the [GitHub developer page](https://github.com/settings/apps).
+
+::: column-margin
+<iframe width="300" height="200" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+:::
+
+::: callout-note
+If this is your first time, you will probably need to run `usethis::use_git_config()`.  Typically the process of setting your git configuration with your GitHub ID and associated email is only done once, i.e. the first time.
+
+By contrast, you will need to rerun `usethis::create_github_token()` each time a PAT expires.
+:::
+
+
 
 ```{r}
 #| echo: TRUE
 #| eval: FALSE
-usethis::create_from_github("https://github.com/data-and-visualization/git-tutorial")
+# Sign-in to your GitHub account
+# Read: https://usethis.r-lib.org/articles/articles/git-credentials.html
+# Read: https://usethis.r-lib.org/articles/articles/usethis-setup.html
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+
+# Now check that your git credentials are set.  A main are to look for is whether you have confgigured your git user.name and user.email.
+gh::gh_whoami()
+usethis::gh_token_help()
+usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+usethis::gh_token_help()
 ```
 
 
+#### Create a new RStudio Project
+
+It's recommended to use RStudio to create your git repot as you create an RStudio project.  In this method, after selecting a "[New Project (Directions)](https://intro2r.library.duke.edu/proj.html#rstudio-projects1)", make sure to **select the "Create a git repository" option** when creating a new project in RStudio.  This will ensure that your RStudio project is properly linked to your git repository.  Then add a README file and a license before connecting your local repository to GitHub.
+
 ::: column-margin
-<iframe width="300" height="200" src="https://www.youtube.com/embed/r5_v5f6128M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 :::
 
-#### Create the GitHub repo from local
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+
+use_readme.md()
+use_ccby_license() # Optionally, add a license
+
+# Before next step  → stage & commit changes
+use_github()       # Connect local repo to GitHub
+```
+
+#### Alternatively, transform an existing folder 
+
+On your local workstation, you can transform a local folder into an RStudio project and also make that project a git repository.  Then connect the local repository to GitHub.
+
+This will transform the local folder into an RStudio project. Howver, with this approach you must then create local git repository and then connect that repo to GitHub from local.
 
 ```{r}
 #| echo: TRUE
 #| eval: FALSE
 library(usethis)
+
 use_git()          # initialize a git repo
-use_git_ignore()
-use_readme.Rmd()
-use_ccby_license()
+# use_git_ignore()  The .gitignore file is created by default running use_git()
+use_readme.md()
+use_ccby_license() # Optionally, add a license
+
 # Before next step  → stage & commit changes
 use_github()       # Connect local repo to GitHub
 ```
 
-
-::: column-margin
-<iframe width="300" height="200"  src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-:::
 
 #### Rename default branch
 
@@ -67,24 +111,20 @@ git_default_branch_rediscover()
 ```
 
 ::: column-margin
-<iframe width="300" height="200"  src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/VjDM-XsoHUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
 :::
 
-#### set-up git and manage GitHub credentials
+
+#### Clone or fork from GitHub
 
 ```{r}
 #| echo: TRUE
 #| eval: FALSE
-# Sign-in to your GitHub account
-# Read: https://usethis.r-lib.org/articles/articles/git-credentials.html
-# Read: https://usethis.r-lib.org/articles/articles/usethis-setup.html
-usethis::create_github_token()
-gitcreds::gitcreds_set()
-gh::gh_whoami()
-usethis::gh_token_help()
-usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
-usethis::gh_token_help()
+usethis::create_from_github("https://github.com/data-and-visualization/git-tutorial")
 ```
+
 
 ### Next Level...
 
