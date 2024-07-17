@@ -7,7 +7,7 @@ The [`usethis`](https://usethis.r-lib.org/) package and the RStudio IDE will hel
 
 ## Background
 
-This page gives tips on the procedures of configuring Git and GitHub from withing RStudio. The page favors the brevity of highlighting functions in a procedural order. There are also three videos in the side bar (ranging from 3 minutes to 120 minutes) . The last video explains in more detail why and how you use version control as part of your reproducible workflow.
+This page gives tips on the procedures of configuring Git and GitHub from withing RStudio. The page favors the brevity of highlighting functions in a procedural order. There are also three videos in the sidebar (ranging from 3 minutes to 120 minutes) . The last video explains in more detail why and how you use version control as part of your reproducible workflow.
 
 ### Setup
 
