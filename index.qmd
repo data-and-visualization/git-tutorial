@@ -59,7 +59,7 @@ usethis::gh_token_help()
 
 #### Create a new RStudio Project
 
-It's recommended to use RStudio to create your git repot as you create an RStudio project.  In this method, after selecting a "[New Project (Directions)](https://intro2r.library.duke.edu/proj.html#rstudio-projects1)", make sure to **select the "Create a git repository" option** when creating a new project in RStudio.  This will ensure that your RStudio project is properly linked to your git repository.  Then add a README file and a license before connecting your local repository to GitHub.
+It's recommended to use RStudio to create your git repo as you create an RStudio project.  In this method, after selecting a "[New Project (Directions)](https://intro2r.library.duke.edu/proj.html#rstudio-projects1)", make sure to **select the "Create a git repository" option** when creating a new project in RStudio.  This will ensure that your RStudio project is properly linked to your git repository.  Then add a README file and a license before connecting your local repository to GitHub.
 
 ::: column-margin
 <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?si=hWO26jfu4-ctXAE1&amp;list=PLXsA_OlR0o0PcuagC_TUl32RULZkLHI1D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
